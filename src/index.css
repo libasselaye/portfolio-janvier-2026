@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --canvas: 210 28% 96%;
+  --surface: 0 0% 100%;
+  --text: 224 32% 14%;
+  --muted: 222 12% 46%;
+  --accent: 178 72% 40%;
+  --accent-strong: 178 78% 34%;
+  --border: 220 12% 86%;
+}
+
+.dark {
+  color-scheme: dark;
+  --canvas: 225 25% 8%;
+  --surface: 225 22% 12%;
+  --text: 210 20% 96%;
+  --muted: 216 12% 68%;
+  --accent: 178 84% 46%;
+  --accent-strong: 178 88% 40%;
+  --border: 225 15% 22%;
+}
+
+* {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-canvas text-text font-body leading-relaxed;
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.gradient-mesh {
+  position: absolute;
+  inset: -20% -10% auto -10%;
+  height: 45rem;
+  background: radial-gradient(circle at 20% 20%, hsl(var(--accent) / 0.18), transparent 45%),
+    radial-gradient(circle at 70% 10%, hsl(var(--accent) / 0.12), transparent 40%),
+    radial-gradient(circle at 40% 60%, hsl(var(--accent) / 0.1), transparent 50%);
+  filter: blur(0px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.noise-layer {
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.12"/></svg>');
+  opacity: 0.25;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  z-index: 0;
+}
+
+.glass {
+  background: hsl(var(--surface) / 0.8);
+  border: 1px solid hsl(var(--border) / 0.6);
+  backdrop-filter: blur(16px);
+}
+
+.section-title {
+  @apply font-heading text-3xl md:text-4xl tracking-tight;
+}
+
+.section-kicker {
+  @apply text-xs uppercase tracking-[0.3em] text-muted font-semibold;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accentStrong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-border px-6 py-3 text-sm font-semibold text-text/90 transition hover:border-accent hover:text-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full border border-border/70 bg-surface/70 px-3 py-1 text-xs font-semibold text-muted;
+}
+
+.card {
+  @apply rounded-2xl border border-border/70 bg-surface/80 p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow;
+}
+
+.input-field {
+  @apply w-full rounded-xl border border-border bg-surface/80 px-4 py-3 text-sm text-text placeholder:text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
