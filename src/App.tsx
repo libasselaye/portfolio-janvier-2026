@@ -237,7 +237,7 @@ export default function App() {
           <div className="grid gap-6 md:grid-cols-2">
             {content.expertise.categories.map((category, index) => (
               <Reveal key={category.title} delay={index * 0.05}>
-                <Card className="glass space-y-4">
+                <Card className="glass flex h-full flex-col space-y-4">
                   <h3 className="font-heading text-lg font-semibold">{category.title}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.items.map((item) => (
@@ -358,9 +358,7 @@ export default function App() {
             <div id="write" className="scroll-mt-28">
               <Card className="glass space-y-6">
                 <div className="space-y-2">
-                  <p className="section-kicker">{content.ui.sectionKickers.message}</p>
                   <h3 className="font-heading text-2xl font-semibold">{content.write.title}</h3>
-                  <p className="text-sm text-muted">{content.write.subtitle}</p>
                 </div>
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   <label className="sr-only" htmlFor="name">
@@ -398,7 +396,6 @@ export default function App() {
                     {content.write.submit}
                   </button>
                 </form>
-                <p className="text-xs text-muted">{content.write.helper}</p>
               </Card>
             </div>
           </div>

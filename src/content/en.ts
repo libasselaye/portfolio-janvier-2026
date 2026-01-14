@@ -54,22 +54,22 @@ export const contentEn: Content = {
     items: [
       {
         title: 'Master 2 Machine Learning for Artificial Intelligence',
-        org: 'Université Lyon Lumière',
+        org: 'Université Lumière Lyon II, France',
         period: '2021–2022'
       },
       {
-        title: 'Master 1 Computer Science',
-        org: 'Université Lyon Lumière',
+        title: 'Master 1 Computer Science and Statistics',
+        org: 'Université Lumière Lyon II, France',
         period: '2020–2021'
       },
       {
-        title: 'Bachelor in Computer Science',
-        org: 'ULCO',
+        title: 'BSc in Computer Science',
+        org: "Université du Littoral Côte d'Opale, France",
         period: '2018–2020'
       },
       {
         title: 'BSc Mathematics & Computer Science',
-        org: 'Université de Thiès (UT), Senegal',
+        org: 'Université de Thiès, Senegal',
         period: '2015–2018'
       }
     ]
