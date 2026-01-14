@@ -117,10 +117,6 @@ export default function App() {
                     {content.hero.ctaCv}
                   </a>
                 </div>
-                <div className="flex flex-wrap gap-3">
-                  <Tag>{content.identity.company}</Tag>
-                  <Tag>{content.identity.location}</Tag>
-                </div>
               </div>
             </Reveal>
 

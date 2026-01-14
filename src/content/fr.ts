@@ -254,7 +254,7 @@ export const contentFr: Content = {
         email: 'Email',
         phone: 'Téléphone'
       },
-      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'Analytics']
+      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'Data Analytics', 'Automatisation IA', 'Agent IA']
     },
     sectionKickers: {
       profile: 'Profil',
