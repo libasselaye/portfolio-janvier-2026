@@ -30,7 +30,7 @@ export const contentFr: Content = {
       "Data Scientist & ML Engineer chez Innovation e-Santé Sud. J'architecte des pipelines et des modèles qui relient rigueur scientifique, impact métier et storytelling clair.",
     ctaProjects: 'Voir mes projets',
     ctaCv: 'Voir mon CV',
-    cvUrl: '/Mame Libasse-Mboup-Ingénieur Machine Learning - Data Scientist.pdf',
+    cvUrl: 'cv_libasse.pdf',
     status: 'Disponible pour collaborations data produit & IA appliquée'
   },
   about: {

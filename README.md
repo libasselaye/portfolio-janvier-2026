@@ -26,19 +26,8 @@ Vous pouvez ajouter des projets, modifier les textes, ou mettre à jour les lien
 
 ## Remplacer le CV
 
-Le CV est servi depuis `public/Mame Libasse-Mboup-Ingénieur Machine Learning - Data Scientist.pdf`.
+Le CV est servi depuis `public/cv_libasse.pdf`.
 Si vous remplacez ce fichier, mettez à jour `hero.cvUrl` dans `src/content/fr.ts` et `src/content/en.ts`.
-
-## Déploiement GitHub Pages
-
-Le workflow `.github/workflows/deploy.yml` publie automatiquement sur GitHub Pages à chaque push sur `main`.
-
-Si vous utilisez un repo projet (ex: `username/portfolio`), le base path est géré automatiquement via `BASE_PATH`.
-Pour un domaine racine ou un repo utilisateur (`username.github.io`), définissez `BASE_PATH=/` dans le workflow.
-
-Activation :
-1. Dans GitHub → Settings → Pages → Source : **GitHub Actions**.
-2. Poussez sur `main` et attendez le déploiement.
 
 ## Déploiement VPS (Nginx)
 

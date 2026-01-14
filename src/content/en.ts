@@ -30,7 +30,7 @@ export const contentEn: Content = {
       'Data Scientist & ML Engineer at Innovation e-Santé Sud. I design pipelines and models that connect scientific rigor, business impact, and clear storytelling.',
     ctaProjects: 'View my projects',
     ctaCv: 'View my CV',
-    cvUrl: '/Mame Libasse-Mboup-Ingénieur Machine Learning - Data Scientist.pdf',
+    cvUrl: 'cv_libasse.pdf',
     status: 'Open to data product and applied AI collaborations'
   },
   about: {

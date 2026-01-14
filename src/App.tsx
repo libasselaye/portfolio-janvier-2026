@@ -72,6 +72,8 @@ export default function App() {
     event.currentTarget.reset();
   };
 
+  const cvHref = `${import.meta.env.BASE_URL}${content.hero.cvUrl.replace(/^\//, '')}`;
+
   return (
     <div className="relative min-h-screen bg-canvas text-text">
       <div className="gradient-mesh" />
@@ -109,7 +111,7 @@ export default function App() {
                     {content.hero.ctaProjects}
                   </a>
                   <a
-                    href={encodeURI(content.hero.cvUrl)}
+                    href={encodeURI(cvHref)}
                     className="btn-secondary"
                     target="_blank"
                     rel="noreferrer noopener"
