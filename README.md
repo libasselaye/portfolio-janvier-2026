@@ -9,6 +9,18 @@ npm install
 npm run dev
 ```
 
+## Formulaire “Écrivez-moi”
+
+Le webhook est configuré via une variable d’environnement Vite.
+Créez un fichier `.env` (non commité) à partir de `.env.example` et renseignez :
+
+```
+VITE_WEBHOOK_URL=https://n8n.srv1268950.hstgr.cloud/webhook/36ae0deb-36f0-4b0a-b7ec-6f95331c22dc
+```
+
+Important : la variable est **injectée au build**. Sur VPS, exportez `VITE_WEBHOOK_URL`
+avant `npm run build`.
+
 Build production :
 
 ```bash

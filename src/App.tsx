@@ -18,7 +18,7 @@ const contentByLang: Record<'fr' | 'en', Content> = {
   en: contentEn
 };
 
-// const WEBHOOK_URL = 'https://your-n8n-webhook-url';
+const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL;
 
 const defaultTheme: Theme = 'dark';
 
@@ -33,6 +33,9 @@ export default function App() {
     const stored = window.localStorage.getItem('theme');
     return stored === 'light' || stored === 'dark' ? stored : defaultTheme;
   });
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>(
+    'idle'
+  );
 
   const content = useMemo(() => contentByLang[language], [language]);
   const activeId = useActiveSection(content.nav.map((item) => item.id));
@@ -55,21 +58,38 @@ export default function App() {
     window.localStorage.setItem('language', language);
   }, [language]);
 
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const name = String(formData.get('name') ?? '');
     const email = String(formData.get('email') ?? '');
     const message = String(formData.get('message') ?? '');
 
-    const subject = content.write.subject;
-    const body = `${content.write.fields.name}: ${name}\n${content.write.fields.email}: ${email}\n\n${message}`;
+    setSubmitStatus('loading');
 
-    window.location.href = `mailto:${content.identity.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    if (!WEBHOOK_URL) {
+      setSubmitStatus('error');
+      return;
+    }
 
-    event.currentTarget.reset();
+    try {
+      const response = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
+      setSubmitStatus('success');
+      event.currentTarget.reset();
+    } catch (error) {
+      setSubmitStatus('error');
+    }
   };
 
   const cvHref = `${import.meta.env.BASE_URL}${content.hero.cvUrl.replace(/^\//, '')}`;
@@ -392,10 +412,22 @@ export default function App() {
                     placeholder={content.write.fields.message}
                     required
                   />
-                  <button type="submit" className="btn-primary">
+                  <button
+                    type="submit"
+                    className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
+                    disabled={submitStatus === 'loading'}
+                  >
                     {content.write.submit}
                   </button>
                 </form>
+                {submitStatus === 'success' ? (
+                  <p className="text-sm text-accent">Message envoyé</p>
+                ) : null}
+                {submitStatus === 'error' ? (
+                  <p className="text-sm text-red-400">
+                    Erreur lors de l’envoi, veuillez réessayer
+                  </p>
+                ) : null}
               </Card>
             </div>
           </div>
