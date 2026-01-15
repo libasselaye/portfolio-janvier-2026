@@ -21,6 +21,17 @@ VITE_WEBHOOK_URL=https://n8n.srv1268950.hstgr.cloud/webhook/36ae0deb-36f0-4b0a-b
 Important : la variable est **injectée au build**. Sur VPS, exportez `VITE_WEBHOOK_URL`
 avant `npm run build`.
 
+## Chatbot n8n
+
+Le chatbot utilise une variable d’environnement dédiée :
+
+```
+VITE_CHAT_WEBHOOK_URL=YOUR_PRODUCTION_WEBHOOK_URL
+```
+
+Important : la variable est **injectée au build**. Sur VPS, exportez `VITE_CHAT_WEBHOOK_URL`
+avant `npm run build`.
+
 Build production :
 
 ```bash
