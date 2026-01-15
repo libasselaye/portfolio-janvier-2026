@@ -142,44 +142,114 @@ export const contentFr: Content = {
     subtitle: 'Sélection de projets académiques et personnels en IA, data et analytics.',
     items: [
       {
+        title: 'Création d’un portfolio web full-stack avec automatisation back-end en production',
+        description:
+          'Développement d’un portfolio web moderne et évolutif (React, Vite, Tailwind) intégrant un système de contact temps réel. Conception d’une architecture backend événementielle basée sur n8n (webhooks, workflows automatisés) permettant la réception, le traitement et la notification des messages utilisateurs par email (Gmail API, OAuth 2.0). Déploiement sur VPS avec Docker et Nginx, configuration réseau avancée (CORS, reverse proxy, ports, environnements), et intégration CI/CD via GitHub.',
+        tags: ['React', 'Vite', 'Tailwind', 'n8n', 'Docker', 'Nginx', 'CI/CD'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Automatisation de workflows IA no-code avec n8n et DeepSeek',
+        description:
+          'Conception d’agents intelligents capables d’extraire des informations depuis des PDF et emails, de les structurer et de les exploiter (Google Sheets, notifications). Mise en production de flux robustes avec gestion des erreurs, tests et débogage.',
+        tags: ['n8n', 'DeepSeek', 'Agents IA', 'PDF', 'Google Sheets'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Pipeline d’import de données de santé (ViaTrajectoire / TND) vers MariaDB',
+        description:
+          'Conception et industrialisation d’un pipeline en Python : automatisation de l’ingestion d’archives CSV, alignement des fichiers avec le modèle de données, nettoyage des données et gestion des doublons et incohérences. Mise en œuvre et exécution sur serveur Linux, avec préparation de l’environnement et livraison d’un script Python prêt à l’utilisation en production.',
+        tags: ['Python', 'MariaDB', 'CSV', 'ETL', 'Linux'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Pipeline automatisé de génération de vidéos publicitaires par IA',
+        description:
+          'Combinaison d’appels API à fal.ai pour la création vidéo et à ChatGPT (OpenAI API) pour la génération automatique de titres marketing. Workflow orchestré avec n8n : exécution asynchrone, dépôt des vidéos sur Google Drive et mise à jour des résultats dans Google Sheets, avec une attention particulière portée à la scalabilité et à l’optimisation des coûts.',
+        tags: ['fal.ai', 'ChatGPT', 'OpenAI API', 'n8n', 'Google Drive', 'Google Sheets'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Automatisation de la production de visuels e-commerce par IA',
+        description:
+          'Workflow automatisé de génération de visuels marketing à partir de données produits, basé sur des API d’IA générative (Google AI Studio – Gemini Imagen). Orchestration complète avec n8n : ingestion des données via Google Sheets, appels API, gestion asynchrone des traitements, stockage des images sur Google Drive et mise à jour automatique des résultats. Objectif : produire des rendus produits réalistes à grande échelle pour optimiser la qualité visuelle et la performance marketing.',
+        tags: ['Google AI Studio', 'Gemini Imagen', 'n8n', 'Google Sheets', 'Google Drive', 'E-commerce'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Automatisation de pipelines IA pour la génération et l’édition d’images',
+        description:
+          'Workflows automatisés avec n8n intégrant des appels API REST sécurisés (POST) vers Google AI Studio pour exploiter le modèle Nano Banana Pro avec gestion des clés API. Création d’un formulaire web permettant de capturer l’image source et le prompt utilisateur, de convertir les fichiers en Base64 et de gérer le traitement de multiples images dans un même flux. Orchestration complète de la génération, de l’édition et de la restitution de fichiers images exploitables, optimisant la production d’assets IA dans des workflows structurés.',
+        tags: ['n8n', 'Google AI Studio', 'Nano Banana Pro', 'API REST', 'Base64', 'Image IA'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Application web “Aide-moi” + agent IA',
+        description:
+          'Application d’assistance intelligente basée sur la description des problèmes. Le frontend (React, Vite, TypeScript) déclenche des requêtes POST vers des webhooks n8n locaux, exposés de manière sécurisée via Cloudflare Tunnel. Les données sont traitées par un workflow n8n orchestrant un agent IA (DeepSeek Chat Model), avant restitution synchronisée via le mécanisme “Respond to Webhook”. Le projet couvre l’UX, l’intégration HTTP, l’exposition contrôlée de services locaux et les problématiques réseau (CORS, méthodes HTTP, tunnels).',
+        tags: ['React', 'TypeScript', 'n8n', 'Cloudflare Tunnel', 'DeepSeek'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Agent IA conversationnel sur Telegram',
+        description:
+          'Conception et déploiement d’un agent IA sur Telegram, orchestré via n8n, capable de comprendre des requêtes complexes, de rechercher des informations en temps réel (ERP API) et d’exécuter des actions via des outils externes (APIs Google, automatisations). Architecture basée sur webhooks, intégration de LLM (Grok API) et workflows décisionnels, démontrant la différence entre chatbot passif et agent intelligent orienté action.',
+        tags: ['Telegram', 'n8n', 'Grok API', 'Webhooks', 'Automatisation'],
+        repo: '#',
+        demo: '#'
+      },
+      {
         title: 'Advanced Supervised Learning',
-        description: 'Implémentation from scratch d’arbres de décision et de forêts aléatoires, avec validation, métriques et comparaisons.',
+        description:
+          'Implémentation from scratch d’arbres de décision et de forêts aléatoires, avec validation, métriques et comparaisons.',
         tags: ['Python', 'ML', 'Decision Trees', 'Random Forests'],
         repo: '#',
         demo: '#'
       },
       {
-        title: 'Projet Fin d’Études Licence – Jeu de Quiz',
-        description: 'Application interactive de quiz, intégrant logique de score, base de questions et reporting basique.',
-        tags: ['Fullstack', 'UX', 'Data'],
-        repo: '#',
-        demo: '#'
-      },
-      {
         title: 'Détection de Communauté DBLP',
-        description: 'Analyse de graphes et visualisation pour identifier des communautés de chercheurs et leurs interactions.',
+        description:
+          'Analyse de graphes et visualisation pour identifier des communautés de chercheurs et leurs interactions.',
         tags: ['Graphes', 'Visualisation', 'Python'],
         repo: '#',
         demo: '#'
       },
       {
+        title: 'Clustering & Analyse multidimensionnelle',
+        description:
+          'ACP et classification non supervisée sur des données automobiles pour identifier des segments.',
+        tags: ['ACP', 'Clustering', 'Analyse multivariée'],
+        repo: '#',
+        demo: '#'
+      },
+      {
         title: 'Projet SAS – World Happiness Report',
-        description: 'Exploration statistique et reporting sur les données de bonheur mondial avec mise en contexte des résultats.',
+        description:
+          'Exploration statistique et reporting sur les données de bonheur mondial avec mise en contexte des résultats.',
         tags: ['SAS', 'Statistiques', 'BI'],
         repo: '#',
         demo: '#'
       },
       {
         title: 'Simple Data Analysis Project',
-        description: 'Pipeline d’analyse exploratoire et synthèse de résultats pour des jeux de données multi-variables.',
+        description:
+          'Pipeline d’analyse exploratoire et synthèse de résultats pour des jeux de données multi-variables.',
         tags: ['EDA', 'Python', 'Pandas'],
         repo: '#',
         demo: '#'
       },
       {
-        title: 'Clustering & Analyse multidimensionnelle',
-        description: 'ACP et classification non supervisée sur des données automobiles pour identifier des segments.',
-        tags: ['ACP', 'Clustering', 'Analyse multivariée'],
+        title: 'Projet Fin d’Études Licence – Jeu de Quiz',
+        description:
+          'Application interactive de quiz, intégrant logique de score, base de questions et reporting basique.',
+        tags: ['Fullstack', 'UX', 'Data'],
         repo: '#',
         demo: '#'
       }

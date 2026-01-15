@@ -142,6 +142,70 @@ export const contentEn: Content = {
     subtitle: 'A selection of academic and personal projects in AI, data, and analytics.',
     items: [
       {
+        title: 'Full-stack web portfolio with production backend automation',
+        description:
+          'Built a modern, scalable portfolio (React, Vite, Tailwind) with a real-time contact system. Designed an event-driven backend architecture with n8n (webhooks, automated workflows) to receive, process, and notify user messages by email (Gmail API, OAuth 2.0). Deployed on VPS with Docker and Nginx, advanced network configuration (CORS, reverse proxy, ports, environments), and CI/CD integration via GitHub.',
+        tags: ['React', 'Vite', 'Tailwind', 'n8n', 'Docker', 'Nginx', 'CI/CD'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'No-code AI workflow automation with n8n and DeepSeek',
+        description:
+          'Designed intelligent agents to extract information from PDFs and emails, structure it, and leverage it (Google Sheets, notifications). Production-ready flows with error handling, testing, and debugging.',
+        tags: ['n8n', 'DeepSeek', 'AI Agents', 'PDF', 'Google Sheets'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Healthcare data import pipeline (ViaTrajectoire / TND) to MariaDB',
+        description:
+          'Designed and industrialized a Python pipeline: automated CSV archive ingestion, schema alignment, data cleaning, and handling duplicates and inconsistencies. Deployed and executed on a Linux server, with environment preparation and delivery of a production-ready Python script.',
+        tags: ['Python', 'MariaDB', 'CSV', 'ETL', 'Linux'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Automated AI advertising video generation pipeline',
+        description:
+          'Combined API calls to fal.ai for video creation and ChatGPT (OpenAI API) for automatic marketing titles. n8n-orchestrated workflow: async execution, video delivery to Google Drive, and results updates in Google Sheets, with a focus on scalability and cost optimization.',
+        tags: ['fal.ai', 'ChatGPT', 'OpenAI API', 'n8n', 'Google Drive', 'Google Sheets'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'AI automation for e-commerce visual production',
+        description:
+          'Automated workflow to generate marketing visuals from product data using generative AI APIs (Google AI Studio - Gemini Imagen). Full orchestration with n8n: data ingestion via Google Sheets, API calls, async processing, image storage in Google Drive, and automatic result updates. Goal: produce realistic product renders at scale to optimize visual quality and marketing performance.',
+        tags: ['Google AI Studio', 'Gemini Imagen', 'n8n', 'Google Sheets', 'Google Drive', 'E-commerce'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'AI pipeline automation for image generation and editing',
+        description:
+          'Automated workflows with n8n integrating secure REST API calls (POST) to Google AI Studio to use the Nano Banana Pro model with API key management. Built a web form to capture the source image and user prompt, convert files to Base64, and handle multiple images in a single flow. End-to-end orchestration of generation, editing, and delivery of usable image files, optimizing AI asset production in structured workflows.',
+        tags: ['n8n', 'Google AI Studio', 'Nano Banana Pro', 'REST API', 'Base64', 'AI Images'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: '"Aide-moi" web app + AI agent',
+        description:
+          'Smart assistance web app based on problem descriptions. The frontend (React, Vite, TypeScript) triggers POST requests to local n8n webhooks, securely exposed via Cloudflare Tunnel. Data is processed by an n8n workflow orchestrating an AI agent (DeepSeek Chat Model), then returned synchronously via the "Respond to Webhook" mechanism. The project covers UX, HTTP integration, controlled exposure of local services, and network issues (CORS, HTTP methods, tunnels).',
+        tags: ['React', 'TypeScript', 'n8n', 'Cloudflare Tunnel', 'DeepSeek'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Conversational AI agent on Telegram',
+        description:
+          'Designed and deployed an AI agent on Telegram, orchestrated via n8n, capable of understanding complex requests, retrieving real-time information (ERP API), and executing actions via external tools (Google APIs, automations). Webhook-based architecture with LLM integration (Grok API) and decision workflows, demonstrating the difference between a passive chatbot and an action-oriented intelligent agent.',
+        tags: ['Telegram', 'n8n', 'Grok API', 'Webhooks', 'Automation'],
+        repo: '#',
+        demo: '#'
+      },
+      {
         title: 'Advanced Supervised Learning',
         description: 'From-scratch implementation of decision trees and random forests, including evaluation and benchmarking.',
         tags: ['Python', 'ML', 'Decision Trees', 'Random Forests'],
@@ -149,16 +213,16 @@ export const contentEn: Content = {
         demo: '#'
       },
       {
-        title: "Bachelor Capstone – Quiz Game",
-        description: 'Interactive quiz application with scoring logic, question bank, and simple analytics.',
-        tags: ['Fullstack', 'UX', 'Data'],
+        title: 'DBLP Community Detection',
+        description: 'Graph analysis and visualization to uncover researcher communities and interactions.',
+        tags: ['Graphs', 'Visualization', 'Python'],
         repo: '#',
         demo: '#'
       },
       {
-        title: 'DBLP Community Detection',
-        description: 'Graph analysis and visualization to uncover researcher communities and interactions.',
-        tags: ['Graphs', 'Visualization', 'Python'],
+        title: 'Clustering & Multidimensional Analysis',
+        description: 'PCA and unsupervised clustering on automotive data to identify segments.',
+        tags: ['PCA', 'Clustering', 'Multivariate Analysis'],
         repo: '#',
         demo: '#'
       },
@@ -177,9 +241,9 @@ export const contentEn: Content = {
         demo: '#'
       },
       {
-        title: 'Clustering & Multidimensional Analysis',
-        description: 'PCA and unsupervised clustering on automotive data to identify segments.',
-        tags: ['PCA', 'Clustering', 'Multivariate Analysis'],
+        title: 'Bachelor Capstone – Quiz Game',
+        description: 'Interactive quiz application with scoring logic, question bank, and simple analytics.',
+        tags: ['Fullstack', 'UX', 'Data'],
         repo: '#',
         demo: '#'
       }
