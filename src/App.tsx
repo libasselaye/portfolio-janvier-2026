@@ -18,7 +18,7 @@ const contentByLang: Record<'fr' | 'en', Content> = {
   en: contentEn
 };
 
-const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL;
+const WEBHOOK_URL = '/api/contact';
 
 const defaultTheme: Theme = 'dark';
 
