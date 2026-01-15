@@ -60,7 +60,8 @@ export default function App() {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const name = String(formData.get('name') ?? '');
     const email = String(formData.get('email') ?? '');
     const message = String(formData.get('message') ?? '');
@@ -82,11 +83,12 @@ export default function App() {
       });
 
       if (!response.ok) {
-        throw new Error('Request failed');
+        setSubmitStatus('error');
+        return;
       }
 
       setSubmitStatus('success');
-      event.currentTarget.reset();
+      form.reset();
     } catch (error) {
       setSubmitStatus('error');
     }
