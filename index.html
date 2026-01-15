@@ -14,7 +14,16 @@
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
       createChat({
-        webhookUrl: '%VITE_CHAT_WEBHOOK_URL%'
+        webhookUrl: '%VITE_CHAT_WEBHOOK_URL%',
+        i18n: {
+          en: {
+            title: 'LibasseAI',
+            subtitle: 'Ask me anything about data, AI, and automation.',
+            inputPlaceholder: 'Type your message...',
+            closeButtonTooltip: 'Close'
+          }
+        },
+        initialMessages: ['Hello!', "I'm LibasseAI. How can I help you today?"]
       });
     </script>
   </body>
