@@ -69,6 +69,7 @@ export type Content = {
     subheadline: string;
     ctaProjects: string;
     ctaCv: string;
+    scrollHint: string;
     cvUrl: string;
     status: string;
   };

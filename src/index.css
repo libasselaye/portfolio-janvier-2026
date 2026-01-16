@@ -248,11 +248,11 @@ body:hover .gradient-mesh {
   text-transform: none;
   flex-direction: column;
   gap: 0.15rem;
-  border: 1px solid hsl(var(--glass-edge) / 0.5);
-  background: linear-gradient(135deg, hsl(var(--glass-tint) / 0.7), hsl(var(--accent) / 0.4));
-  box-shadow: 0 12px 30px hsl(var(--text) / 0.2);
-  backdrop-filter: blur(12px) saturate(1.2);
-  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border: 1px solid hsl(var(--glass-edge) / 0.45);
+  background: linear-gradient(135deg, hsl(var(--glass-tint) / 0.35), hsl(var(--accent) / 0.25));
+  box-shadow: 0 6px 14px hsl(var(--text) / 0.14);
+  backdrop-filter: blur(6px) saturate(1.05);
+  -webkit-backdrop-filter: blur(6px) saturate(1.05);
 }
 
 .n8n-chat .chat-window-toggle svg,
@@ -281,9 +281,9 @@ body:hover .gradient-mesh {
 .n8n-chat .chat-window,
 #n8n-chat .chat-window {
   background: hsl(var(--surface) / 0.75);
-  box-shadow: 0 24px 60px hsl(var(--text) / 0.22);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 20px hsl(var(--text) / 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .n8n-chat .chat-header,
@@ -332,7 +332,7 @@ body:hover .gradient-mesh {
   background: hsl(var(--surface) / 0.92);
   border: 1px solid hsl(var(--border) / 0.7);
   border-radius: 20px;
-  box-shadow: inset 0 0 0 1px hsl(var(--surface) / 0.6);
+  box-shadow: inset 0 0 0 1px hsl(var(--surface) / 0.5);
 }
 
 .n8n-chat .chat-inputs textarea,
@@ -371,12 +371,12 @@ body:hover .gradient-mesh {
 
 .n8n-chat .chat-message,
 #n8n-chat .chat-message {
-  box-shadow: 0 8px 24px hsl(var(--text) / 0.06);
+  box-shadow: 0 6px 16px hsl(var(--text) / 0.04);
 }
 
 .n8n-chat .chat-message-from-user,
 #n8n-chat .chat-message-from-user {
-  box-shadow: 0 12px 28px hsl(var(--accent) / 0.25);
+  box-shadow: 0 8px 18px hsl(var(--accent) / 0.2);
 }
 
 .n8n-chat .chat-powered-by,

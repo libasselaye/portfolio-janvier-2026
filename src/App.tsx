@@ -115,20 +115,22 @@ export default function App() {
 
       <main className="relative z-10">
         <section id="hero" className="scroll-mt-28">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mx-auto grid max-w-6xl gap-16 px-6 py-28 lg:items-start lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <span className="badge">{content.hero.status}</span>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <h1 className="font-heading text-4xl font-semibold tracking-tight md:text-5xl">
                     {content.identity.name}
                   </h1>
-                  <p className="text-lg text-muted">{content.identity.role}</p>
+                  <p className="text-base font-medium text-muted">{content.identity.role}</p>
                 </div>
-                <p className="text-2xl font-semibold text-text md:text-3xl">
+                <p className="max-w-xl text-base text-muted">
                   {content.hero.headline}
                 </p>
-                <p className="max-w-xl text-base text-muted">{content.hero.subheadline}</p>
+                {content.hero.subheadline ? (
+                  <p className="max-w-xl text-sm text-muted">{content.hero.subheadline}</p>
+                ) : null}
                 <div className="flex flex-wrap gap-4">
                   <a href="#projects" className="btn-primary">
                     {content.hero.ctaProjects}
@@ -142,11 +144,18 @@ export default function App() {
                     {content.hero.ctaCv}
                   </a>
                 </div>
+                <a
+                  href="#experience"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-muted transition hover:text-text"
+                >
+                  <span className="text-base">↓</span>
+                  {content.hero.scrollHint}
+                </a>
               </div>
             </Reveal>
 
             <Reveal delay={0.15}>
-              <Card className="glass space-y-6">
+              <Card className="glass space-y-5 lg:mt-14 lg:self-start">
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-muted">{content.ui.heroProfile.kicker}</p>
                   <h2 className="mt-2 font-heading text-2xl font-semibold">
@@ -161,14 +170,6 @@ export default function App() {
                   <div className="flex items-center justify-between gap-3">
                     <span>{content.ui.heroProfile.labels.location}</span>
                     <span className="text-text">{content.identity.location}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-3">
-                    <span>{content.ui.heroProfile.labels.email}</span>
-                    <span className="text-text">{content.identity.email}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-3">
-                    <span>{content.ui.heroProfile.labels.phone}</span>
-                    <span className="text-text">{content.identity.phone}</span>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">

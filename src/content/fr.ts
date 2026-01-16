@@ -18,20 +18,20 @@ export const contentFr: Content = {
   ],
   identity: {
     name: 'Mame Libasse Mboup',
-    role: 'Data Scientist / Machine Learning Engineer',
+    role: 'Ingénieur data & IA appliquée',
     company: 'Innovation e-Santé Sud',
     location: 'Toulon, France',
     email: 'libasselaye01@gmail.com',
     phone: '+33 6 51 98 36 14'
   },
   hero: {
-    headline: "Transformer la data en décisions IA fiables, utiles et mesurables.",
-    subheadline:
-      "Data Scientist & ML Engineer chez Innovation e-Santé Sud. J'architecte des pipelines et des modèles qui relient rigueur scientifique, impact métier et storytelling clair.",
-    ctaProjects: 'Voir mes projets',
-    ctaCv: 'Voir mon CV',
+    headline: 'J’accompagne les organisations dans la transformation de la donnée brute en décisions intelligentes, fiables et mesurables, via la conception et le déploiement de solutions data et IA à fort impact métier.',
+    subheadline: '',
+    ctaProjects: 'Découvrir mes projets',
+    ctaCv: 'En savoir plus avec mon CV',
+    scrollHint: 'Explorer mon parcours',
     cvUrl: 'cv_libasse.pdf',
-    status: 'Disponible pour collaborations data produit & IA appliquée'
+    status: 'Disponible pour collaborations en data & IA appliquée'
   },
   about: {
     title: 'À propos de moi',
@@ -325,7 +325,7 @@ export const contentFr: Content = {
         email: 'Email',
         phone: 'Téléphone'
       },
-      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'Data Analytics', 'AI Automation', 'Agentic AI']
+      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'AI Automation', 'Agentic AI']
     },
     sectionKickers: {
       profile: 'Profil',

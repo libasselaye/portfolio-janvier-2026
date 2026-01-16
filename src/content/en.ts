@@ -18,20 +18,21 @@ export const contentEn: Content = {
   ],
   identity: {
     name: 'Mame Libasse Mboup',
-    role: 'Data Scientist / Machine Learning Engineer',
+    role: 'Applied Data & AI Engineer',
     company: 'Innovation e-Santé Sud',
     location: 'Toulon, France',
     email: 'libasselaye01@gmail.com',
     phone: '+33 6 51 98 36 14'
   },
   hero: {
-    headline: 'Turning data into reliable, useful, and measurable AI decisions.',
-    subheadline:
-      'Data Scientist & ML Engineer at Innovation e-Santé Sud. I design pipelines and models that connect scientific rigor, business impact, and clear storytelling.',
-    ctaProjects: 'View my projects',
-    ctaCv: 'View my CV',
+    headline:
+      'I help organizations transform raw data into intelligent, reliable, measurable decisions by designing and deploying data & AI solutions with strong business impact.',
+    subheadline: '',
+    ctaProjects: 'Discover my projects',
+    ctaCv: 'Learn more with my CV',
+    scrollHint: 'Explore my journey',
     cvUrl: 'cv_libasse.pdf',
-    status: 'Open to data product and applied AI collaborations'
+    status: 'Available for applied data & AI collaborations'
   },
   about: {
     title: 'About me',
@@ -319,7 +320,7 @@ export const contentEn: Content = {
         email: 'Email',
         phone: 'Phone'
       },
-      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'Analytics', 'AI Automation', 'Agentic AI']
+      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'AI Automation', 'Agentic AI']
     },
     sectionKickers: {
       profile: 'Profile',
