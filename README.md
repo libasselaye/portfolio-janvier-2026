@@ -1,90 +1,24 @@
-# Portfolio Mame Libasse Mboup (FR/EN)
+# Portfolio — Mame Libasse Mboup
 
-Portfolio one-page bilingue (FR/EN) construit avec **React + Vite + TypeScript + Tailwind CSS**.
+Ce repository contient la version 2026 de mon portfolio data/IA. L’objectif est clair : inspirer confiance immédiatement (expertise technique, maturité d’ingénierie, crédibilité IA/Data) avec un site premium, moderne et facile à faire évoluer.
 
-## Démarrage rapide
+## Fonctionnalités développées
 
-```bash
-npm install
-npm run dev
-```
+- One-page structuré avec navigation ancrée : Accueil, À propos, Expériences, Formation, Expertise, Projets (incluant la Recherche), Contact et Écrivez-moi.
+- Bilingue FR/EN avec sélecteur visible, changement instantané sans rechargement, textes synchronisés entre les deux langues.
+- Identité complète et claire : rôle, entreprise, localisation, email, téléphone, liens LinkedIn/GitHub.
+- CTA principaux : Voir mes projets et Voir mon CV (ouverture du PDF dans un nouvel onglet).
+- Expériences professionnelles détaillées et timeline de formation moderne.
+- Expertise structurée par catégories avec badges pour une lecture rapide.
+- Projets présentés en cartes modernes, ordonnés par richesse technique, avec un focus Automatisation en tête de section.
+- Bloc Recherche intégré à la section Projets pour une lecture unifiée.
+- Contact clair + formulaire “Écrivez-moi” avec envoi temps réel et retours d’état (message envoyé / erreur).
+- Chatbot LibasseAI intégré, cohérent avec le thème, ouverture flottante, messages localisés FR/EN.
+- Design premium et fluide : responsive, accessible (contrastes, focus), animations légères, navbar sticky, dark mode par défaut + toggle light.
 
-## Formulaire “Écrivez-moi”
+## Points à retenir
 
-Le webhook est configuré via une variable d’environnement Vite.
-Créez un fichier `.env` (non commité) à partir de `.env.example` et renseignez :
-
-```
-VITE_WEBHOOK_URL=https://n8n.srv1268950.hstgr.cloud/webhook/36ae0deb-36f0-4b0a-b7ec-6f95331c22dc
-```
-
-Important : la variable est **injectée au build**. Sur VPS, exportez `VITE_WEBHOOK_URL`
-avant `npm run build`.
-
-## Chatbot n8n
-
-Le chatbot utilise une variable d’environnement dédiée :
-
-```
-VITE_CHAT_WEBHOOK_URL=YOUR_PRODUCTION_WEBHOOK_URL
-```
-
-Important : la variable est **injectée au build**. Sur VPS, exportez `VITE_CHAT_WEBHOOK_URL`
-avant `npm run build`.
-
-Build production :
-
-```bash
-npm run build
-```
-
-## Modifier le contenu (FR / EN)
-
-Tout le contenu est centralisé dans :
-
-- `src/content/fr.ts`
-- `src/content/en.ts`
-
-Vous pouvez ajouter des projets, modifier les textes, ou mettre à jour les liens (repo/demo/paper) sans toucher au layout.
-
-## Remplacer le CV
-
-Le CV est servi depuis `public/cv_libasse.pdf`.
-Si vous remplacez ce fichier, mettez à jour `hero.cvUrl` dans `src/content/fr.ts` et `src/content/en.ts`.
-
-## Déploiement VPS (Nginx)
-
-1. Build local :
-
-```bash
-npm run build
-```
-
-2. Copiez le dossier `dist` sur votre serveur (ex: `/var/www/portfolio`).
-3. Exemple de configuration Nginx :
-
-```nginx
-server {
-    listen 80;
-    server_name your-domain.com;
-
-    root /var/www/portfolio;
-    index index.html;
-
-    location / {
-        try_files $uri /index.html;
-    }
-}
-```
-
-4. Rechargez Nginx :
-
-```bash
-sudo nginx -s reload
-```
-
-## Personnalisation rapide
-
-- **Couleurs / Typographies** : `src/index.css`
-- **Composants réutilisables** : `src/components/`
-- **Sections** : `src/App.tsx`
+- Tout le contenu existe en FR et EN : chaque mise à jour doit rester cohérente dans les deux langues.
+- Le CV doit toujours pointer vers le PDF actuel et s’ouvrir dans un nouvel onglet.
+- Le formulaire et le chatbot s’appuient sur des webhooks : en production, l’URL de destination doit être valide et autorisée côté CORS.
+- Les projets d’automatisation doivent rester en haut de la section Projets pour refléter la priorité de la spécialisation.
