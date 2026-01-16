@@ -142,9 +142,9 @@ export const contentEn: Content = {
     subtitle: 'A selection of academic and personal projects in AI, data, and analytics.',
     items: [
       {
-        title: 'Full-stack web portfolio with production backend automation',
+        title: 'Full-stack web portfolio with backend automation and chatbot in production',
         description:
-          'Built a modern, scalable portfolio (React, Vite, Tailwind) with a real-time contact system. Designed an event-driven backend architecture with n8n (webhooks, automated workflows) to receive, process, and notify user messages by email (Gmail API, OAuth 2.0). Deployed on VPS with Docker and Nginx, advanced network configuration (CORS, reverse proxy, ports, environments), and CI/CD integration via GitHub.',
+          'Built a modern, scalable portfolio (React, Vite, Tailwind) with a real-time contact system and an interactive chatbot to engage visitors and streamline contact. Designed an event-driven backend architecture with n8n (webhooks, automated workflows) to receive, process, and notify user messages by email (Gmail API, OAuth 2.0). Deployed on VPS with Docker and Nginx, advanced network configuration (CORS, reverse proxy, ports, environments), and CI/CD integration via GitHub.',
         tags: ['React', 'Vite', 'Tailwind', 'n8n', 'Docker', 'Nginx', 'CI/CD'],
         repo: '#',
         demo: '#'

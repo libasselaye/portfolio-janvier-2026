@@ -142,9 +142,9 @@ export const contentFr: Content = {
     subtitle: 'Sélection de projets académiques et personnels en IA, data et analytics.',
     items: [
       {
-        title: 'Création d’un portfolio web full-stack avec automatisation back-end en production',
+        title: 'Création d’un portfolio web full-stack avec automatisation back-end et chatbot en production',
         description:
-          'Développement d’un portfolio web moderne et évolutif (React, Vite, Tailwind) intégrant un système de contact temps réel. Conception d’une architecture backend événementielle basée sur n8n (webhooks, workflows automatisés) permettant la réception, le traitement et la notification des messages utilisateurs par email (Gmail API, OAuth 2.0). Déploiement sur VPS avec Docker et Nginx, configuration réseau avancée (CORS, reverse proxy, ports, environnements), et intégration CI/CD via GitHub.',
+          'Développement d’un portfolio web moderne et évolutif (React, Vite, Tailwind) intégrant un système de contact temps réel ainsi qu’un chatbot interactif permettant d’échanger avec les visiteurs et de faciliter la prise de contact. Conception d’une architecture back-end événementielle basée sur n8n (webhooks, workflows automatisés) permettant la réception, le traitement et la notification des messages utilisateurs par email (Gmail API, OAuth 2.0). Déploiement sur VPS avec Docker et Nginx, configuration réseau avancée (CORS, reverse proxy, ports, environnements), et intégration CI/CD via GitHub.',
         tags: ['React', 'Vite', 'Tailwind', 'n8n', 'Docker', 'Nginx', 'CI/CD'],
         repo: '#',
         demo: '#'
