@@ -28,17 +28,77 @@
     <script type="module">
       import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-      createChat({
-        webhookUrl: '%VITE_CHAT_WEBHOOK_URL%',
-        i18n: {
-          en: {
-            title: 'LibasseAI',
-            subtitle: 'Ask me anything about data, AI, and automation.',
-            inputPlaceholder: 'Type your message...',
-            closeButtonTooltip: 'Close'
-          }
+      const chatCopy = {
+        fr: {
+          title: 'LibasseAI',
+          subtitle: '',
+          inputPlaceholder: 'Ecrivez votre message...',
+          closeButtonTooltip: 'Fermer',
+          initialMessages: [
+            'Hello !',
+            "Je suis LibasseAI, l'assistant virtuel de Libasse. Posez-moi toutes vos questions, je vous repondrai comme si vous etiez en face de lui."
+          ]
         },
-        initialMessages: ['Hello!', "I'm LibasseAI. How can I help you today?"]
+        en: {
+          title: 'LibasseAI',
+          subtitle: '',
+          inputPlaceholder: 'Type your message...',
+          closeButtonTooltip: 'Close',
+          initialMessages: [
+            'Hello!',
+            "I'm LibasseAI, Libasse's virtual assistant. Ask me anything and I'll answer as if you were speaking with him."
+          ]
+        }
+      };
+
+      const getChatLanguage = () => {
+        const stored = window.localStorage.getItem('language');
+        if (stored === 'en' || stored === 'fr') return stored;
+        const htmlLang = document.documentElement.lang || 'fr';
+        return htmlLang.startsWith('en') ? 'en' : 'fr';
+      };
+
+      let chatApp;
+
+      const initChat = (lang) => {
+        const selected = chatCopy[lang] || chatCopy.fr;
+
+        if (chatApp) {
+          chatApp.unmount();
+          chatApp = null;
+        }
+
+        const target = document.querySelector('#n8n-chat');
+        if (target) target.remove();
+
+        chatApp = createChat({
+          webhookUrl: '%VITE_CHAT_WEBHOOK_URL%',
+          defaultLanguage: lang,
+          i18n: {
+            fr: {
+              title: chatCopy.fr.title,
+              subtitle: chatCopy.fr.subtitle,
+              inputPlaceholder: chatCopy.fr.inputPlaceholder,
+              closeButtonTooltip: chatCopy.fr.closeButtonTooltip
+            },
+            en: {
+              title: chatCopy.en.title,
+              subtitle: chatCopy.en.subtitle,
+              inputPlaceholder: chatCopy.en.inputPlaceholder,
+              closeButtonTooltip: chatCopy.en.closeButtonTooltip
+            }
+          },
+          initialMessages: selected.initialMessages
+        });
+      };
+
+      initChat(getChatLanguage());
+
+      window.addEventListener('portfolio-language-change', (event) => {
+        const next = event?.detail;
+        if (next === 'fr' || next === 'en') {
+          initChat(next);
+        }
       });
     </script>
   </body>

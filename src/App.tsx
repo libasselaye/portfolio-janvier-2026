@@ -56,6 +56,7 @@ export default function App() {
 
   useEffect(() => {
     window.localStorage.setItem('language', language);
+    window.dispatchEvent(new CustomEvent('portfolio-language-change', { detail: language }));
   }, [language]);
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (event) => {
