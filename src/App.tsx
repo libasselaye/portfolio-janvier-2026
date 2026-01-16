@@ -437,7 +437,7 @@ export default function App() {
         </Section>
       </main>
 
-      <Footer text={content.footer.text} />
+      <Footer text={content.footer.text} marquee={content.footer.marquee} />
     </div>
   );
 }

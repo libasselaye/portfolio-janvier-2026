@@ -123,6 +123,7 @@ export type Content = {
   };
   footer: {
     text: string;
+    marquee: string;
   };
   ui: {
     themeToggle: string;

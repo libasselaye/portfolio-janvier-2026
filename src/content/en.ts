@@ -153,7 +153,7 @@ export const contentEn: Content = {
         title: 'No-code AI workflow automation with n8n and DeepSeek',
         description:
           'Designed intelligent agents to extract information from PDFs and emails, structure it, and leverage it (Google Sheets, notifications). Production-ready flows with error handling, testing, and debugging.',
-        tags: ['n8n', 'DeepSeek', 'AI Agents', 'PDF', 'Google Sheets'],
+        tags: ['n8n', 'DeepSeek', 'Agentic AI', 'PDF', 'Google Sheets'],
         repo: '#',
         demo: '#'
       },
@@ -190,17 +190,17 @@ export const contentEn: Content = {
         demo: '#'
       },
       {
-        title: '"Aide-moi" web app + AI agent',
+        title: '"Aide-moi" web app + Agentic AI',
         description:
-          'Smart assistance web app based on problem descriptions. The frontend (React, Vite, TypeScript) triggers POST requests to local n8n webhooks, securely exposed via Cloudflare Tunnel. Data is processed by an n8n workflow orchestrating an AI agent (DeepSeek Chat Model), then returned synchronously via the "Respond to Webhook" mechanism. The project covers UX, HTTP integration, controlled exposure of local services, and network issues (CORS, HTTP methods, tunnels).',
+          'Smart assistance web app based on problem descriptions. The frontend (React, Vite, TypeScript) triggers POST requests to local n8n webhooks, securely exposed via Cloudflare Tunnel. Data is processed by an n8n workflow orchestrating an Agentic AI (DeepSeek Chat Model), then returned synchronously via the "Respond to Webhook" mechanism. The project covers UX, HTTP integration, controlled exposure of local services, and network issues (CORS, HTTP methods, tunnels).',
         tags: ['React', 'TypeScript', 'n8n', 'Cloudflare Tunnel', 'DeepSeek'],
         repo: '#',
         demo: '#'
       },
       {
-        title: 'Conversational AI agent on Telegram',
+        title: 'Conversational Agentic AI on Telegram',
         description:
-          'Designed and deployed an AI agent on Telegram, orchestrated via n8n, capable of understanding complex requests, retrieving real-time information (ERP API), and executing actions via external tools (Google APIs, automations). Webhook-based architecture with LLM integration (Grok API) and decision workflows, demonstrating the difference between a passive chatbot and an action-oriented intelligent agent.',
+          'Designed and deployed an Agentic AI on Telegram, orchestrated via n8n, capable of understanding complex requests, retrieving real-time information (ERP API), and executing actions via external tools (Google APIs, automations). Webhook-based architecture with LLM integration (Grok API) and decision workflows, demonstrating the difference between a passive chatbot and an action-oriented intelligent agent.',
         tags: ['Telegram', 'n8n', 'Grok API', 'Webhooks', 'Automation'],
         repo: '#',
         demo: '#'
@@ -304,7 +304,8 @@ export const contentEn: Content = {
     helper: 'The form opens your default email client. n8n integration can be enabled later.'
   },
   footer: {
-    text: '© 2026 Mame Libasse Mboup. All rights reserved.'
+    text: '© 2026 Mame Libasse Mboup. All rights reserved.',
+    marquee: "Let's build Together"
   },
   ui: {
     themeToggle: 'Toggle theme',
@@ -318,7 +319,7 @@ export const contentEn: Content = {
         email: 'Email',
         phone: 'Phone'
       },
-      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'Analytics', 'AI Automation']
+      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'Analytics', 'AI Automation', 'Agentic AI']
     },
     sectionKickers: {
       profile: 'Profile',

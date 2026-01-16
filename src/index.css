@@ -6,13 +6,14 @@
 
 :root {
   color-scheme: light;
-  --canvas: 210 28% 96%;
-  --surface: 0 0% 100%;
+  --canvas: 34 43% 94%;
+  --surface: 36 33% 97%;
   --text: 224 32% 14%;
   --muted: 222 12% 46%;
-  --accent: 178 72% 40%;
-  --accent-strong: 178 78% 34%;
-  --border: 220 12% 86%;
+  --accent: 210 58% 52%;
+  --accent-strong: 210 65% 45%;
+  --hover-accent: 210 58% 52%;
+  --border: 32 18% 84%;
 }
 
 .dark {
@@ -21,8 +22,9 @@
   --surface: 225 22% 12%;
   --text: 210 20% 96%;
   --muted: 216 12% 68%;
-  --accent: 178 84% 46%;
-  --accent-strong: 178 88% 40%;
+  --accent: 210 58% 52%;
+  --accent-strong: 210 65% 45%;
+  --hover-accent: 210 58% 52%;
   --border: 225 15% 22%;
 }
 
@@ -51,9 +53,9 @@ html {
   position: fixed;
   inset: -20% -10% auto -10%;
   height: 45rem;
-  background: radial-gradient(circle at 20% 20%, hsl(var(--accent) / 0.12), transparent 45%),
-    radial-gradient(circle at 70% 10%, hsl(var(--accent) / 0.08), transparent 40%),
-    radial-gradient(circle at 40% 60%, hsl(var(--accent) / 0.06), transparent 50%);
+  background: radial-gradient(circle at 20% 20%, hsl(var(--hover-accent) / 0.12), transparent 45%),
+    radial-gradient(circle at 70% 10%, hsl(var(--hover-accent) / 0.08), transparent 40%),
+    radial-gradient(circle at 40% 60%, hsl(var(--hover-accent) / 0.06), transparent 50%);
   filter: blur(0px);
   z-index: 0;
   pointer-events: none;
@@ -102,11 +104,58 @@ body:hover .gradient-mesh {
 }
 
 .card {
-  @apply rounded-2xl border border-border/70 bg-surface/80 p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow;
+  @apply rounded-2xl border border-border/80 bg-surface/90 p-6 shadow-sm transition dark:border-border/70 dark:bg-surface/80;
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+  border-color: hsl(var(--hover-accent) / 0.45);
+  box-shadow: 0 0 40px hsl(var(--hover-accent) / 0.22);
 }
 
 .input-field {
   @apply w-full rounded-xl border border-border bg-surface/80 px-4 py-3 text-sm text-text placeholder:text-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 0 2.5rem;
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-shrink: 0;
+  min-width: 100%;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-text {
+  font-family: 'Space Grotesk', 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: hsl(var(--text) / 0.25);
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 :root {
