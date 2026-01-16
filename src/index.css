@@ -136,6 +136,11 @@ body:hover .gradient-mesh {
   background: hsl(var(--card) / 0.94);
 }
 
+.dark .card {
+  background: hsl(var(--card) / 0.45);
+  border-color: hsl(var(--border) / 0.45);
+}
+
 .card:hover {
   transform: translateY(-0.25rem);
   border-color: hsl(var(--hover-accent) / 0.3);
