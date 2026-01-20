@@ -6,7 +6,7 @@
     <meta name="description" content="Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer." />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href="https://libasse.tech" />
-    <meta property="og:title" content="Mame Libasse Mboup | Data Scientist" />
+    <meta property="og:title" content="Libasse | Data & IA" />
     <meta
       property="og:description"
       content="Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer."
@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://libasse.tech" />
     <meta property="og:site_name" content="Mame Libasse Mboup" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Mame Libasse Mboup | Data Scientist" />
+    <meta name="twitter:title" content="Libasse | Data & I" />
     <meta
       name="twitter:description"
       content="Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer."
@@ -61,6 +61,21 @@
 
       let chatApp;
 
+      const bindCloseButton = () => {
+        const root = document.querySelector('#n8n-chat');
+        if (!root) return;
+        const closeButton = root.querySelector('.chat-close-button');
+        const toggleButton = root.querySelector('.chat-window-toggle');
+        if (!closeButton || !toggleButton) return;
+        if (closeButton.dataset.bound === 'true') return;
+        closeButton.dataset.bound = 'true';
+        closeButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          toggleButton.click();
+        });
+      };
+
       const initChat = (lang) => {
         const selected = chatCopy[lang] || chatCopy.fr;
 
@@ -74,6 +89,7 @@
 
         chatApp = createChat({
           webhookUrl: '%VITE_CHAT_WEBHOOK_URL%',
+          showWindowCloseButton: true,
           defaultLanguage: lang,
           i18n: {
             fr: {
@@ -90,6 +106,10 @@
             }
           },
           initialMessages: selected.initialMessages
+        });
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(bindCloseButton);
         });
       };
 

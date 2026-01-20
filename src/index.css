@@ -207,7 +207,7 @@ body:hover .gradient-mesh {
   --chat--font-family: 'IBM Plex Sans', 'Space Grotesk', system-ui, -apple-system, sans-serif;
   --chat--border-radius: 22px;
   --chat--window--width: 360px;
-  --chat--window--height: 520px;
+  --chat--window--height: 620px;
   --chat--window--border-radius: 28px;
   --chat--window--border: 1px solid hsl(var(--border) / 0.6);
   --chat--header--background: hsl(var(--surface) / 0.9);
@@ -288,12 +288,20 @@ body:hover .gradient-mesh {
 
 .n8n-chat .chat-header,
 #n8n-chat .chat-header {
-  text-align: center;
+  text-align: left;
+  position: relative;
 }
 
 .n8n-chat .chat-heading,
 #n8n-chat .chat-heading {
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.n8n-chat .chat-header-content,
+#n8n-chat .chat-header-content {
+  position: relative;
+  width: 100%;
 }
 
 .n8n-chat .chat-heading h1,
@@ -307,7 +315,44 @@ body:hover .gradient-mesh {
 
 .n8n-chat .chat-close-button,
 #n8n-chat .chat-close-button {
-  display: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: hsl(var(--surface) / 0.55);
+  border: 1px solid hsl(var(--border) / 0.5);
+  color: hsl(var(--text));
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(6px) saturate(1.05);
+  -webkit-backdrop-filter: blur(6px) saturate(1.05);
+}
+
+.n8n-chat .chat-close-button::before,
+#n8n-chat .chat-close-button::before {
+  content: '';
+  font-size: 1rem;
+  line-height: 1;
+  color: currentColor;
+}
+
+.n8n-chat .chat-close-button svg,
+#n8n-chat .chat-close-button svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.n8n-chat .chat-close-button:hover,
+#n8n-chat .chat-close-button:hover {
+  background: hsl(var(--surface) / 0.75);
+  border-color: hsl(var(--border) / 0.7);
+  transform: translateY(-50%) scale(1.08);
 }
 
 .n8n-chat .chat-layout,
