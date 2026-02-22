@@ -60,6 +60,7 @@
       };
 
       let chatApp;
+      const chatWebhookUrl = import.meta.env.VITE_CHAT_WEBHOOK_URL;
 
       const bindCloseButton = () => {
         const root = document.querySelector('#n8n-chat');
@@ -79,6 +80,11 @@
       const initChat = (lang) => {
         const selected = chatCopy[lang] || chatCopy.fr;
 
+        if (!chatWebhookUrl) {
+          console.warn('VITE_CHAT_WEBHOOK_URL is missing. Chatbot init skipped.');
+          return;
+        }
+
         if (chatApp) {
           chatApp.unmount();
           chatApp = null;
@@ -88,7 +94,7 @@
         if (target) target.remove();
 
         chatApp = createChat({
-          webhookUrl: '%VITE_CHAT_WEBHOOK_URL%',
+          webhookUrl: chatWebhookUrl,
           showWindowCloseButton: true,
           defaultLanguage: lang,
           i18n: {

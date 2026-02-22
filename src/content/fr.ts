@@ -30,7 +30,7 @@ export const contentFr: Content = {
     ctaProjects: 'Découvrir mes projets',
     ctaCv: 'En savoir plus avec mon CV',
     scrollHint: 'Explorer mon parcours',
-    cvUrl: 'cv_libasse.pdf',
+    cvUrl: 'CV_Mame_Libasse_Mboup.pdf',
     status: 'Disponible pour collaborations en data & IA appliquée'
   },
   about: {
