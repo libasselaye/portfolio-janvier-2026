@@ -143,6 +143,14 @@ export const contentEn: Content = {
     subtitle: 'A selection of academic and personal projects in AI, data, and analytics.',
     items: [
       {
+        title: 'LiBrain - Personal multi-agent AI assistant',
+        description:
+          'Designed and deployed a full-stack personal AI assistant able to manage emails, calendar, contacts, and finances in natural language. Multi-agent architecture with a central orchestrator (n8n) routing requests to 4 specialized agents connected to Gmail, Google Calendar, and Airtable via OAuth2. Deployed a centralized LLM proxy (LiteLLM) with role-based intelligent routing, multi-provider fallback (Groq, Gemini, DeepSeek), and real-time cost monitoring. Production infrastructure on Ubuntu VPS with Docker, Traefik SSL, UFW, and Fail2ban.',
+        tags: ['n8n', 'LiteLLM', 'React', 'Docker', 'Traefik', 'Groq', 'Gemini', 'Supabase', 'Agentic AI', 'LLMOps'],
+        repo: 'https://github.com/libasselaye/librain',
+        demo: 'https://librain.libasse.tech'
+      },
+      {
         title: 'Full-stack web portfolio with backend automation and chatbot in production',
         description:
           'Built a modern, scalable portfolio (React, Vite, Tailwind) with a real-time contact system and an interactive chatbot to engage visitors and streamline contact. Designed an event-driven backend architecture with n8n (webhooks, automated workflows) to receive, process, and notify user messages by email (Gmail API, OAuth 2.0). Deployed on VPS with Docker and Nginx, advanced network configuration (CORS, reverse proxy, ports, environments), and CI/CD integration via GitHub.',

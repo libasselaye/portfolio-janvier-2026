@@ -142,6 +142,14 @@ export const contentFr: Content = {
     subtitle: 'Sélection de projets académiques et personnels en IA, data et analytics.',
     items: [
       {
+        title: 'LiBrain - Assistant IA multi-agents personnel',
+        description:
+          "Conception et déploiement d'un assistant IA personnel full-stack capable de gérer emails, agenda, contacts et finances en langage naturel. Architecture multi-agents avec orchestrateur central (n8n) routant vers 4 agents spécialisés connectés à Gmail, Google Calendar et Airtable via OAuth2. Déploiement d'un proxy LLM centralisé (LiteLLM) avec routage intelligent par alias de rôle, fallback automatique multi-providers (Groq, Gemini, DeepSeek) et monitoring des coûts en temps réel. Infrastructure de production sur VPS Ubuntu avec Docker, Traefik SSL, UFW et Fail2ban.",
+        tags: ['n8n', 'LiteLLM', 'React', 'Docker', 'Traefik', 'Groq', 'Gemini', 'Supabase', 'Agentic AI', 'LLMOps'],
+        repo: 'https://github.com/libasselaye/librain',
+        demo: 'https://librain.libasse.tech'
+      },
+      {
         title: 'Création d’un portfolio web full-stack avec automatisation back-end et chatbot en production',
         description:
           'Développement d’un portfolio web moderne et évolutif (React, Vite, Tailwind) intégrant un système de contact temps réel ainsi qu’un chatbot interactif permettant d’échanger avec les visiteurs et de faciliter la prise de contact. Conception d’une architecture back-end événementielle basée sur n8n (webhooks, workflows automatisés) permettant la réception, le traitement et la notification des messages utilisateurs par email (Gmail API, OAuth 2.0). Déploiement sur VPS avec Docker et Nginx, configuration réseau avancée (CORS, reverse proxy, ports, environnements), et intégration CI/CD via GitHub.',

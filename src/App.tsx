@@ -115,9 +115,9 @@ export default function App() {
 
       <main className="relative z-10">
         <section id="hero" className="scroll-mt-28">
-          <div className="mx-auto grid max-w-6xl gap-16 px-6 py-28 lg:items-start lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mx-auto grid max-w-6xl gap-10 px-6 pb-12 pt-16 md:pb-14 md:pt-20 lg:items-start lg:grid-cols-[1.1fr_0.9fr] lg:pb-16 lg:pt-24">
             <Reveal>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <span className="badge">{content.hero.status}</span>
                 <div className="space-y-3">
                   <h1 className="font-heading text-4xl font-semibold tracking-tight md:text-5xl">
@@ -155,7 +155,7 @@ export default function App() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <Card className="glass space-y-5 lg:mt-14 lg:self-start">
+              <Card className="glass space-y-5 lg:self-start">
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-muted">{content.ui.heroProfile.kicker}</p>
                   <h2 className="mt-2 font-heading text-2xl font-semibold">
@@ -196,7 +196,7 @@ export default function App() {
                 </Reveal>
               ))}
             </div>
-            <Card className="glass">
+            <Card className="glass lg:self-start">
               <h3 className="font-heading text-xl font-semibold">{content.ui.strengthsTitle}</h3>
               <ul className="mt-4 space-y-3 text-sm text-muted">
                 {content.about.highlights.map((item) => (
