@@ -153,7 +153,7 @@ export const contentEn: Content = {
       {
         title: 'LiBrain - Personal multi-agent AI assistant',
         description:
-          'Designed and deployed a full-stack personal AI assistant able to manage emails, calendar, contacts, and finances in natural language. Multi-agent architecture with a central orchestrator (n8n) routing requests to 4 specialized agents connected to Gmail, Google Calendar, and Airtable via OAuth2. Deployed a centralized LLM proxy (LiteLLM) with role-based intelligent routing, multi-provider fallback (Groq, Gemini, DeepSeek), and real-time cost monitoring. Delivery stack used in the GitHub project: React 19, Vite 7, TypeScript, React Router, Tailwind CSS v4, Supabase Auth, n8n, LiteLLM, Docker Compose, and Traefik.',
+          'Designed and deployed a full-stack personal AI assistant able to manage emails, calendar, contacts, and finances in natural language. Multi-agent architecture with a central orchestrator (n8n) routing requests to 4 specialized agents connected to Gmail, Google Calendar, and Airtable via OAuth2. Deployed a centralized LLM proxy (LiteLLM) with role-based intelligent routing, multi-provider fallback (Groq, Gemini, DeepSeek), and real-time cost monitoring.',
         tags: ['React 19', 'Vite 7', 'TypeScript', 'React Router', 'Tailwind CSS v4', 'Supabase Auth', 'n8n', 'LiteLLM', 'Docker Compose', 'Traefik', 'Groq', 'DeepSeek'],
         repo: 'https://github.com/libasselaye/librain',
         demo: 'https://librain.libasse.tech'
