@@ -143,6 +143,42 @@ export const contentEn: Content = {
     subtitle: 'A selection of academic and personal projects in AI, data, and analytics.',
     items: [
       {
+        title: 'LibLeadIN - Agentic AI-driven B2B prospecting',
+        description:
+          'Designed a full-stack prospecting platform centralizing the sales cycle: lead discovery, email/LinkedIn enrichment, AI-personalized message generation, delivery, and status tracking. Next.js + API Routes architecture connected to n8n (4 workflows) with operational storage in Google Sheets, real-time business dashboard (send rate, recent activity, sector split), and VPS deployment synced with GitHub for robust delivery.',
+        tags: ['Next.js', 'n8n', 'OpenAI', 'DeepSeek', 'Apify', 'Hunter', 'Gmail OAuth2', 'Google Sheets', 'JWT', 'Tailwind CSS'],
+        repo: '#',
+        demo: 'https://libleadin.duckdns.org'
+      },
+      {
+        title: 'B2B AI Prospecting Agent',
+        description: 'Google Places scraping, email/LinkedIn enrichment, and structured lead storage.',
+        tags: ['n8n', 'Apify', 'Hunter', 'Google Sheets'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Email Preview Agent',
+        description: 'AI generation of personalized outreach emails (subject + body) based on lead profile.',
+        tags: ['OpenAI', 'DeepSeek', 'n8n'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Email Send Agent',
+        description: 'HTML email delivery through Gmail OAuth2 with automatic send-status updates.',
+        tags: ['Gmail API', 'n8n', 'Automation'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Read Leads Agent',
+        description: 'Lead read/sync from Google Sheets for dashboarding and pipeline management.',
+        tags: ['Google Sheets', 'API', 'Data Sync'],
+        repo: '#',
+        demo: '#'
+      },
+      {
         title: 'LiBrain - Personal multi-agent AI assistant',
         description:
           'Designed and deployed a full-stack personal AI assistant able to manage emails, calendar, contacts, and finances in natural language. Multi-agent architecture with a central orchestrator (n8n) routing requests to 4 specialized agents connected to Gmail, Google Calendar, and Airtable via OAuth2. Deployed a centralized LLM proxy (LiteLLM) with role-based intelligent routing, multi-provider fallback (Groq, Gemini, DeepSeek), and real-time cost monitoring. Production infrastructure on Ubuntu VPS with Docker, Traefik SSL, UFW, and Fail2ban.',

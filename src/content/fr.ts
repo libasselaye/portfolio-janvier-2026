@@ -142,6 +142,42 @@ export const contentFr: Content = {
     subtitle: 'Sélection de projets académiques et personnels en IA, data et analytics.',
     items: [
       {
+        title: 'LibLeadIN - Prospection B2B automatisée par agents IA',
+        description:
+          "Conception d'une plateforme full-stack de prospection centralisant le cycle commercial: recherche de prospects, enrichissement email/LinkedIn, génération de messages IA personnalisés, envoi et suivi des statuts. Architecture Next.js + API Routes connectée à n8n (4 workflows) avec stockage opérationnel sur Google Sheets, dashboard métier en temps réel (taux d'envoi, activité récente, répartition sectorielle) et déploiement VPS synchronisé avec GitHub pour une livraison robuste.",
+        tags: ['Next.js', 'n8n', 'OpenAI', 'DeepSeek', 'Apify', 'Hunter', 'Gmail OAuth2', 'Google Sheets', 'JWT', 'Tailwind CSS'],
+        repo: '#',
+        demo: 'https://libleadin.duckdns.org'
+      },
+      {
+        title: 'B2B AI Prospecting Agent',
+        description: 'Scraping Google Places, enrichissement email/LinkedIn et stockage structuré des leads.',
+        tags: ['n8n', 'Apify', 'Hunter', 'Google Sheets'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Email Preview Agent',
+        description: 'Génération IA d’emails personnalisés (objet + corps) selon le profil de chaque prospect.',
+        tags: ['OpenAI', 'DeepSeek', 'n8n'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Email Send Agent',
+        description: 'Envoi d’emails HTML via Gmail OAuth2 avec mise à jour automatique du statut d’envoi.',
+        tags: ['Gmail API', 'n8n', 'Automation'],
+        repo: '#',
+        demo: '#'
+      },
+      {
+        title: 'Read Leads Agent',
+        description: 'Lecture et synchronisation des leads depuis Google Sheets pour le dashboard et la gestion prospects.',
+        tags: ['Google Sheets', 'API', 'Data Sync'],
+        repo: '#',
+        demo: '#'
+      },
+      {
         title: 'LiBrain - Assistant IA multi-agents personnel',
         description:
           "Conception et déploiement d'un assistant IA personnel full-stack capable de gérer emails, agenda, contacts et finances en langage naturel. Architecture multi-agents avec orchestrateur central (n8n) routant vers 4 agents spécialisés connectés à Gmail, Google Calendar et Airtable via OAuth2. Déploiement d'un proxy LLM centralisé (LiteLLM) avec routage intelligent par alias de rôle, fallback automatique multi-providers (Groq, Gemini, DeepSeek) et monitoring des coûts en temps réel. Infrastructure de production sur VPS Ubuntu avec Docker, Traefik SSL, UFW et Fail2ban.",
