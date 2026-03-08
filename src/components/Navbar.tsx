@@ -29,13 +29,15 @@ export default function Navbar({
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-canvas/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5">
-        <nav className="hidden flex-1 items-center gap-6 md:flex">
+        <nav className="hidden flex-1 items-center gap-2 md:flex">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`text-sm font-semibold transition hover:text-text ${
-                activeId === item.id ? 'text-text' : 'text-muted'
+              className={`rounded-full px-3 py-2 text-sm font-semibold transition-all duration-200 ${
+                activeId === item.id
+                  ? 'bg-surface/80 text-text shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
+                  : 'text-muted hover:bg-surface/40 hover:text-text'
               }`}
               aria-current={activeId === item.id ? 'page' : undefined}
             >
@@ -80,8 +82,10 @@ export default function Navbar({
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`text-sm font-semibold transition hover:text-text ${
-                activeId === item.id ? 'text-text' : 'text-muted'
+              className={`rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 ${
+                activeId === item.id
+                  ? 'bg-surface/80 text-text shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
+                  : 'text-muted hover:bg-surface/40 hover:text-text'
               }`}
               aria-current={activeId === item.id ? 'page' : undefined}
               onClick={() => setOpen(false)}
