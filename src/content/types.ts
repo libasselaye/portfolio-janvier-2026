@@ -128,6 +128,10 @@ export type Content = {
   };
   ui: {
     themeToggle: string;
+    themeOptions: {
+      light: string;
+      dark: string;
+    };
     menuToggle: string;
     heroProfile: {
       kicker: string;

@@ -108,8 +108,9 @@ export default function App() {
         language={language}
         onLanguageChange={setLanguage}
         theme={theme}
-        onThemeToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+        onThemeChange={setTheme}
         themeLabel={content.ui.themeToggle}
+        themeOptions={content.ui.themeOptions}
         menuLabel={content.ui.menuToggle}
       />
 

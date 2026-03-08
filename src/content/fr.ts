@@ -331,6 +331,10 @@ export const contentFr: Content = {
   },
   ui: {
     themeToggle: 'Changer le thème',
+    themeOptions: {
+      light: 'Clair',
+      dark: 'Sombre'
+    },
     menuToggle: 'Afficher le menu',
     heroProfile: {
       kicker: 'Profil',

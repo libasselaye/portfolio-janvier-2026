@@ -9,8 +9,12 @@ type NavbarProps = {
   language: 'fr' | 'en';
   onLanguageChange: (lang: 'fr' | 'en') => void;
   theme: Theme;
-  onThemeToggle: () => void;
+  onThemeChange: (theme: Theme) => void;
   themeLabel: string;
+  themeOptions: {
+    light: string;
+    dark: string;
+  };
   menuLabel: string;
 };
 
@@ -20,8 +24,9 @@ export default function Navbar({
   language,
   onLanguageChange,
   theme,
-  onThemeToggle,
+  onThemeChange,
   themeLabel,
+  themeOptions,
   menuLabel
 }: NavbarProps) {
   const [open, setOpen] = useState(false);
@@ -47,7 +52,12 @@ export default function Navbar({
         </nav>
         <div className="flex items-center gap-3">
           <LanguageToggle language={language} onChange={onLanguageChange} />
-          <ThemeToggle theme={theme} onToggle={onThemeToggle} label={themeLabel} />
+          <ThemeToggle
+            theme={theme}
+            onChange={onThemeChange}
+            label={themeLabel}
+            options={themeOptions}
+          />
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}

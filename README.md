@@ -1,50 +1,122 @@
 # Portfolio 2026 — Mame Libasse Mboup
 
-Ce dépôt contient la version actuelle de mon portfolio professionnel Data / IA.
-L'objectif est d'avoir un site clair, crédible et maintenable, capable de présenter mon parcours, mes expériences, mes projets et mes travaux IA de façon structurée.
+Ce dépôt contient mon portfolio professionnel Data / IA.  
+Je l’ai conçu comme une vitrine technique, claire et maintenable, pour présenter mon parcours, mes expériences, mes projets et ma façon de construire des solutions orientées impact métier.
 
-## Vue d'ensemble
+---
 
-Le site est conçu comme une page unique fluide, avec navigation par ancres.
-Il met en avant :
+## Ce que je montre dans ce portfolio
 
-- mon positionnement Data Scientist / Machine Learning Engineer
+Le site est organisé en one-page avec navigation fluide par ancres. On y retrouve :
+
+- un hero orienté proposition de valeur
+- une section « À propos »
 - mes expériences professionnelles
 - ma formation
-- mon expertise technique
-- mes projets (dont LiBrain et LibLeadIN)
-- ma section contact avec formulaire et assistant conversationnel
+- mon expertise technique (Data, ML, Engineering, Automation, Agentic AI)
+- mes projets et recherches
+- une section contact avec formulaire
+- un assistant conversationnel intégré (LibasseAI)
+
+L’objectif n’est pas juste de “montrer un CV”, mais de rendre ma démarche lisible rapidement : vision, exécution, résultats.
+
+---
 
 ## Fonctionnalités principales
 
-- Interface bilingue FR / EN avec changement instantané.
-- Mode sombre / mode clair.
-- Cartes projets homogènes et faciles à enrichir.
-- CV adapté à la langue sélectionnée.
-- Formulaire de contact opérationnel.
-- Assistant LibasseAI intégré dans l'interface.
-- Design responsive (desktop et mobile).
+- **Bilingue FR / EN** avec bascule instantanée
+- **Mode clair / sombre** avec préférence persistée
+- **CV contextualisé par langue** (FR ouvre le CV FR, EN ouvre le CV EN)
+- **Sections animées** de manière discrète (scroll/reveal)
+- **Cards projets homogènes** et faciles à enrichir
+- **Formulaire de contact** connecté à un webhook externe
+- **Chatbot LibasseAI** intégré à l’interface
+- **Responsive** desktop / tablette / mobile
 
-## Organisation du contenu
+---
 
-Le contenu éditorial est centralisé pour simplifier les mises à jour.
+## Stack utilisée
 
-- `src/content/fr.ts` pour le contenu français
-- `src/content/en.ts` pour le contenu anglais
-- `src/content/types.ts` pour la structure commune
+- React + Vite + TypeScript
+- Tailwind CSS
+- Framer Motion (animations légères)
+- Site statique optimisé SEO (build Vite)
+- Déploiement compatible GitHub + VPS/Nginx
 
-Règle de maintenance : toute mise à jour doit être appliquée dans les deux langues.
+---
 
-## Mise à jour du CV
+## Architecture du projet
 
-Les fichiers CV sont stockés dans `public/`.
+```txt
+src/
+  components/        # Composants UI réutilisables
+  content/           # Contenu éditorial FR/EN + typage
+    fr.ts
+    en.ts
+    types.ts
+  hooks/             # Hooks utilitaires (sections actives, etc.)
+  App.tsx            # Composition globale des sections
+  index.css          # Thème global + styles custom
+public/
+  CV_Mame_Libasse_Mboup.pdf
+  CV_Mame_Libasse_Mboup_EN.pdf
+  favicon.ico
+```
 
-- `CV_Mame_Libasse_Mboup.pdf`
-- `CV_Mame_Libasse_Mboup_EN.pdf`
+---
 
-Pour mettre à jour le CV, remplacer ces fichiers en conservant les mêmes noms.
+## Règle de maintenance du contenu
+
+Toute évolution de contenu doit rester **symétrique FR/EN**.
+
+### Ajouter / modifier un projet
+
+Je mets à jour :
+
+- `src/content/fr.ts` → `projects.items`
+- `src/content/en.ts` → `projects.items`
+
+Chaque projet suit la même structure :
+
+- `title`
+- `description`
+- `tags`
+- `repo`
+- `demo`
+
+Ça permet de garder un rendu homogène automatiquement sans toucher au layout.
+
+---
+
+## Gestion des CV
+
+Les deux CV sont servis depuis `public/` :
+
+- `CV_Mame_Libasse_Mboup.pdf` (FR)
+- `CV_Mame_Libasse_Mboup_EN.pdf` (EN)
+
+Pour les mettre à jour, je remplace simplement les fichiers en conservant les mêmes noms.
+
+---
+
+## Variables d’environnement
+
+Je garde toute configuration externe hors du code source via `.env`.
+
+Exemple minimal :
+
+```bash
+VITE_WEBHOOK_URL=https://your-domain/webhook/contact
+VITE_CHAT_WEBHOOK_URL=https://your-domain/webhook/chat
+```
+
+> Important : je ne versionne jamais d’identifiants, tokens ou URLs sensibles dans la documentation publique.
+
+---
 
 ## Lancer le projet en local
+
+Pré-requis : Node.js 18+ et npm.
 
 ```bash
 npm install
@@ -58,9 +130,14 @@ npm run build
 npm run preview
 ```
 
-## Publication
+### Astuce si `ERR_CONNECTION_REFUSED`
 
-Push GitHub :
+Ce message signifie généralement que le serveur Vite n’est pas lancé (ou a été arrêté).  
+Je relance simplement `npm run dev` et je garde le terminal actif.
+
+---
+
+## Workflow Git (simple et propre)
 
 ```bash
 git add .
@@ -68,7 +145,13 @@ git commit -m "update portfolio"
 git push origin main
 ```
 
-Déploiement VPS :
+Je préfère des commits atomiques (une intention claire par commit : design, contenu, chatbot, etc.).
+
+---
+
+## Déploiement VPS (Nginx)
+
+Depuis le serveur :
 
 ```bash
 cd /var/www/portfolio-janvier-2026
@@ -79,18 +162,36 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-## Bonnes pratiques d'exploitation
+Checklist post-déploiement :
 
-- Vérifier les contenus FR/EN à chaque évolution.
-- Vérifier les liens Repo / Démo avant publication.
-- Tester le formulaire et l'assistant après chaque déploiement.
-- Utiliser un hard refresh navigateur après mise en production.
+- hard refresh navigateur
+- test formulaire contact
+- test chatbot
+- vérification des liens CV/Repo/Démo
 
-## Note sécurité
+---
 
-Les paramètres d'intégration et de communication externe sont gérés via la configuration d'environnement du projet.
-Ils ne sont pas détaillés dans ce README pour éviter d'exposer des informations sensibles.
+## Contrôle qualité avant push
+
+Avant chaque push, je vérifie :
+
+- cohérence FR/EN
+- cohérence des CTA et ancres
+- lisibilité light/dark
+- rendu mobile
+- absence de liens cassés
+- build OK (`npm run build`)
+
+---
+
+## Sécurité & confidentialité
+
+- Aucune clé/API token ne doit être exposée dans le code front
+- Toute intégration externe passe par variable d’environnement
+- Les infos d’infrastructure (adresses, secrets, credentials) restent hors documentation publique
+
+---
 
 ## Licence
 
-Projet personnel — usage vitrine.
+Projet personnel (usage portfolio).
