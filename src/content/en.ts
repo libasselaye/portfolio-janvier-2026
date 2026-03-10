@@ -80,38 +80,40 @@ export const contentEn: Content = {
     subtitle: 'Data and AI contributions across healthcare, telecom, and energy.',
     items: [
       {
-        role: 'Data Scientist',
-        company: 'Innovation e-Santé Sud',
+        role: 'Data Scientist – Public Health',
+        company: 'Innovation e-Santé Sud (GRADeS PACA)',
         period: 'Oct. 2022 – Present',
         location: 'Hyères, France',
         highlights: [
-          'Health data analysis and modeling to support regional steering (Ségur, ROR, e-parcours) and improve care coordination.',
-          'Development of strategic dashboards (CONTESS, OKAPI, ETP, emergency services, Samu/Smur, hospital capacity).',
-          'Migration of BI reports from Jaspersoft to SAS Viya, automation with Python/SQL, and design of regional mapping of available beds.',
-          'Access administration, multi-source data integration, and active participation in public health digital projects in the PACA region.',
-          'TRU modeling (ARS PACA): development of a tool to identify, at municipal level, factors influencing avoidable emergency visits based on demographic, health, care access, and socioeconomic variables to guide deployment of unscheduled care.',
-          'Technical support and guidance for the digital transition of regional health structures.'
+          'Hospital bed mapping: real-time visualization tool for available healthcare capacities, powered by automated data feeds, deployed for crisis management (Covid-19, mass casualty plans, hospital strain) at ARS PACA.',
+          'CONTESS: decision-support dashboard for the Ségur digital health program across 6 sectors, cross-referencing DMP, MSS, INS and Pro Santé Connect usage via multi-source SAS Viya pipelines.',
+          'Development of strategic dashboards to support regional management and improve care coordination (OKAPI, ETP, Emergency/SAMU-SMUR, ROR, E-parcours).',
+          'TRU Modeling (ARS PACA): tool identifying at municipal level the factors influencing avoidable emergency visits, based on demographic, health, care access and socioeconomic variables, to guide unscheduled care deployment.',
+          'Migration of BI reports from Jaspersoft to SAS Viya and automation of data processing with Python/SQL.',
+          'Regional SAS Viya platform administration (access rights, Caslibs, user groups, multi-source data integration).',
+          'Automated medical data extraction (reports, prescriptions, lab results in PDF/images) via multimodal LLM (Gemini), with structured output to Google Sheets using n8n.',
+          'Healthcare professional address verification through cross-checking via Google Maps (Apify) and PagesJaunes (SerpAPI), with inconsistency detection and automatic database updates.',
+          'Intelligent Redmine ticket triage: automatic classification and assignment via LLM analysis, priority determination, consistency checks and dynamic agent assignment within DTSI.'
         ]
       },
       {
-        role: 'Data Scientist',
+        role: 'Data Scientist – Work-Study',
         company: 'Orange',
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
         highlights: [
-          'Development of statistical models on heterogeneous data streams.',
-          'Processing textual data for automation and monitoring.',
-          'Automation via UiPath and advanced visualizations (Kibana, Power BI).'
+          'RPA automation (UI Path) and advanced data visualization with Kibana and Power BI for operational team management.',
+          'Development of statistical models on large-scale heterogeneous data streams (network monitoring).'
         ]
       },
       {
-        role: 'Data Engineer - Developer',
+        role: 'Data Engineer – Internship',
         company: 'Enedis',
         period: 'Apr. 2021 – Sept. 2021',
         location: 'Toulon, France',
         highlights: [
-          'Development of energy monitoring applications (CodeIgniter).',
-          'Data integration via Denodo (VQL) and analytical reporting.'
+          'Full-stack regional energy monitoring application (CodeIgniter/PHP/MySQL) for real-time field consumption tracking.',
+          'Multi-source data integration via Denodo (VQL), analytical reports for regional management.'
         ]
       }
     ]
@@ -149,6 +151,14 @@ export const contentEn: Content = {
         tags: ['Next.js', 'n8n', 'OpenAI', 'DeepSeek', 'Apify', 'Hunter', 'Gmail OAuth2', 'Google Sheets', 'JWT', 'Tailwind CSS'],
         repo: 'https://github.com/libasselaye/libleadin',
         demo: 'https://libleadin.duckdns.org'
+      },
+      {
+        title: 'LibJobPilot - Intelligent job search automation',
+        description:
+          'Designed and developed a full-stack job-search automation platform targeting Data/AI Engineer roles. It aggregates opportunities from LinkedIn, Indeed, and Glassdoor through intelligent scraping, applies AI scoring for each offer against the candidate profile (0-100 match), and automates applications on Indeed/Glassdoor through headless browser automation. The dashboard includes a Kanban pipeline, real-time metrics, and follow-up suggestions. React + Vite + TypeScript architecture connected to 5 n8n workflows orchestrating scraping, LLM scoring, Playwright auto-apply, and application tracking, with Supabase storage and a unified LiteLLM proxy.',
+        tags: ['React 19', 'Vite 6', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Zustand', 'n8n', 'Supabase', 'LiteLLM', 'Groq', 'Playwright', 'Browserless', 'Docker', 'Traefik'],
+        repo: '#',
+        demo: '#'
       },
       {
         title: 'LiBrain - Personal multi-agent AI assistant',

@@ -79,38 +79,40 @@ export const contentFr: Content = {
     subtitle: 'Contributions data et IA au service de la santé, des télécoms et de l’énergie.',
     items: [
       {
-        role: 'Data Scientist',
-        company: 'Innovation e-Santé Sud',
-        period: 'Oct. 2022 – Actuellement',
+        role: 'Data Scientist – Santé Publique',
+        company: 'Innovation e-Santé Sud (GRADeS PACA)',
+        period: 'Oct. 2022 – Présent',
         location: 'Hyères, France',
         highlights: [
-          'Analyse et modélisation de données de santé pour appuyer le pilotage régional (Ségur, ROR, e-parcours) et améliorer la coordination des soins.',
-          'Développement de tableaux de bord stratégiques (CONTESS, OKAPI, ETP, Urgences, Samu/Smur, capacités hospitalières).',
-          'Migration de rapports BI de Jaspersoft vers SAS Viya, automatisation de traitements avec Python/SQL, et conception de la cartographie régionale des lits disponibles.',
-          'Administration des accès, intégration de flux multisources, et participation active aux projets numériques de santé publique en région PACA.',
-          "Modélisation TRU (ARS PACA) : Développement d’un outil permettant d’identifier, à l’échelle communale, les facteurs influençant le recours évitable aux urgences, à partir de variables démographiques, sanitaires, d’accès aux soins et socio-économiques, afin d’orienter le déploiement des soins non programmés.",
-          'Support technique et accompagnement de la transition numérique des structures régionales de santé.'
+          "Cartographie des lits hospitaliers : outil temps réel de visualisation des capacités disponibles sur le volet sanitaire, alimenté par des flux automatisés, déployé pour le pilotage de crise (Covid-19, plans blancs, afflux multi-victimes, tensions hospitalières) de l'ARS PACA.",
+          'CONTESS : dashboard d\'aide à la décision du Ségur numérique sur 6 couloirs, croisant les usages DMP, MSS, INS et Pro Santé Connect via pipelines SAS Viya multisources.',
+          'Développement de tableaux de bord stratégiques pour appuyer le pilotage régional et améliorer la coordination des soins (OKAPI, ETP, Urgences-Samu/Smur, ROR, E-parcours).',
+          'Modélisation TRU (ARS PACA) : outil identifiant à l’échelle communale les facteurs influençant le recours évitable aux urgences, à partir de variables démographiques, sanitaires, d’accès aux soins et socio-économiques, pour orienter le déploiement des soins non programmés.',
+          'Migration de rapports BI de Jaspersoft vers SAS Viya et automatisation de traitements Python/SQL.',
+          'Administration plateforme SAS Viya régionale (droits d’accès, Caslibs, groupes d’utilisateurs, intégration de flux multisources).',
+          'Extraction automatisée de données médicales (comptes rendus, ordonnances, analyses biologiques en PDF ou images) via LLM multimodal (Gemini), avec structuration et alimentation automatique d’un fichier Google Sheets exploitable avec n8n.',
+          'Fiabilisation d’adresses de professionnels de santé par vérification croisée via Google Maps (Apify) et PagesJaunes (SerpAPI), avec détection d’incohérences et mise à jour automatique de la base de données.',
+          'Tri intelligent de tickets Redmine : classification et affectation automatique via analyse LLM du contenu métier, détermination de priorité, contrôle de cohérence et assignation dynamique aux agents du pôle DTSI.'
         ]
       },
       {
-        role: 'Data Scientist',
+        role: 'Data Scientist – Alternance',
         company: 'Orange',
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
         highlights: [
-          'Développement de modèles statistiques sur des flux de données hétérogènes.',
-          'Traitement de données textuelles pour l’automatisation et la supervision.',
-          'Mise en œuvre d’automatisations via UI Path et visualisations avancées (Kibana, Power BI).'
+          'Automatisations RPA (UI Path) et datavisualisation avancée avec Kibana et Power BI pour le pilotage opérationnel des équipes.',
+          'Développement de modèles statistiques sur des flux de données hétérogènes à grande échelle (supervision réseau).'
         ]
       },
       {
-        role: 'Data Engineer - Développeur',
+        role: 'Data Engineer – Stage',
         company: 'Enedis',
         period: 'Avr. 2021 – Sept. 2021',
         location: 'Toulon, France',
         highlights: [
-          'Développement d’applications de suivi énergétique (CodeIgniter).',
-          'Intégration de données via Denodo (VQL) et reporting analytique.'
+          'Application full-stack de suivi énergétique régional (CodeIgniter/PHP/MySQL) pour le pilotage terrain de la consommation en temps réel.',
+          'Intégration multi-sources via Denodo (VQL), production de rapports analytiques pour la direction régionale.'
         ]
       }
     ]
@@ -148,6 +150,14 @@ export const contentFr: Content = {
         tags: ['Next.js', 'n8n', 'OpenAI', 'DeepSeek', 'Apify', 'Hunter', 'Gmail OAuth2', 'Google Sheets', 'JWT', 'Tailwind CSS'],
         repo: 'https://github.com/libasselaye/libleadin',
         demo: 'https://libleadin.duckdns.org'
+      },
+      {
+        title: "LibJobPilot - Automatisation intelligente de recherche d'emploi",
+        description:
+          "Conception et développement d'une plateforme full-stack d'automatisation de recherche d'emploi ciblant les postes Data/AI Engineer. Agrégation automatique d'offres depuis LinkedIn, Indeed et Glassdoor via scraping intelligent, scoring IA de chaque offre par rapport au profil candidat (match 0-100), et candidature automatisée sur Indeed/Glassdoor via browser automation headless. Dashboard de suivi avec pipeline Kanban, métriques en temps réel et suggestions de relance. Architecture React + Vite + TypeScript connectée à 5 workflows n8n orchestrant le scraping, le scoring LLM, l'auto-apply Playwright et le suivi des candidatures, avec stockage Supabase et proxy LLM unifié via LiteLLM.",
+        tags: ['React 19', 'Vite 6', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Zustand', 'n8n', 'Supabase', 'LiteLLM', 'Groq', 'Playwright', 'Browserless', 'Docker', 'Traefik'],
+        repo: '#',
+        demo: '#'
       },
       {
         title: 'LiBrain - Assistant IA multi-agents personnel',
