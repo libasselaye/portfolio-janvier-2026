@@ -96,7 +96,7 @@ export const contentFr: Content = {
         ]
       },
       {
-        role: 'Data Scientist – Alternance',
+        role: 'Data Scientist',
         company: 'Orange',
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
@@ -106,7 +106,7 @@ export const contentFr: Content = {
         ]
       },
       {
-        role: 'Data Engineer – Stage',
+        role: 'Data Engineer',
         company: 'Enedis',
         period: 'Avr. 2021 – Sept. 2021',
         location: 'Toulon, France',

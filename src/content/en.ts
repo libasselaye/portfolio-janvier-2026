@@ -97,7 +97,7 @@ export const contentEn: Content = {
         ]
       },
       {
-        role: 'Data Scientist – Work-Study',
+        role: 'Data Scientist',
         company: 'Orange',
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
@@ -107,7 +107,7 @@ export const contentEn: Content = {
         ]
       },
       {
-        role: 'Data Engineer – Internship',
+        role: 'Data Engineer',
         company: 'Enedis',
         period: 'Apr. 2021 – Sept. 2021',
         location: 'Toulon, France',
