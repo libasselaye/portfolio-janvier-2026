@@ -29,6 +29,7 @@ export const contentFr: Content = {
     subheadline: '',
     ctaProjects: 'Découvrir mes projets',
     ctaCv: 'En savoir plus avec mon CV',
+    assistantCta: 'Essayez LibasseAI',
     scrollHint: 'Explorer mon parcours',
     cvUrl: 'CV_Mame_Libasse_Mboup.pdf',
     status: 'Disponible pour collaborations en data & IA appliquée'

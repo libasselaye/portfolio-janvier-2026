@@ -96,6 +96,12 @@ export default function App() {
   };
 
   const cvHref = `${import.meta.env.BASE_URL}${content.hero.cvUrl.replace(/^\//, '')}`;
+  const handleOpenChat = () => {
+    const toggle = document.querySelector<HTMLElement>(
+      '.n8n-chat .chat-window-toggle, #n8n-chat .chat-window-toggle'
+    );
+    toggle?.click();
+  };
 
   return (
     <div className="relative min-h-screen bg-canvas text-text">
@@ -132,22 +138,29 @@ export default function App() {
                 {content.hero.subheadline ? (
                   <p className="max-w-xl text-sm text-muted">{content.hero.subheadline}</p>
                 ) : null}
-                <div className="flex flex-wrap gap-4">
-                  <a href="#projects" className="btn-primary">
+                <div className="flex flex-wrap items-center gap-3 lg:flex-nowrap lg:gap-2">
+                  <a href="#projects" className="btn-primary btn-hero">
                     {content.hero.ctaProjects}
                   </a>
                   <a
                     href={encodeURI(cvHref)}
-                    className="btn-secondary"
+                    className="btn-secondary btn-hero"
                     target="_blank"
                     rel="noreferrer noopener"
                   >
                     {content.hero.ctaCv}
                   </a>
+                  <button
+                    type="button"
+                    onClick={handleOpenChat}
+                    className="btn-secondary btn-hero assistant-cta"
+                  >
+                    {content.hero.assistantCta}
+                  </button>
                 </div>
                 <a
                   href="#experience"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-muted transition hover:text-text"
+                  className="hero-scroll"
                 >
                   <span className="text-base">↓</span>
                   {content.hero.scrollHint}
@@ -156,7 +169,7 @@ export default function App() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <Card className="glass space-y-5 lg:self-start">
+              <Card className="glass space-y-4 lg:max-w-[420px] lg:self-start lg:justify-self-end !p-5">
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-muted">{content.ui.heroProfile.kicker}</p>
                   <h2 className="mt-2 font-heading text-2xl font-semibold">

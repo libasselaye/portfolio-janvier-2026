@@ -30,6 +30,7 @@ export const contentEn: Content = {
     subheadline: '',
     ctaProjects: 'Discover my projects',
     ctaCv: 'Learn more with my CV',
+    assistantCta: 'Try LibasseAI',
     scrollHint: 'Explore my journey',
     cvUrl: 'CV_Mame_Libasse_Mboup_EN.pdf',
     status: 'Available for applied data & AI collaborations'
