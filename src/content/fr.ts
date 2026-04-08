@@ -14,7 +14,8 @@ export const contentFr: Content = {
     { id: 'curriculum', label: 'Formation' },
     { id: 'expertise', label: 'Expertise' },
     { id: 'projects', label: 'Projets' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
+    { id: 'assistant', label: 'LibasseAI' }
   ],
   identity: {
     name: 'Mame Libasse Mboup',

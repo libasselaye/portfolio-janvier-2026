@@ -486,6 +486,10 @@ html:not(.dark) .card:hover {
 
 .n8n-chat .chat-window,
 #n8n-chat .chat-window {
+  width: min(680px, calc(100vw - 32px));
+  height: min(78vh, 860px);
+  max-height: calc(100vh - 108px);
+  border-radius: 28px;
   background: hsl(var(--surface) / 0.75);
   box-shadow: 0 8px 20px hsl(var(--text) / 0.12);
   backdrop-filter: blur(12px);
@@ -633,4 +637,22 @@ html:not(.dark) .card:hover {
 .n8n-chat .chat-powered-by,
 #n8n-chat .chat-powered-by {
   color: hsl(var(--muted));
+}
+
+@media (max-width: 1024px) {
+  .n8n-chat .chat-window,
+  #n8n-chat .chat-window {
+    width: min(600px, calc(100vw - 24px));
+    height: min(76vh, 780px);
+  }
+}
+
+@media (max-width: 768px) {
+  .n8n-chat .chat-window,
+  #n8n-chat .chat-window {
+    width: calc(100vw - 16px);
+    height: min(82vh, 760px);
+    max-height: calc(100vh - 88px);
+    border-radius: 24px;
+  }
 }

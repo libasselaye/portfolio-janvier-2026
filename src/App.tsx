@@ -38,7 +38,9 @@ export default function App() {
   );
 
   const content = useMemo(() => contentByLang[language], [language]);
-  const activeId = useActiveSection(content.nav.map((item) => item.id));
+  const activeId = useActiveSection(
+    content.nav.filter((item) => item.id !== 'assistant').map((item) => item.id)
+  );
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -100,7 +102,9 @@ export default function App() {
     const toggle = document.querySelector<HTMLElement>(
       '.n8n-chat .chat-window-toggle, #n8n-chat .chat-window-toggle'
     );
-    toggle?.click();
+    if (toggle?.getAttribute('aria-expanded') !== 'true') {
+      toggle?.click();
+    }
   };
 
   return (
@@ -111,6 +115,7 @@ export default function App() {
       <Navbar
         navItems={content.nav}
         activeId={activeId}
+        onAssistantOpen={handleOpenChat}
         language={language}
         onLanguageChange={setLanguage}
         theme={theme}

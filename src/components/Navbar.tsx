@@ -6,6 +6,7 @@ import ThemeToggle, { type Theme } from './ThemeToggle';
 type NavbarProps = {
   navItems: NavItem[];
   activeId: string;
+  onAssistantOpen: () => void;
   language: 'fr' | 'en';
   onLanguageChange: (lang: 'fr' | 'en') => void;
   theme: Theme;
@@ -21,6 +22,7 @@ type NavbarProps = {
 export default function Navbar({
   navItems,
   activeId,
+  onAssistantOpen,
   language,
   onLanguageChange,
   theme,
@@ -36,18 +38,29 @@ export default function Navbar({
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5">
         <nav className="hidden flex-1 items-center gap-2 md:flex">
           {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`rounded-full px-3 py-2 text-sm font-semibold transition-all duration-200 ${
-                activeId === item.id
-                  ? 'bg-surface/80 text-text shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
-                  : 'text-muted hover:bg-surface/40 hover:text-text'
-              }`}
-              aria-current={activeId === item.id ? 'page' : undefined}
-            >
-              {item.label}
-            </a>
+            item.id === 'assistant' ? (
+              <button
+                key={item.id}
+                type="button"
+                onClick={onAssistantOpen}
+                className="rounded-full px-3 py-2 text-sm font-semibold text-muted transition-all duration-200 hover:bg-surface/40 hover:text-text"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`rounded-full px-3 py-2 text-sm font-semibold transition-all duration-200 ${
+                  activeId === item.id
+                    ? 'bg-surface/80 text-text shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
+                    : 'text-muted hover:bg-surface/40 hover:text-text'
+                }`}
+                aria-current={activeId === item.id ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            )
           ))}
         </nav>
         <div className="flex items-center gap-3">
@@ -89,19 +102,33 @@ export default function Navbar({
       <nav className={`md:hidden ${open ? 'block' : 'hidden'}`}>
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 pb-5">
           {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 ${
-                activeId === item.id
-                  ? 'bg-surface/80 text-text shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
-                  : 'text-muted hover:bg-surface/40 hover:text-text'
-              }`}
-              aria-current={activeId === item.id ? 'page' : undefined}
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </a>
+            item.id === 'assistant' ? (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => {
+                  onAssistantOpen();
+                  setOpen(false);
+                }}
+                className="rounded-xl px-3 py-2 text-left text-sm font-semibold text-muted transition-all duration-200 hover:bg-surface/40 hover:text-text"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`rounded-xl px-3 py-2 text-sm font-semibold transition-all duration-200 ${
+                  activeId === item.id
+                    ? 'bg-surface/80 text-text shadow-[inset_0_0_0_1px_hsl(var(--border)/0.6)]'
+                    : 'text-muted hover:bg-surface/40 hover:text-text'
+                }`}
+                aria-current={activeId === item.id ? 'page' : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </a>
+            )
           ))}
         </div>
       </nav>
