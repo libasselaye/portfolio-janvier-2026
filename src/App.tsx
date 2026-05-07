@@ -127,76 +127,64 @@ export default function App() {
 
       <main className="relative z-10">
         <section id="hero" className="scroll-mt-28">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 pb-12 pt-16 md:pb-14 md:pt-20 lg:items-start lg:grid-cols-[1.1fr_0.9fr] lg:pb-16 lg:pt-24">
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 pb-16 pt-24 text-center md:pb-24 md:pt-32 lg:pb-32 lg:pt-40">
             <Reveal>
-              <div className="space-y-6">
-                <span className="badge">{content.hero.status}</span>
-                <div className="space-y-3">
-                  <h1 className="font-heading text-4xl font-semibold tracking-tight md:text-5xl">
-                    {content.identity.name}
-                  </h1>
-                  <p className="text-base font-medium text-muted">{content.identity.role}</p>
-                </div>
-                <p className="max-w-xl text-base text-muted">
-                  {content.hero.headline}
-                </p>
-                {content.hero.subheadline ? (
-                  <p className="max-w-xl text-sm text-muted">{content.hero.subheadline}</p>
-                ) : null}
-                <div className="flex flex-wrap items-center gap-3 lg:flex-nowrap lg:gap-2">
-                  <a href="#projects" className="btn-primary btn-hero">
-                    {content.hero.ctaProjects}
-                  </a>
-                  <a
-                    href={encodeURI(cvHref)}
-                    className="btn-secondary btn-hero"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    {content.hero.ctaCv}
-                  </a>
-                  <button
-                    type="button"
-                    onClick={handleOpenChat}
-                    className="btn-secondary btn-hero assistant-cta"
-                  >
-                    {content.hero.assistantCta}
-                  </button>
-                </div>
-                <a
-                  href="#experience"
-                  className="hero-scroll"
-                >
-                  <span className="text-base">↓</span>
-                  {content.hero.scrollHint}
+              <span className="badge">{content.hero.status}</span>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <h1 className="font-display text-5xl font-medium leading-[1.1] tracking-tight md:text-6xl lg:text-7xl xl:text-8xl">
+                {content.identity.name}
+              </h1>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="font-display text-xl italic text-muted md:text-2xl">
+                {content.identity.role}
+              </p>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <p className="max-w-2xl text-base leading-relaxed text-muted md:text-lg">
+                {content.hero.headline}
+              </p>
+            </Reveal>
+            {content.hero.subheadline ? (
+              <Reveal delay={0.2}>
+                <p className="max-w-xl text-sm text-muted/80">{content.hero.subheadline}</p>
+              </Reveal>
+            ) : null}
+            <Reveal delay={0.25}>
+              <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                <a href="#projects" className="btn-primary btn-hero">
+                  {content.hero.ctaProjects}
                 </a>
+                <a
+                  href={encodeURI(cvHref)}
+                  className="btn-secondary btn-hero"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {content.hero.ctaCv}
+                </a>
+                <button
+                  type="button"
+                  onClick={handleOpenChat}
+                  className="btn-secondary btn-hero assistant-cta"
+                >
+                  {content.hero.assistantCta}
+                </button>
               </div>
             </Reveal>
-
-            <Reveal delay={0.15}>
-              <Card className="glass space-y-4 lg:max-w-[420px] lg:self-start lg:justify-self-end !p-5">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-muted">{content.ui.heroProfile.kicker}</p>
-                  <h2 className="mt-2 font-heading text-2xl font-semibold">
-                    {content.ui.heroProfile.title}
-                  </h2>
-                </div>
-                <div className="space-y-4 text-sm text-muted">
-                  <div className="flex items-center justify-between gap-3">
-                    <span>{content.ui.heroProfile.labels.company}</span>
-                    <span className="text-text">{content.identity.company}</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-3">
-                    <span>{content.ui.heroProfile.labels.location}</span>
-                    <span className="text-text">{content.identity.location}</span>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {content.ui.heroProfile.tags.map((item) => (
-                    <Tag key={item}>{item}</Tag>
-                  ))}
-                </div>
-              </Card>
+            <Reveal delay={0.35}>
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted/80">
+                <span>{content.ui.heroProfile.labels.company}<span className="ml-2 text-text/90">{content.identity.company}</span></span>
+                <span className="hidden h-1 w-1 rounded-full bg-muted/40 md:inline-block" />
+                <span>{content.ui.heroProfile.labels.location}<span className="ml-2 text-text/90">{content.identity.location}</span></span>
+              </div>
+            </Reveal>
+            <Reveal delay={0.4}>
+              <a href="#experience" className="hero-scroll mt-4">
+                <span className="text-base">↓</span>
+                {content.hero.scrollHint}
+              </a>
             </Reveal>
           </div>
         </section>
@@ -216,7 +204,7 @@ export default function App() {
               ))}
             </div>
             <Card className="glass lg:self-start">
-              <h3 className="font-heading text-xl font-semibold">{content.ui.strengthsTitle}</h3>
+              <h3 className="font-display text-2xl font-medium">{content.ui.strengthsTitle}</h3>
               <ul className="mt-4 space-y-3 text-sm text-muted">
                 {content.about.highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -238,18 +226,23 @@ export default function App() {
           <div className="space-y-6">
             {content.experience.items.map((item, index) => (
               <Reveal key={`${item.role}-${item.company}`} delay={index * 0.05}>
-                <Card className="glass">
+                <Card>
                   <div className="flex flex-wrap items-start justify-between gap-4">
-                    <div className="space-y-1">
-                      <p className="text-xs uppercase tracking-[0.2em] text-muted">{item.company}</p>
-                      <h3 className="font-heading text-lg font-semibold">{item.role}</h3>
-                      <p className="text-sm text-muted">{item.location}</p>
+                    <div className="flex items-start gap-5">
+                      <span className="font-mono text-xs font-medium tracking-[0.18em] text-accent/90 pt-1">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <div className="space-y-1">
+                        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">{item.company}</p>
+                        <h3 className="font-display text-2xl font-medium leading-tight">{item.role}</h3>
+                        <p className="text-sm text-muted">{item.location}</p>
+                      </div>
                     </div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+                    <p className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
                       {item.period}
                     </p>
                   </div>
-                  <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-muted">
+                  <ul className="mt-5 list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted marker:text-accent/60">
                     {item.highlights.map((highlight) => (
                       <li key={highlight}>{highlight}</li>
                     ))}
@@ -281,7 +274,7 @@ export default function App() {
             {content.expertise.categories.map((category, index) => (
               <Reveal key={category.title} delay={index * 0.05}>
                 <Card className="glass flex h-full flex-col space-y-4">
-                  <h3 className="font-heading text-lg font-semibold">{category.title}</h3>
+                  <h3 className="font-display text-2xl font-medium leading-tight">{category.title}</h3>
                   <div className="flex flex-wrap gap-2">
                     {category.items.map((item) => (
                       <Tag key={item}>{item}</Tag>
@@ -302,17 +295,23 @@ export default function App() {
           <div className="grid gap-6 md:grid-cols-2">
             {content.projects.items.map((project, index) => (
               <Reveal key={project.title} delay={index * 0.05}>
-                <Card className="glass flex h-full flex-col">
-                  <div className="space-y-3">
-                    <h3 className="font-heading text-lg font-semibold">{project.title}</h3>
-                    <p className="text-sm text-muted">{project.description}</p>
+                <Card className="flex h-full flex-col">
+                  <div className="mb-6 flex items-start justify-between gap-3">
+                    <span className="font-mono text-xs font-medium tracking-[0.18em] text-accent/90">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="badge">{content.ui.buttons.demo}</span>
                   </div>
-                  <div className="mt-4 flex flex-wrap gap-2">
+                  <div className="space-y-3">
+                    <h3 className="font-display text-2xl font-medium leading-tight">{project.title}</h3>
+                    <p className="text-sm leading-relaxed text-muted">{project.description}</p>
+                  </div>
+                  <div className="mt-5 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <Tag key={tag}>{tag}</Tag>
                     ))}
                   </div>
-                  <div className="mt-6 flex gap-3">
+                  <div className="mt-auto flex gap-3 pt-6">
                     <ActionLink href={project.repo} target="_blank" rel="noreferrer">
                       {content.ui.buttons.repo}
                     </ActionLink>
@@ -325,23 +324,29 @@ export default function App() {
             ))}
           </div>
 
-          <div id="research" className="scroll-mt-28 pt-14">
+          <div id="research" className="scroll-mt-28 pt-20">
             <Reveal>
-              <div className="space-y-3">
+              <div className="mb-12 flex flex-col items-center gap-4 text-center">
                 <p className="section-kicker">{content.ui.sectionKickers.papers}</p>
-                <h3 className="font-heading text-2xl font-semibold">{content.research.title}</h3>
-                <p className="max-w-3xl text-muted">{content.research.subtitle}</p>
+                <h3 className="font-display text-3xl font-medium leading-tight md:text-4xl">{content.research.title}</h3>
+                <p className="max-w-2xl text-muted">{content.research.subtitle}</p>
               </div>
             </Reveal>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2">
               {content.research.items.map((item, index) => (
                 <Reveal key={item.title} delay={index * 0.05}>
-                  <Card className="glass flex h-full flex-col">
-                    <div className="space-y-3">
-                      <h3 className="font-heading text-lg font-semibold">{item.title}</h3>
-                      <p className="text-sm text-muted">{item.description}</p>
+                  <Card className="flex h-full flex-col">
+                    <div className="mb-6 flex items-start justify-between gap-3">
+                      <span className="font-mono text-xs font-medium tracking-[0.18em] text-accent/90">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="badge">{content.ui.buttons.paper}</span>
                     </div>
-                    <div className="mt-6 flex gap-3">
+                    <div className="space-y-3">
+                      <h3 className="font-display text-2xl font-medium leading-tight">{item.title}</h3>
+                      <p className="text-sm leading-relaxed text-muted">{item.description}</p>
+                    </div>
+                    <div className="mt-auto flex gap-3 pt-6">
                       <ActionLink href={item.paper} target="_blank" rel="noreferrer">
                         {content.ui.buttons.paper}
                       </ActionLink>
@@ -367,17 +372,19 @@ export default function App() {
               <div className="grid gap-6 sm:grid-cols-2">
                 {content.contact.cards.map((card, index) => (
                   <Reveal key={card.label} delay={index * 0.05}>
-                    <Card className="glass">
-                      <p className="text-xs uppercase tracking-[0.2em] text-muted">{card.label}</p>
+                    <Card>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent/90">
+                        {card.label}
+                      </p>
                       {card.href ? (
                         <a
                           href={card.href}
-                          className="mt-3 block text-base font-semibold text-text"
+                          className="mt-3 block font-display text-xl text-text transition-colors hover:text-accent"
                         >
                           {card.value}
                         </a>
                       ) : (
-                        <p className="mt-3 text-base font-semibold text-text">{card.value}</p>
+                        <p className="mt-3 font-display text-xl text-text">{card.value}</p>
                       )}
                     </Card>
                   </Reveal>
@@ -401,7 +408,7 @@ export default function App() {
             <div id="write" className="scroll-mt-28">
               <Card className="glass space-y-6">
                 <div className="space-y-2">
-                  <h3 className="font-heading text-2xl font-semibold">{content.write.title}</h3>
+                  <h3 className="font-display text-3xl font-medium">{content.write.title}</h3>
                 </div>
                 <form className="space-y-4" onSubmit={handleSubmit}>
                   <label className="sr-only" htmlFor="name">

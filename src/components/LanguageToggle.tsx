@@ -3,15 +3,18 @@ type LanguageToggleProps = {
   onChange: (lang: 'fr' | 'en') => void;
 };
 
+const buttonBase =
+  'px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] transition-colors duration-200';
+
 export default function LanguageToggle({ language, onChange }: LanguageToggleProps) {
   return (
-    <div className="inline-flex items-center rounded-full border border-border bg-surface/80 p-1 text-xs font-semibold">
+    <div className="inline-flex items-center divide-x divide-border/60 rounded-sm border border-border">
       <button
         type="button"
         onClick={() => onChange('fr')}
         aria-pressed={language === 'fr'}
-        className={`rounded-full px-3 py-1 transition ${
-          language === 'fr' ? 'bg-accent text-white' : 'text-muted hover:text-text'
+        className={`${buttonBase} ${
+          language === 'fr' ? 'text-accent' : 'text-muted hover:text-text'
         }`}
       >
         FR
@@ -20,8 +23,8 @@ export default function LanguageToggle({ language, onChange }: LanguageTogglePro
         type="button"
         onClick={() => onChange('en')}
         aria-pressed={language === 'en'}
-        className={`rounded-full px-3 py-1 transition ${
-          language === 'en' ? 'bg-accent text-white' : 'text-muted hover:text-text'
+        className={`${buttonBase} ${
+          language === 'en' ? 'text-accent' : 'text-muted hover:text-text'
         }`}
       >
         EN

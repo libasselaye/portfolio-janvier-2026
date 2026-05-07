@@ -10,32 +10,35 @@ type ThemeToggleProps = {
   };
 };
 
+const buttonBase =
+  'px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] transition-colors duration-200';
+
 export default function ThemeToggle({ theme, onChange, label, options }: ThemeToggleProps) {
   return (
     <div
       aria-label={label}
       role="group"
-      className="inline-flex items-center rounded-full border border-border bg-surface/80 p-1 text-xs font-semibold"
+      className="inline-flex items-center divide-x divide-border/60 rounded-sm border border-border"
     >
       <button
         type="button"
         onClick={() => onChange('light')}
         aria-pressed={theme === 'light'}
-        className={`inline-flex items-center rounded-full px-3 py-1 transition ${
-          theme === 'light' ? 'bg-accent text-white' : 'text-muted hover:text-text'
+        className={`${buttonBase} ${
+          theme === 'light' ? 'text-accent' : 'text-muted hover:text-text'
         }`}
       >
-        <span>{options.light}</span>
+        {options.light}
       </button>
       <button
         type="button"
         onClick={() => onChange('dark')}
         aria-pressed={theme === 'dark'}
-        className={`inline-flex items-center rounded-full px-3 py-1 transition ${
-          theme === 'dark' ? 'bg-accent text-white' : 'text-muted hover:text-text'
+        className={`${buttonBase} ${
+          theme === 'dark' ? 'text-accent' : 'text-muted hover:text-text'
         }`}
       >
-        <span>{options.dark}</span>
+        {options.dark}
       </button>
     </div>
   );

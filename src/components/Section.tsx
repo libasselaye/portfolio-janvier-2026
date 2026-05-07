@@ -10,12 +10,12 @@ type SectionProps = {
 
 export default function Section({ id, title, subtitle, kicker, children }: SectionProps) {
   return (
-    <section id={id} className="scroll-mt-28 border-t border-border/35 py-14 md:py-16">
+    <section id={id} className="scroll-mt-28 border-t border-border/40 py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="mb-9 space-y-3">
+        <div className="mb-14 flex flex-col items-center gap-4 text-center">
           {kicker ? <p className="section-kicker">{kicker}</p> : null}
           <h2 className="section-title">{title}</h2>
-          {subtitle ? <p className="max-w-3xl text-muted">{subtitle}</p> : null}
+          {subtitle ? <p className="max-w-2xl text-muted">{subtitle}</p> : null}
         </div>
         {children}
       </div>

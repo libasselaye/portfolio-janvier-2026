@@ -5,8 +5,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
         heading: ['"Space Grotesk"', 'sans-serif'],
-        body: ['"IBM Plex Sans"', 'sans-serif']
+        body: ['"IBM Plex Sans"', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
       },
       colors: {
         canvas: 'hsl(var(--canvas) / <alpha-value>)',

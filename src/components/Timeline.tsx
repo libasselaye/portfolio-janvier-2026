@@ -10,15 +10,11 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
       {items.map((item) => (
         <Card key={`${item.title}-${item.period}`} className="relative">
           <span className={dotClass} aria-hidden="true" />
-          <div className="flex flex-wrap items-baseline justify-between gap-4">
-            <div>
-              <h3 className="font-heading text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-muted">{item.org}</p>
-            </div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-              {item.period}
-            </p>
-          </div>
+          <p className="mb-2 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-accent/90">
+            {item.period}
+          </p>
+          <h3 className="font-display text-2xl font-medium leading-tight">{item.title}</h3>
+          <p className="mt-1 text-sm text-muted">{item.org}</p>
           {item.location ? <p className="mt-3 text-sm text-muted">{item.location}</p> : null}
         </Card>
       ))}
