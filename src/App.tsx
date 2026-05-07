@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import ActionLink from './components/ActionLink';
 import Card from './components/Card';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Reveal from './components/Reveal';
 import Section from './components/Section';
@@ -126,68 +127,7 @@ export default function App() {
       />
 
       <main className="relative z-10">
-        <section id="hero" className="scroll-mt-28">
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 pb-16 pt-24 text-center md:pb-24 md:pt-32 lg:pb-32 lg:pt-40">
-            <Reveal>
-              <span className="badge">{content.hero.status}</span>
-            </Reveal>
-            <Reveal delay={0.05}>
-              <h1 className="font-display text-5xl font-medium leading-[1.1] tracking-tight md:text-6xl lg:text-7xl xl:text-8xl">
-                {content.identity.name}
-              </h1>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="font-display text-xl italic text-muted md:text-2xl">
-                {content.identity.role}
-              </p>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <p className="max-w-2xl text-base leading-relaxed text-muted md:text-lg">
-                {content.hero.headline}
-              </p>
-            </Reveal>
-            {content.hero.subheadline ? (
-              <Reveal delay={0.2}>
-                <p className="max-w-xl text-sm text-muted/80">{content.hero.subheadline}</p>
-              </Reveal>
-            ) : null}
-            <Reveal delay={0.25}>
-              <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-                <a href="#projects" className="btn-primary btn-hero">
-                  {content.hero.ctaProjects}
-                </a>
-                <a
-                  href={encodeURI(cvHref)}
-                  className="btn-secondary btn-hero"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  {content.hero.ctaCv}
-                </a>
-                <button
-                  type="button"
-                  onClick={handleOpenChat}
-                  className="btn-secondary btn-hero assistant-cta"
-                >
-                  {content.hero.assistantCta}
-                </button>
-              </div>
-            </Reveal>
-            <Reveal delay={0.35}>
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-muted/80">
-                <span>{content.ui.heroProfile.labels.company}<span className="ml-2 text-text/90">{content.identity.company}</span></span>
-                <span className="hidden h-1 w-1 rounded-full bg-muted/40 md:inline-block" />
-                <span>{content.ui.heroProfile.labels.location}<span className="ml-2 text-text/90">{content.identity.location}</span></span>
-              </div>
-            </Reveal>
-            <Reveal delay={0.4}>
-              <a href="#experience" className="hero-scroll mt-4">
-                <span className="text-base">↓</span>
-                {content.hero.scrollHint}
-              </a>
-            </Reveal>
-          </div>
-        </section>
+        <Hero content={content} cvHref={cvHref} onAssistantOpen={handleOpenChat} />
 
         <Section
           id="about"

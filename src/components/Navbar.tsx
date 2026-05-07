@@ -75,12 +75,14 @@ export default function Navbar({
         </nav>
         <div className="flex items-center gap-2 md:gap-3">
           <LanguageToggle language={language} onChange={onLanguageChange} />
-          <ThemeToggle
-            theme={theme}
-            onChange={onThemeChange}
-            label={themeLabel}
-            options={themeOptions}
-          />
+          <div className="hidden sm:block">
+            <ThemeToggle
+              theme={theme}
+              onChange={onThemeChange}
+              label={themeLabel}
+              options={themeOptions}
+            />
+          </div>
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
