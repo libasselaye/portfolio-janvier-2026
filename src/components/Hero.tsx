@@ -147,21 +147,22 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
         </div>
       </motion.div>
 
-      <motion.span
-        aria-hidden="true"
-        className="hero-bg-letter"
-        style={
-          reduce
-            ? undefined
-            : {
-                scale: bgLetterScale,
-                opacity: bgLetterOpacity,
-                y: bgLetterY
-              }
-        }
-      >
-        M
-      </motion.span>
+      <div aria-hidden="true" className="hero-bg-letter-wrap">
+        <motion.span
+          className="hero-bg-letter"
+          style={
+            reduce
+              ? undefined
+              : {
+                  scale: bgLetterScale,
+                  opacity: bgLetterOpacity,
+                  y: bgLetterY
+                }
+          }
+        >
+          M
+        </motion.span>
+      </div>
 
       <span aria-hidden="true" className="hero-edition">
         Portfolio<span className="hero-edition-sep">·</span>2026

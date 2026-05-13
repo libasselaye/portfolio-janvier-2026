@@ -290,13 +290,18 @@ html:not(.dark) .btn-primary {
   }
 }
 
-.hero-bg-letter {
+.hero-bg-letter-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -46%);
   z-index: 1;
   pointer-events: none;
+  will-change: transform;
+}
+
+.hero-bg-letter {
+  display: block;
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
   font-weight: 400;
@@ -306,6 +311,7 @@ html:not(.dark) .btn-primary {
   -webkit-text-stroke: 1px hsl(var(--accent) / 0.18);
   user-select: none;
   letter-spacing: -0.04em;
+  will-change: transform, opacity;
 }
 
 html:not(.dark) .hero-bg-letter {
