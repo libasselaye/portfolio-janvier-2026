@@ -1,7 +1,6 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import type { Content } from '../content/types';
-import HeroSigil from './HeroSigil';
 
 type HeroProps = {
   content: Content;
@@ -117,8 +116,6 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
   const { scrollY } = useScroll();
   const VH = typeof window !== 'undefined' ? window.innerHeight : 900;
 
-  const bgLetterScale = useTransform(scrollY, [0, VH], [1, 1.4]);
-  const bgLetterOpacity = useTransform(scrollY, [0, VH * 0.9], [1, 0]);
   const contentY = useTransform(scrollY, [0, VH], [0, -80]);
   const tickerX = useTransform(scrollY, [0, VH], ['0%', '-8%']);
 
@@ -146,22 +143,6 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
           ))}
         </div>
       </motion.div>
-
-      <div aria-hidden="true" className="hero-sigil-wrap">
-        <motion.div
-          className="hero-sigil-inner"
-          style={
-            reduce
-              ? undefined
-              : {
-                  scale: bgLetterScale,
-                  opacity: bgLetterOpacity
-                }
-          }
-        >
-          <HeroSigil className="hero-sigil" />
-        </motion.div>
-      </div>
 
       <span aria-hidden="true" className="hero-edition">
         Portfolio<span className="hero-edition-sep">·</span>2026
