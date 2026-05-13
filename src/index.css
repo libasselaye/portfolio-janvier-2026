@@ -371,7 +371,7 @@ html:not(.dark) .btn-primary {
   border-radius: 999px;
   background: hsl(var(--accent));
   transition: width 0.18s ease, height 0.18s ease, background 0.18s ease, opacity 0.18s ease;
-  mix-blend-mode: difference;
+  box-shadow: 0 0 0 1px hsl(var(--canvas) / 0.6);
 }
 
 .cursor-dot-hover {
@@ -618,6 +618,8 @@ html:not(.dark) .card:hover {
   box-shadow: 0 8px 20px hsl(var(--text) / 0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  z-index: 80;
+  position: relative;
 }
 
 .n8n-chat .chat-header,
@@ -692,6 +694,34 @@ html:not(.dark) .card:hover {
 .n8n-chat .chat-layout,
 #n8n-chat .chat-layout {
   background: hsl(var(--canvas) / 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.n8n-chat .chat-layout::before,
+#n8n-chat .chat-layout::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  max-width: 360px;
+  max-height: 360px;
+  transform: translate(-50%, -50%);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'><g fill='none' stroke='%2338b4ff' stroke-width='0.8' opacity='0.55'><circle cx='200' cy='200' r='196'/><circle cx='200' cy='200' r='182'/></g><text x='200' y='280' text-anchor='middle' font-family='Playfair Display,Georgia,serif' font-style='italic' font-size='280' fill='none' stroke='%2338b4ff' stroke-width='1.4' opacity='0.6'>M</text><text x='252' y='310' font-family='Playfair Display,Georgia,serif' font-style='italic' font-size='170' fill='none' stroke='%2338b4ff' stroke-width='1.2' opacity='0.55'>L</text><circle cx='200' cy='200' r='2.4' fill='%2338b4ff' opacity='0.6'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.n8n-chat .chat-messages-list,
+#n8n-chat .chat-messages-list {
+  position: relative;
+  z-index: 1;
 }
 
 .n8n-chat .chat-footer,
