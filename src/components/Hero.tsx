@@ -94,7 +94,11 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
         M
       </span>
 
-<div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 px-6 pb-16 pt-20 text-center md:gap-9 md:pb-24 md:pt-28 lg:pb-32 lg:pt-36">
+      <span aria-hidden="true" className="hero-edition">
+        Portfolio<span className="hero-edition-sep">·</span>2026
+      </span>
+
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 px-6 pb-16 pt-20 text-center md:gap-9 md:pb-24 md:pt-28 lg:pb-32 lg:pt-36">
         <motion.span
           className="badge"
           initial={reduce ? false : 'hidden'}
