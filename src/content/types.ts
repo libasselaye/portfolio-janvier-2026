@@ -73,6 +73,7 @@ export type Content = {
     scrollHint: string;
     cvUrl: string;
     status: string;
+    ticker: string[];
   };
   about: {
     title: string;

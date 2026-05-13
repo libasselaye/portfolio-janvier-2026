@@ -335,12 +335,14 @@ export default function App() {
                       {card.href ? (
                         <a
                           href={card.href}
-                          className="mt-3 block font-display text-xl text-text transition-colors hover:text-accent"
+                          className="mt-3 block break-words font-display text-base text-text transition-colors hover:text-accent md:text-lg"
                         >
                           {card.value}
                         </a>
                       ) : (
-                        <p className="mt-3 font-display text-xl text-text">{card.value}</p>
+                        <p className="mt-3 break-words font-display text-base text-text md:text-lg">
+                          {card.value}
+                        </p>
                       )}
                     </Card>
                   </Reveal>

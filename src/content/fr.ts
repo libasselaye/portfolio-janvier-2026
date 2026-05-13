@@ -33,7 +33,8 @@ export const contentFr: Content = {
     assistantCta: 'Essayez LibasseAI',
     scrollHint: 'Explorer mon parcours',
     cvUrl: 'CV_Mame_Libasse_Mboup.pdf',
-    status: 'Disponible pour collaborations en data & IA appliquée'
+    status: 'Disponible pour collaborations en data & IA appliquée',
+    ticker: ['DISPONIBLE POUR COLLABORATIONS', 'INGÉNIEUR DATA & IA', 'RÉGION PACA · FRANCE']
   },
   about: {
     title: 'À propos de moi',

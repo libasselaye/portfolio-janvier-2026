@@ -29,12 +29,6 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
 };
 
-const tickerItems = [
-  'AVAILABLE FOR COLLABORATIONS',
-  'DATA & AI ENGINEER',
-  'RÉGION PACA · FRANCE'
-];
-
 function AnimatedName({ name }: { name: string }) {
   const reduce = useReducedMotion();
   const words = name.split(' ');
@@ -133,7 +127,7 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
         <div className="hero-ticker-track">
           {Array.from({ length: 3 }).map((_, repeatIdx) => (
             <span key={repeatIdx} className="hero-ticker-row">
-              {tickerItems.map((item) => (
+              {content.hero.ticker.map((item) => (
                 <span key={`${repeatIdx}-${item}`} className="hero-ticker-item">
                   <span className="hero-ticker-dot" aria-hidden="true" />
                   {item}
