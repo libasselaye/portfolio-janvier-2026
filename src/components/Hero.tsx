@@ -31,9 +31,7 @@ const fadeUp = {
 const tickerItems = [
   'AVAILABLE FOR COLLABORATIONS',
   'DATA & AI ENGINEER',
-  'TOULON · FR',
-  'PORTFOLIO VOL.02',
-  'EST. 2024'
+  'RÉGION PACA · FRANCE'
 ];
 
 function AnimatedName({ name }: { name: string }) {
@@ -96,11 +94,7 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
         M
       </span>
 
-      <span aria-hidden="true" className="hero-edition">
-        Portfolio<span className="hero-edition-sep">·</span>2026<span className="hero-edition-sep">·</span>Vol.02
-      </span>
-
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 px-6 pb-16 pt-20 text-center md:gap-9 md:pb-24 md:pt-28 lg:pb-32 lg:pt-36">
+<div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 px-6 pb-16 pt-20 text-center md:gap-9 md:pb-24 md:pt-28 lg:pb-32 lg:pt-36">
         <motion.span
           className="badge"
           initial={reduce ? false : 'hidden'}

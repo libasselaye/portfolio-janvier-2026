@@ -21,7 +21,7 @@ export const contentEn: Content = {
     name: 'Mame Libasse Mboup',
     role: 'Applied Data & AI Engineer',
     company: 'Innovation e-Santé Sud',
-    location: 'Toulon, France',
+    location: 'PACA Region, France',
     email: 'libasselaye01@gmail.com',
     phone: '+33 6 51 98 36 14'
   },
@@ -312,7 +312,7 @@ export const contentEn: Content = {
       },
       {
         label: 'Location',
-        value: 'Toulon, France'
+        value: 'PACA Region, France'
       }
     ],
     socials: [
