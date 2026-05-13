@@ -1,4 +1,5 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { useEffect, useRef, type ReactNode } from 'react';
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import type { Content } from '../content/types';
 
 type HeroProps = {
@@ -70,12 +71,68 @@ function AnimatedName({ name }: { name: string }) {
   );
 }
 
-export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
+function Magnetic({ children, strength = 18 }: { children: ReactNode; strength?: number }) {
+  const ref = useRef<HTMLSpanElement | null>(null);
   const reduce = useReducedMotion();
 
+  useEffect(() => {
+    if (reduce) return;
+    const el = ref.current;
+    if (!el) return;
+    if (typeof window === 'undefined') return;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+
+    const handleMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - (rect.left + rect.width / 2);
+      const y = e.clientY - (rect.top + rect.height / 2);
+      const distX = (x / rect.width) * strength * 2;
+      const distY = (y / rect.height) * strength * 2;
+      el.style.transform = `translate3d(${distX}px, ${distY}px, 0)`;
+    };
+    const handleLeave = () => {
+      el.style.transform = 'translate3d(0, 0, 0)';
+    };
+
+    el.addEventListener('mousemove', handleMove);
+    el.addEventListener('mouseleave', handleLeave);
+    return () => {
+      el.removeEventListener('mousemove', handleMove);
+      el.removeEventListener('mouseleave', handleLeave);
+    };
+  }, [reduce, strength]);
+
   return (
-    <section id="hero" className="relative scroll-mt-28 overflow-hidden">
-      <div className="hero-ticker" aria-hidden="true">
+    <span ref={ref} className="magnetic-target">
+      {children}
+    </span>
+  );
+}
+
+export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
+  const reduce = useReducedMotion();
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const { scrollY } = useScroll();
+  const VH = typeof window !== 'undefined' ? window.innerHeight : 900;
+
+  const bgLetterScale = useTransform(scrollY, [0, VH], [1, 1.5]);
+  const bgLetterOpacity = useTransform(scrollY, [0, VH * 0.9], [1, 0]);
+  const bgLetterY = useTransform(scrollY, [0, VH], [0, -120]);
+  const contentY = useTransform(scrollY, [0, VH], [0, -80]);
+  const tickerX = useTransform(scrollY, [0, VH], ['0%', '-8%']);
+
+  return (
+    <section
+      ref={sectionRef}
+      id="hero"
+      className="relative scroll-mt-28 overflow-hidden"
+    >
+      <motion.div
+        className="hero-ticker"
+        aria-hidden="true"
+        style={reduce ? undefined : { x: tickerX }}
+      >
         <div className="hero-ticker-track">
           {Array.from({ length: 3 }).map((_, repeatIdx) => (
             <span key={repeatIdx} className="hero-ticker-row">
@@ -88,17 +145,32 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
             </span>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <span aria-hidden="true" className="hero-bg-letter">
+      <motion.span
+        aria-hidden="true"
+        className="hero-bg-letter"
+        style={
+          reduce
+            ? undefined
+            : {
+                scale: bgLetterScale,
+                opacity: bgLetterOpacity,
+                y: bgLetterY
+              }
+        }
+      >
         M
-      </span>
+      </motion.span>
 
       <span aria-hidden="true" className="hero-edition">
         Portfolio<span className="hero-edition-sep">·</span>2026
       </span>
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 px-6 pb-16 pt-20 text-center md:gap-9 md:pb-24 md:pt-28 lg:pb-32 lg:pt-36">
+      <motion.div
+        className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-7 px-6 pb-16 pt-20 text-center md:gap-9 md:pb-24 md:pt-28 lg:pb-32 lg:pt-36"
+        style={reduce ? undefined : { y: contentY }}
+      >
         <motion.span
           className="badge"
           initial={reduce ? false : 'hidden'}
@@ -155,24 +227,30 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
           transition={{ delay: 0.95 }}
           variants={fadeUp}
         >
-          <a href="#projects" className="btn-primary btn-hero">
-            {content.hero.ctaProjects}
-          </a>
-          <a
-            href={encodeURI(cvHref)}
-            className="btn-secondary btn-hero"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {content.hero.ctaCv}
-          </a>
-          <button
-            type="button"
-            onClick={onAssistantOpen}
-            className="btn-secondary btn-hero assistant-cta"
-          >
-            {content.hero.assistantCta}
-          </button>
+          <Magnetic>
+            <a href="#projects" className="btn-primary btn-hero">
+              {content.hero.ctaProjects}
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href={encodeURI(cvHref)}
+              className="btn-secondary btn-hero"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {content.hero.ctaCv}
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <button
+              type="button"
+              onClick={onAssistantOpen}
+              className="btn-secondary btn-hero assistant-cta"
+            >
+              {content.hero.assistantCta}
+            </button>
+          </Magnetic>
         </motion.div>
 
         <motion.div
@@ -206,7 +284,7 @@ export default function Hero({ content, cvHref, onAssistantOpen }: HeroProps) {
           <span className="hero-scroll-arrow" aria-hidden="true">↓</span>
           {content.hero.scrollHint}
         </motion.a>
-      </div>
+      </motion.div>
     </section>
   );
 }

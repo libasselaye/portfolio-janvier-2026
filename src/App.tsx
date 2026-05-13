@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import ActionLink from './components/ActionLink';
 import Card from './components/Card';
+import CustomCursor from './components/CustomCursor';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Reveal from './components/Reveal';
+import ScrollProgress from './components/ScrollProgress';
 import Section from './components/Section';
 import Tag from './components/Tag';
 import Timeline from './components/Timeline';
@@ -110,6 +112,8 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-canvas text-text">
+      <ScrollProgress />
+      <CustomCursor />
       <div className="gradient-mesh" />
       <div className="noise-layer" />
 
@@ -131,6 +135,8 @@ export default function App() {
 
         <Section
           id="about"
+          index={1}
+          total={6}
           title={content.about.title}
           subtitle={content.about.subtitle}
           kicker={content.ui.sectionKickers.profile}
@@ -159,6 +165,8 @@ export default function App() {
 
         <Section
           id="experience"
+          index={2}
+          total={6}
           title={content.experience.title}
           subtitle={content.experience.subtitle}
           kicker={content.ui.sectionKickers.experience}
@@ -195,6 +203,8 @@ export default function App() {
 
         <Section
           id="curriculum"
+          index={3}
+          total={6}
           title={content.curriculum.title}
           subtitle={content.curriculum.subtitle}
           kicker={content.ui.sectionKickers.timeline}
@@ -206,6 +216,8 @@ export default function App() {
 
         <Section
           id="expertise"
+          index={4}
+          total={6}
           title={content.expertise.title}
           subtitle={content.expertise.subtitle}
           kicker={content.ui.sectionKickers.skills}
@@ -228,6 +240,8 @@ export default function App() {
 
         <Section
           id="projects"
+          index={5}
+          total={6}
           title={content.projects.title}
           subtitle={content.projects.subtitle}
           kicker={content.ui.sectionKickers.work}
@@ -303,6 +317,8 @@ export default function App() {
 
         <Section
           id="contact"
+          index={6}
+          total={6}
           title={content.contact.title}
           subtitle={content.contact.subtitle}
           kicker={content.ui.sectionKickers.details}
