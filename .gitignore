@@ -4,4 +4,5 @@ node_modules
 *.log
 dist
 .env
-.claude/
+.claude/*
+!.claude/settings.json
