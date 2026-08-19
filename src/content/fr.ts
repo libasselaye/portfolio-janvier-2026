@@ -147,6 +147,22 @@ export const contentFr: Content = {
     subtitle: 'Sélection de projets académiques et personnels en IA, data et analytics.',
     items: [
       {
+        title: "LibOrga - Application de productivité personnelle (matrice d'Eisenhower)",
+        description:
+          "Conception et développement d'une application de productivité mobile-first structurée autour de la matrice d'Eisenhower : capture rapide en inbox, tri par glisser-déposer entre quadrants, vue « Aujourd'hui » avec ruban horaire dynamique, timer de focus plein écran, calendrier à grille horaire, suivi de projets et bilan hebdomadaire calculé depuis l'historique réel. Saisie en langage naturel (date, heure, projet et priorité extraits d'une phrase) et scan OCR de listes papier (tesseract.js) pour convertir une liste manuscrite en tâches. Architecture Next.js 16 (App Router) + React 19 + TypeScript, données Supabase (Postgres, Auth, Row Level Security activée sur toutes les tables), design system à hiérarchie de trait à trois niveaux partagé mobile/desktop. PWA installable, thème clair/sombre/système.",
+        tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Supabase', 'PostgreSQL', 'RLS', 'tesseract.js', 'PWA', 'Vercel'],
+        repo: 'https://github.com/libasselaye/LibOrga',
+        demo: 'https://liborga.vercel.app'
+      },
+      {
+        title: 'LibCalPilot - Suivi alimentaire et macros pour sportifs',
+        description:
+          "Conception et développement d'une application mobile PWA de suivi alimentaire pour sportifs : recherche d'aliments (base CIQUAL locale de 2 300 références + OpenFoodFacts), scan de code-barres et reconnaissance photo par IA (Gemini vision) estimant plusieurs aliments et leurs quantités sur une seule image. Calcul personnalisé des besoins caloriques et de la répartition des macronutriments (formule Mifflin-St Jeor), recalculé automatiquement à chaque pesée, dashboard journalier avec anneau de progression animé, recettes et favoris réutilisables, statistiques hebdomadaires et courbe de poids. Architecture React 19 + Vite + TypeScript, TanStack Query, Supabase (Postgres, Auth, RLS, Edge Functions Deno pour l'inférence IA), logique métier testée en TDD et design system verrouillé par un test de contraste WCAG. Installable en PWA, fonctionne hors-ligne.",
+        tags: ['React 19', 'Vite', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Supabase', 'Gemini Vision', 'PWA', 'Vitest', 'Edge Functions'],
+        repo: 'https://github.com/libasselaye/LibCalPilot',
+        demo: 'https://lib-cal-pilot.vercel.app'
+      },
+      {
         title: 'LibLeadIN - Prospection B2B automatisée par agents IA',
         description:
           "Conception d'une plateforme full-stack de prospection centralisant le cycle commercial: recherche de prospects, enrichissement email/LinkedIn, génération de messages IA personnalisés, envoi et suivi des statuts. Architecture Next.js + API Routes connectée à n8n (4 workflows) avec stockage opérationnel sur Google Sheets, dashboard métier en temps réel (taux d'envoi, activité récente, répartition sectorielle) et déploiement VPS synchronisé avec GitHub pour une livraison robuste. Agents intégrés: B2B AI Prospecting Agent, Email Preview Agent, Email Send Agent, Read Leads Agent.",

@@ -148,6 +148,22 @@ export const contentEn: Content = {
     subtitle: 'A selection of academic and personal projects in AI, data, and analytics.',
     items: [
       {
+        title: 'LibOrga - Personal productivity app (Eisenhower matrix)',
+        description:
+          'Designed and built a mobile-first productivity app structured around the Eisenhower matrix: quick inbox capture, drag-and-drop sorting between quadrants, a "Today" view with a dynamic time ribbon, a full-screen focus timer, a time-grid calendar, project tracking, and a weekly review computed from real history. Natural-language task entry (date, time, project, and priority extracted from a single sentence) and browser-side OCR scanning (tesseract.js) to turn a handwritten paper list into tasks. Next.js 16 (App Router) + React 19 + TypeScript architecture, Supabase data layer (Postgres, Auth, Row Level Security enabled on every table), and a three-level border-hierarchy design system shared across mobile and desktop. Installable PWA with light/dark/system theming.',
+        tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Supabase', 'PostgreSQL', 'RLS', 'tesseract.js', 'PWA', 'Vercel'],
+        repo: 'https://github.com/libasselaye/LibOrga',
+        demo: 'https://liborga.vercel.app'
+      },
+      {
+        title: 'LibCalPilot - Food and macro tracking for athletes',
+        description:
+          'Designed and built a mobile PWA for food tracking aimed at athletes: food search (local CIQUAL database of 2,300 references + OpenFoodFacts), barcode scanning, and AI photo recognition (Gemini vision) that estimates multiple foods and their quantities from a single picture. Personalized calorie and macronutrient targets (Mifflin-St Jeor formula) automatically recalculated on each weigh-in, a daily dashboard with an animated progress ring, reusable recipes and favorites, weekly stats, and a weight curve. React 19 + Vite + TypeScript architecture, TanStack Query, Supabase (Postgres, Auth, RLS, Deno Edge Functions for AI inference), TDD-tested business logic, and a design system locked by a WCAG contrast test. Installable PWA with partial offline support.',
+        tags: ['React 19', 'Vite', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Supabase', 'Gemini Vision', 'PWA', 'Vitest', 'Edge Functions'],
+        repo: 'https://github.com/libasselaye/LibCalPilot',
+        demo: 'https://lib-cal-pilot.vercel.app'
+      },
+      {
         title: 'LibLeadIN - Agentic AI-driven B2B prospecting',
         description:
           'Designed a full-stack prospecting platform centralizing the sales cycle: lead discovery, email/LinkedIn enrichment, AI-personalized message generation, delivery, and status tracking. Next.js + API Routes architecture connected to n8n (4 workflows) with operational storage in Google Sheets, a real-time business dashboard (send rate, recent activity, sector split), and VPS deployment synced with GitHub for robust delivery. Integrated agents: B2B AI Prospecting Agent, Email Preview Agent, Email Send Agent, Read Leads Agent.',
