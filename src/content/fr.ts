@@ -20,13 +20,13 @@ export const contentFr: Content = {
   identity: {
     name: 'Mame Libasse Mboup',
     role: 'Ingénieur data & IA appliquée',
-    company: 'Innovation e-Santé Sud',
+    company: 'BPCE-SI (Groupe BPCE)',
     location: 'Région PACA, France',
     email: 'libasselaye01@gmail.com',
     phone: '+33 6 51 98 36 14'
   },
   hero: {
-    headline: '+4 ans à concevoir des solutions data & IA pour la santé publique (ARS PACA · Ségur numérique, environnement certifié HDS et conforme RGPD), les télécoms (Orange) et l’énergie (Enedis). J’accompagne les organisations dans la transformation de la donnée brute en décisions intelligentes, fiables et mesurables, via l’Agentic AI, le Machine Learning et l’automatisation data.',
+    headline: '+5 ans à concevoir des solutions data & IA pour la banque (Groupe BPCE), la santé publique (ARS PACA · Ségur numérique, environnement certifié HDS et conforme RGPD), les télécoms (Orange) et l’énergie (Enedis). J’accompagne les organisations dans la transformation de la donnée brute en décisions intelligentes, fiables et mesurables, via l’Agentic AI, le Machine Learning et l’automatisation data.',
     subheadline: '',
     ctaProjects: 'Découvrir mes projets',
     ctaCv: 'En savoir plus avec mon CV',
@@ -95,12 +95,26 @@ export const contentFr: Content = {
   },
   experience: {
     title: 'Expériences professionnelles',
-    subtitle: 'Contributions data et IA au service de la santé, des télécoms et de l’énergie.',
+    subtitle: 'Contributions data et IA au service de la banque, de la santé, des télécoms et de l’énergie.',
     items: [
+      {
+        role: 'Data Scientist – Squad Data Lab & Nouveaux Usages',
+        company: 'BPCE-SI (Groupe BPCE)',
+        period: 'Juil. 2026 – Présent',
+        location: 'Aix-en-Provence, France',
+        highlights: [
+          "Équipe Performance & Run : garantie de la stabilité des systèmes data existants, gestion des incidents et mise en œuvre des évolutions, en collaboration directe avec les métiers BPCE-SI.",
+          'Développement et industrialisation de pipelines de données sur Google Cloud Platform (BigQuery, Cloud Composer, Cloud Storage) pour la Cloud Data Platform Groupe.',
+          'Modélisation analytique et transformations ELT sous dbt (couches staging/intermediate/marts, tests de qualité, documentation et lineage des modèles).',
+          'Conception et industrialisation de rapports Power BI adossés à BigQuery (modélisation sémantique, DAX, sécurité RLS) pour le pilotage métier.',
+          "Cas d'usage IA générative : intégration de LLM sur données Groupe (assistants analytiques, automatisation de traitements documentaires) au sein du Data Lab.",
+          "Pratique du développement assisté par agents IA en environnement bancaire régulé (données internes, contraintes de conformité) : documentation de contexte structurée des repos et appropriation accélérée du patrimoine existant."
+        ]
+      },
       {
         role: 'Data Scientist – Santé Publique',
         company: 'Innovation e-Santé Sud (GRADeS PACA)',
-        period: 'Oct. 2022 – Présent',
+        period: 'Oct. 2022 – Juil. 2026',
         location: 'Hyères, France',
         highlights: [
           "Cartographie des lits hospitaliers : outil temps réel de visualisation des capacités disponibles sur le volet sanitaire, alimenté par des flux automatisés, déployé pour le pilotage de crise (Covid-19, plans blancs, afflux multi-victimes, tensions hospitalières) de l'ARS PACA.",
@@ -120,6 +134,7 @@ export const contentFr: Content = {
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
         highlights: [
+          "Traitement des données du parcours fibre optique de bout en bout, de la commande client au raccordement, pour le suivi des délais et l'identification des points de blocage.",
           'Automatisations RPA (UI Path) et datavisualisation avancée avec Kibana et Power BI pour le pilotage opérationnel des équipes.',
           'Développement de modèles statistiques sur des flux de données hétérogènes à grande échelle (supervision réseau).'
         ]
