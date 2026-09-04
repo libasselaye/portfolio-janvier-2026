@@ -27,7 +27,7 @@ export const contentEn: Content = {
   },
   hero: {
     headline:
-      'I help organizations transform raw data into intelligent, reliable, measurable decisions by designing and deploying data & AI solutions with strong business impact.',
+      '4+ years designing data & AI solutions for public healthcare (ARS PACA · Ségur digital program, HDS-certified and GDPR-compliant environment), telecom (Orange), and energy (Enedis). I help organizations transform raw data into intelligent, reliable, measurable decisions through Agentic AI, Machine Learning, and data automation.',
     subheadline: '',
     ctaProjects: 'Discover my projects',
     ctaCv: 'Learn more with my CV',
@@ -76,6 +76,22 @@ export const contentEn: Content = {
         org: 'Université de Thiès, Senegal',
         period: '2015–2018'
       }
+    ],
+    languagesTitle: 'Languages',
+    languages: [
+      { label: 'French', level: 5 },
+      { label: 'Wolof', level: 5 },
+      { label: 'English', level: 4 },
+      { label: 'German', level: 2 }
+    ],
+    continuingEducationTitle: 'Continuing Education',
+    continuingEducationItems: [
+      'MLOps',
+      'AI Agents',
+      'Prompt Engineering',
+      'Generative AI',
+      'Healthcare AI',
+      'Data Modeling & Transformation'
     ]
   },
   experience: {
@@ -123,23 +139,27 @@ export const contentEn: Content = {
   },
   expertise: {
     title: 'Expertise',
-    subtitle: 'A broad data, AI, and engineering toolkit to deliver end-to-end solutions.',
+    subtitle: 'A broad data, AI, and engineering toolkit spanning public healthcare to generative AI.',
     categories: [
       {
-        title: 'Data Science & ML',
-        items: ['Python', 'SQL', 'Statistics', 'Supervised Learning', 'Clustering', 'NLP']
+        title: 'Programming & Development',
+        items: ['Python', 'SQL', 'R', 'SAS', 'TypeScript', 'React', 'Next.js', 'Git', 'REST API']
       },
       {
-        title: 'Data Engineering',
-        items: ['ETL', 'Pipelines', 'Data quality', 'PostgreSQL', 'MongoDB']
+        title: 'Machine Learning & Deep Learning',
+        items: ['Scikit-learn', 'TensorFlow', 'PyTorch', 'NLP', 'Time Series', 'Clustering']
       },
       {
-        title: 'BI & Visualization',
-        items: ['Power BI', 'Data storytelling', 'Decision dashboards']
+        title: 'Data Engineering & Cloud',
+        items: ['PostgreSQL', 'MongoDB', 'Spark', 'Airflow', 'dbt', 'GCP', 'Supabase', 'ETL']
       },
       {
-        title: 'AI / Engineering',
-        items: ['Docker', 'n8n', 'CI/CD', 'ML Ops automation']
+        title: 'BI & Automation',
+        items: ['SAS Viya', 'Power BI', 'n8n', 'UI Path (RPA)', 'Streamlit', 'HDS', 'GDPR']
+      },
+      {
+        title: 'Generative AI & Agents',
+        items: ['LLM', 'RAG', 'Prompt Engineering', 'AI Agents', 'LangChain', 'LiteLLM', 'Claude Code']
       }
     ]
   },
@@ -186,6 +206,14 @@ export const contentEn: Content = {
         tags: ['React 19', 'Vite 7', 'TypeScript', 'React Router', 'Tailwind CSS v4', 'Supabase Auth', 'n8n', 'LiteLLM', 'Docker Compose', 'Traefik', 'Groq', 'DeepSeek'],
         repo: 'https://github.com/libasselaye/librain',
         demo: 'http://72.62.186.157:8084/'
+      },
+      {
+        title: 'FifaFish - B2B seafood export platform',
+        description:
+          'Designed and built a full-stack B2B platform for selling and exporting premium seafood products from Senegal: a product catalog with detailed listings (fish, shellfish, per-ton pricing), a B2B quote and cart system, customer authentication and account management via NextAuth, and a multilingual interface (next-intl). Next.js 15 (App Router) + TypeScript architecture, PostgreSQL database through Prisma ORM, Zod validation, and a Tailwind CSS + Radix UI interface. Deployed to production on a VPS behind Nginx with a dedicated domain.',
+        tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'NextAuth.js', 'next-intl', 'Tailwind CSS', 'Zod', 'Radix UI'],
+        repo: 'https://github.com/libasselaye/fifafish',
+        demo: 'https://fifafish.com'
       },
       {
         title: 'Full-stack web portfolio with backend automation and chatbot in production',

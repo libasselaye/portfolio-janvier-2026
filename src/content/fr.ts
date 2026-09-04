@@ -26,7 +26,7 @@ export const contentFr: Content = {
     phone: '+33 6 51 98 36 14'
   },
   hero: {
-    headline: 'J’accompagne les organisations dans la transformation de la donnée brute en décisions intelligentes, fiables et mesurables, via la conception et le déploiement de solutions data et IA à fort impact métier.',
+    headline: '+4 ans à concevoir des solutions data & IA pour la santé publique (ARS PACA · Ségur numérique, environnement certifié HDS et conforme RGPD), les télécoms (Orange) et l’énergie (Enedis). J’accompagne les organisations dans la transformation de la donnée brute en décisions intelligentes, fiables et mesurables, via l’Agentic AI, le Machine Learning et l’automatisation data.',
     subheadline: '',
     ctaProjects: 'Découvrir mes projets',
     ctaCv: 'En savoir plus avec mon CV',
@@ -75,6 +75,22 @@ export const contentFr: Content = {
         org: 'Université de Thiès, Sénégal',
         period: '2015–2018'
       }
+    ],
+    languagesTitle: 'Langues',
+    languages: [
+      { label: 'Français', level: 5 },
+      { label: 'Wolof', level: 5 },
+      { label: 'Anglais', level: 4 },
+      { label: 'Allemand', level: 2 }
+    ],
+    continuingEducationTitle: 'Formation continue',
+    continuingEducationItems: [
+      'MLOps',
+      'AI Agents',
+      'Prompt Engineering',
+      'Generative AI',
+      'Healthcare AI',
+      'Data Modeling & Transformation'
     ]
   },
   experience: {
@@ -122,23 +138,27 @@ export const contentFr: Content = {
   },
   expertise: {
     title: 'Expertise',
-    subtitle: "Un éventail de compétences data, IA et engineering pour livrer des solutions complètes.",
+    subtitle: "Un éventail de compétences data, IA et engineering pour livrer des solutions complètes, de la santé publique à l'IA générative.",
     categories: [
       {
-        title: 'Data Science & ML',
-        items: ['Python', 'SQL', 'Statistiques', 'Supervision', 'Clustering', 'NLP']
+        title: 'Programmation & Développement',
+        items: ['Python', 'SQL', 'R', 'SAS', 'TypeScript', 'React', 'Next.js', 'Git', 'REST API']
       },
       {
-        title: 'Data Engineering',
-        items: ['ETL', 'Pipelines', 'Qualité des données', 'PostgreSQL', 'MongoDB']
+        title: 'Machine Learning & Deep Learning',
+        items: ['Scikit-learn', 'TensorFlow', 'PyTorch', 'NLP', 'Time Series', 'Clustering']
       },
       {
-        title: 'BI & Visualisation',
-        items: ['Power BI', 'Data storytelling', 'Dashboards décisionnels']
+        title: 'Data Engineering & Cloud',
+        items: ['PostgreSQL', 'MongoDB', 'Spark', 'Airflow', 'dbt', 'GCP', 'Supabase', 'ETL']
       },
       {
-        title: 'AI / Engineering',
-        items: ['Docker', 'n8n', 'CI/CD', 'Automatisation ML Ops']
+        title: 'BI & Automatisation',
+        items: ['SAS Viya', 'Power BI', 'n8n', 'UI Path (RPA)', 'Streamlit', 'HDS', 'RGPD']
+      },
+      {
+        title: 'IA Générative & Agents',
+        items: ['LLM', 'RAG', 'Prompt Engineering', 'Agent IA', 'LangChain', 'LiteLLM', 'Claude Code']
       }
     ]
   },
@@ -185,6 +205,14 @@ export const contentFr: Content = {
         tags: ['React 19', 'Vite 7', 'TypeScript', 'React Router', 'Tailwind CSS v4', 'Supabase Auth', 'n8n', 'LiteLLM', 'Docker Compose', 'Traefik', 'Groq', 'DeepSeek'],
         repo: 'https://github.com/libasselaye/librain',
         demo: 'http://72.62.186.157:8084/'
+      },
+      {
+        title: 'FifaFish - Plateforme B2B d’export de produits de la mer',
+        description:
+          "Conception et développement d'une plateforme B2B full-stack de vente et d'export de produits de la mer premium depuis le Sénégal : catalogue produits avec fiches détaillées (poissons, crustacés, tarifs au tonnage), système de devis et panier B2B, authentification et gestion des comptes clients via NextAuth, interface multilingue (next-intl). Architecture Next.js 15 (App Router) + TypeScript, base de données PostgreSQL via Prisma ORM, validation des données avec Zod, UI Tailwind CSS + Radix UI. Déployé en production sur VPS avec Nginx (reverse proxy, domaine dédié).",
+        tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'NextAuth.js', 'next-intl', 'Tailwind CSS', 'Zod', 'Radix UI'],
+        repo: 'https://github.com/libasselaye/fifafish',
+        demo: 'https://fifafish.com'
       },
       {
         title: 'Création d’un portfolio web full-stack avec automatisation back-end et chatbot en production',

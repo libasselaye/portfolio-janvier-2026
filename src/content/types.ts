@@ -10,6 +10,11 @@ export type TimelineItem = {
   location?: string;
 };
 
+export type LanguageItem = {
+  label: string;
+  level: number;
+};
+
 export type ExperienceItem = {
   role: string;
   company: string;
@@ -85,6 +90,10 @@ export type Content = {
     title: string;
     subtitle: string;
     items: TimelineItem[];
+    languagesTitle: string;
+    languages: LanguageItem[];
+    continuingEducationTitle: string;
+    continuingEducationItems: string[];
   };
   experience: {
     title: string;

@@ -212,6 +212,45 @@ export default function App() {
           <Reveal>
             <Timeline items={content.curriculum.items} />
           </Reveal>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            <Reveal>
+              <Card className="glass h-full space-y-4">
+                <h3 className="font-display text-2xl font-medium leading-tight">
+                  {content.curriculum.languagesTitle}
+                </h3>
+                <ul className="space-y-3">
+                  {content.curriculum.languages.map((lang) => (
+                    <li key={lang.label} className="flex items-center justify-between gap-4">
+                      <span className="text-sm text-muted">{lang.label}</span>
+                      <div className="flex gap-1.5">
+                        {Array.from({ length: 5 }).map((_, dotIndex) => (
+                          <span
+                            key={dotIndex}
+                            className={`h-2 w-2 rounded-full ${
+                              dotIndex < lang.level ? 'bg-accent' : 'bg-border/60'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <Card className="glass h-full space-y-4">
+                <h3 className="font-display text-2xl font-medium leading-tight">
+                  {content.curriculum.continuingEducationTitle}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {content.curriculum.continuingEducationItems.map((item) => (
+                    <Tag key={item}>{item}</Tag>
+                  ))}
+                </div>
+              </Card>
+            </Reveal>
+          </div>
         </Section>
 
         <Section
