@@ -20,14 +20,14 @@ export const contentEn: Content = {
   identity: {
     name: 'Mame Libasse Mboup',
     role: 'Applied Data & AI Engineer',
-    company: 'BPCE-SI (BPCE Group)',
+    company: 'Innovation e-Santé Sud',
     location: 'PACA Region, France',
     email: 'libasselaye01@gmail.com',
     phone: '+33 6 51 98 36 14'
   },
   hero: {
     headline:
-      '5+ years designing data & AI solutions for banking (BPCE Group), public healthcare (ARS PACA · Ségur digital program, HDS-certified and GDPR-compliant environment), telecom (Orange), and energy (Enedis). I help organizations transform raw data into intelligent, reliable, measurable decisions through Agentic AI, Machine Learning, and data automation.',
+      'I help organizations transform raw data into intelligent, reliable, measurable decisions by designing and deploying data & AI solutions with strong business impact.',
     subheadline: '',
     ctaProjects: 'Discover my projects',
     ctaCv: 'Learn more with my CV',
@@ -76,46 +76,16 @@ export const contentEn: Content = {
         org: 'Université de Thiès, Senegal',
         period: '2015–2018'
       }
-    ],
-    languagesTitle: 'Languages',
-    languages: [
-      { label: 'French', level: 5 },
-      { label: 'Wolof', level: 5 },
-      { label: 'English', level: 4 },
-      { label: 'German', level: 2 }
-    ],
-    continuingEducationTitle: 'Continuing Education',
-    continuingEducationItems: [
-      'MLOps',
-      'AI Agents',
-      'Prompt Engineering',
-      'Generative AI',
-      'Healthcare AI',
-      'Data Modeling & Transformation'
     ]
   },
   experience: {
     title: 'Professional Experience',
-    subtitle: 'Data and AI contributions across banking, healthcare, telecom, and energy.',
+    subtitle: 'Data and AI contributions across healthcare, telecom, and energy.',
     items: [
-      {
-        role: 'Data Scientist – Data Lab & New Use Cases Squad',
-        company: 'BPCE-SI (BPCE Group)',
-        period: 'Jul. 2026 – Present',
-        location: 'Aix-en-Provence, France',
-        highlights: [
-          'Performance & Run team: ensuring stability of existing data systems, incident management and delivery of enhancements, working directly with BPCE-SI business units.',
-          'Development and industrialization of data pipelines on Google Cloud Platform (BigQuery, Cloud Composer, Cloud Storage) for the Group Cloud Data Platform.',
-          'Analytics modeling and ELT transformations with dbt (staging/intermediate/marts layers, data quality tests, model documentation and lineage).',
-          'Design and industrialization of Power BI reports on top of BigQuery (semantic modeling, DAX, RLS security) for business steering.',
-          'Generative AI use cases: LLM integration on Group data (analytics assistants, automated document processing) within the Data Lab.',
-          'Agent-assisted development practice in a regulated banking environment (internal data, compliance constraints): structured context documentation of repositories and accelerated onboarding onto legacy codebases.'
-        ]
-      },
       {
         role: 'Data Scientist – Public Health',
         company: 'Innovation e-Santé Sud (GRADeS PACA)',
-        period: 'Oct. 2022 – Jul. 2026',
+        period: 'Oct. 2022 – Present',
         location: 'Hyères, France',
         highlights: [
           'Hospital bed mapping: real-time visualization tool for available healthcare capacities, powered by automated data feeds, deployed for crisis management (Covid-19, mass casualty plans, hospital strain) at ARS PACA.',
@@ -135,7 +105,6 @@ export const contentEn: Content = {
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
         highlights: [
-          'End-to-end processing of fibre-optic rollout data, from customer order through to connection, for lead-time tracking and bottleneck identification.',
           'RPA automation (UI Path) and advanced data visualization with Kibana and Power BI for operational team management.',
           'Development of statistical models on large-scale heterogeneous data streams (network monitoring).'
         ]
@@ -154,27 +123,23 @@ export const contentEn: Content = {
   },
   expertise: {
     title: 'Expertise',
-    subtitle: 'A broad data, AI, and engineering toolkit spanning public healthcare to generative AI.',
+    subtitle: 'A broad data, AI, and engineering toolkit to deliver end-to-end solutions.',
     categories: [
       {
-        title: 'Programming & Development',
-        items: ['Python', 'SQL', 'R', 'SAS', 'TypeScript', 'React', 'Next.js', 'Git', 'REST API']
+        title: 'Data Science & ML',
+        items: ['Python', 'SQL', 'Statistics', 'Supervised Learning', 'Clustering', 'NLP']
       },
       {
-        title: 'Machine Learning & Deep Learning',
-        items: ['Scikit-learn', 'TensorFlow', 'PyTorch', 'NLP', 'Time Series', 'Clustering']
+        title: 'Data Engineering',
+        items: ['ETL', 'Pipelines', 'Data quality', 'PostgreSQL', 'MongoDB']
       },
       {
-        title: 'Data Engineering & Cloud',
-        items: ['PostgreSQL', 'MongoDB', 'Spark', 'Airflow', 'dbt', 'GCP', 'Supabase', 'ETL']
+        title: 'BI & Visualization',
+        items: ['Power BI', 'Data storytelling', 'Decision dashboards']
       },
       {
-        title: 'BI & Automation',
-        items: ['SAS Viya', 'Power BI', 'n8n', 'UI Path (RPA)', 'Streamlit', 'HDS', 'GDPR']
-      },
-      {
-        title: 'Generative AI & Agents',
-        items: ['LLM', 'RAG', 'Prompt Engineering', 'AI Agents', 'LangChain', 'LiteLLM', 'Claude Code']
+        title: 'AI / Engineering',
+        items: ['Docker', 'n8n', 'CI/CD', 'ML Ops automation']
       }
     ]
   },
@@ -221,14 +186,6 @@ export const contentEn: Content = {
         tags: ['React 19', 'Vite 7', 'TypeScript', 'React Router', 'Tailwind CSS v4', 'Supabase Auth', 'n8n', 'LiteLLM', 'Docker Compose', 'Traefik', 'Groq', 'DeepSeek'],
         repo: 'https://github.com/libasselaye/librain',
         demo: 'http://72.62.186.157:8084/'
-      },
-      {
-        title: 'FifaFish - B2B seafood export platform',
-        description:
-          'Designed and built a full-stack B2B platform for selling and exporting premium seafood products from Senegal: a product catalog with detailed listings (fish, shellfish, per-ton pricing), a B2B quote and cart system, customer authentication and account management via NextAuth, and a multilingual interface (next-intl). Next.js 15 (App Router) + TypeScript architecture, PostgreSQL database through Prisma ORM, Zod validation, and a Tailwind CSS + Radix UI interface. Deployed to production on a VPS behind Nginx with a dedicated domain.',
-        tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'NextAuth.js', 'next-intl', 'Tailwind CSS', 'Zod', 'Radix UI'],
-        repo: 'https://github.com/libasselaye/fifafish',
-        demo: 'https://fifafish.com'
       },
       {
         title: 'Full-stack web portfolio with backend automation and chatbot in production',
