@@ -83,9 +83,23 @@ export const contentEn: Content = {
     subtitle: 'Data and AI contributions across healthcare, telecom, and energy.',
     items: [
       {
+        role: 'Data Scientist – Data Lab & New Use Cases Squad',
+        company: 'BPCE-SI (BPCE Group)',
+        period: 'Jul. 2026 – Present',
+        location: 'Aix-en-Provence, France',
+        highlights: [
+          'Performance & Run team: ensuring stability of existing data systems, incident management and delivery of enhancements, working directly with BPCE-SI business units.',
+          'Development and industrialization of data pipelines on Google Cloud Platform (BigQuery, Cloud Composer, Cloud Storage) for the Group Cloud Data Platform.',
+          'Analytics modeling and ELT transformations with dbt (staging/intermediate/marts layers, data quality tests, model documentation and lineage).',
+          'Design and industrialization of Power BI reports on top of BigQuery (semantic modeling, DAX, RLS security) for business steering.',
+          'Generative AI use cases: LLM integration on Group data (analytics assistants, automated document processing) within the Data Lab.',
+          'Agent-assisted development practice in a regulated banking environment (internal data, compliance constraints): structured context documentation of repositories and accelerated onboarding onto legacy codebases.'
+        ]
+      },
+      {
         role: 'Data Scientist – Public Health',
         company: 'Innovation e-Santé Sud (GRADeS PACA)',
-        period: 'Oct. 2022 – Present',
+        period: 'Oct. 2022 – Jul. 2026',
         location: 'Hyères, France',
         highlights: [
           'Hospital bed mapping: real-time visualization tool for available healthcare capacities, powered by automated data feeds, deployed for crisis management (Covid-19, mass casualty plans, hospital strain) at ARS PACA.',
@@ -105,6 +119,7 @@ export const contentEn: Content = {
         period: 'Sept. 2021 – Sept. 2022',
         location: 'Lyon, France',
         highlights: [
+          'End-to-end processing of fibre-optic rollout data, from customer order through to connection, for lead-time tracking and bottleneck identification.',
           'RPA automation (UI Path) and advanced data visualization with Kibana and Power BI for operational team management.',
           'Development of statistical models on large-scale heterogeneous data streams (network monitoring).'
         ]
@@ -131,15 +146,15 @@ export const contentEn: Content = {
       },
       {
         title: 'Data Engineering',
-        items: ['ETL', 'Pipelines', 'Data quality', 'PostgreSQL', 'MongoDB']
+        items: ['ETL', 'Pipelines', 'Data quality', 'PostgreSQL', 'MongoDB', 'GCP', 'BigQuery', 'Cloud Composer', 'dbt']
       },
       {
         title: 'BI & Visualization',
-        items: ['Power BI', 'Data storytelling', 'Decision dashboards']
+        items: ['Power BI', 'Data storytelling', 'Decision dashboards', 'DAX', 'RLS']
       },
       {
         title: 'AI / Engineering',
-        items: ['Docker', 'n8n', 'CI/CD', 'ML Ops automation']
+        items: ['Docker', 'n8n', 'CI/CD', 'ML Ops automation', 'LLM', 'Generative AI', 'AI Agents']
       }
     ]
   },
