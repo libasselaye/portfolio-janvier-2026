@@ -1,412 +1,575 @@
-import type { Content } from './types';
+import type { Content } from "./types";
 
 export const contentFr: Content = {
-  lang: 'fr',
+  lang: "fr",
   seo: {
-    title: 'Mame Libasse Mboup | Data Scientist & ML Engineer',
+    title: "Mame Libasse Mboup | Data Scientist & ML Engineer",
     description:
-      "Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer spécialisé en IA appliquée, data engineering et visualisation."
+      "Mame Libasse Mboup, data scientist chez BPCE-SI à Aix-en-Provence. Parcours, projets et compétences en analyse de données, développement web et IA.",
   },
   nav: [
-    { id: 'hero', label: 'Accueil' },
-    { id: 'about', label: 'À propos' },
-    { id: 'experience', label: 'Expériences' },
-    { id: 'curriculum', label: 'Formation' },
-    { id: 'expertise', label: 'Expertise' },
-    { id: 'projects', label: 'Projets' },
-    { id: 'contact', label: 'Contact' },
-    { id: 'assistant', label: 'LibasseAI' }
+    {
+      id: "hero",
+      label: "Accueil",
+    },
+    {
+      id: "about",
+      label: "À propos",
+    },
+    {
+      id: "experience",
+      label: "Expériences",
+    },
+    {
+      id: "curriculum",
+      label: "Formation",
+    },
+    {
+      id: "expertise",
+      label: "Expertise",
+    },
+    {
+      id: "projects",
+      label: "Projets",
+    },
+    {
+      id: "contact",
+      label: "Contact",
+    },
+    {
+      id: "assistant",
+      label: "LibasseAI",
+    },
   ],
   identity: {
-    name: 'Mame Libasse Mboup',
-    role: 'Ingénieur data & IA appliquée',
-    company: 'Innovation e-Santé Sud',
-    location: 'Région PACA, France',
-    email: 'libasselaye01@gmail.com',
-    phone: '+33 6 51 98 36 14'
+    name: "Mame Libasse Mboup",
+    role: "Ingénieur data & IA appliquée",
+    company: "BPCE-SI (Groupe BPCE)",
+    location: "Région PACA, France",
+    email: "libasselaye01@gmail.com",
+    phone: "+33 6 51 98 36 14",
   },
   hero: {
-    headline: 'J’accompagne les organisations dans la transformation de la donnée brute en décisions intelligentes, fiables et mesurables, via la conception et le déploiement de solutions data et IA à fort impact métier.',
-    subheadline: '',
-    ctaProjects: 'Découvrir mes projets',
-    ctaCv: 'En savoir plus avec mon CV',
-    assistantCta: 'Essayez LibasseAI',
-    scrollHint: 'Explorer mon parcours',
-    cvUrl: 'CV_Mame_Libasse_Mboup.pdf',
-    status: 'Disponible pour collaborations en data & IA appliquée',
-    ticker: ['DISPONIBLE POUR COLLABORATIONS', 'INGÉNIEUR DATA & IA', 'RÉGION PACA · FRANCE']
+    headline:
+      "Chez BPCE-SI, à Aix-en-Provence, je travaille sur la plateforme data du Groupe avec GCP, BigQuery et dbt, et je conçois des rapports Power BI.\n\nJe participe aussi à des projets d’IA appliquée aux métiers bancaires dans un contexte international. En parallèle, je développe mes propres applications web et assistants IA.",
+    subheadline: "",
+    ctaProjects: "Voir mes projets",
+    ctaCv: "Consulter mon CV",
+    assistantCta: "Essayez LibasseAI",
+    scrollHint: "Voir mon parcours",
+    cvUrl: "CV_Mame_Libasse_Mboup.pdf",
+    status: "Ouvert aux collaborations",
+    ticker: [
+      "DISPONIBLE POUR COLLABORATIONS",
+      "INGÉNIEUR DATA & IA",
+      "RÉGION PACA · FRANCE",
+    ],
   },
   about: {
-    title: 'À propos de moi',
-    subtitle: "Une culture data complète, entre recherche, ingénierie et impact terrain.",
+    title: "À propos de moi",
+    subtitle:
+      "J’ai commencé mes études en mathématiques et informatique à Thiès, avant de les poursuivre en France. J’ai obtenu mon master en machine learning à Lyon II en 2022.",
     paragraphs: [
-      "Passionné par les mathématiques et la data, je combine modélisation statistique, Machine Learning et ingénierie pour faire émerger des solutions robustes et exploitables.",
-      "Je travaille sur des algorithmes, des pipelines ETL, la visualisation et le data storytelling afin de créer des produits data clairs, actionnables et alignés aux enjeux métier.",
-      "J'aime partager mes connaissances, notamment autour des statistiques appliquées et de l'analyse sportive. Le football et le fitness nourrissent mon esprit de compétition et ma discipline."
+      "J’ai commencé mes études en mathématiques et informatique à Thiès, avant de les poursuivre en France. J’ai obtenu mon master en machine learning à Lyon II en 2022.",
+      "Depuis 2021, je travaille dans la data. J’ai développé des outils de suivi pour l’énergie, les télécoms et la santé publique, avant de rejoindre le secteur bancaire. Mes projets personnels me permettent aussi de travailler sur les interfaces web et les agents IA.",
+      "Je m’intéresse aussi aux statistiques appliquées au sport. En dehors du travail, je suis supporter du Paris Saint-Germain et je pratique la musculation.",
     ],
     highlights: [
-      'Rigueur scientifique et esprit d’optimisation',
-      'Data storytelling orienté impact',
-      'Ouverture d’esprit et apprentissage continu',
-      'Culture sport & performance'
-    ]
+      "Analyse statistique",
+      "Traitement des données",
+      "Développement web",
+      "Automatisation avec des agents IA",
+    ],
   },
   curriculum: {
-    title: 'Formation',
-    subtitle: 'Un parcours solide en mathématiques, informatique et IA.',
+    title: "Formation",
+    subtitle: "Mes études en mathématiques, informatique et machine learning.",
     items: [
       {
-        title: 'Master 2 Machine Learning for Artificial Intelligence',
-        org: 'Université Lumière Lyon II, France',
-        period: '2021–2022'
+        title: "Master 2 Machine Learning for Artificial Intelligence",
+        org: "Université Lumière Lyon II, France",
+        period: "2021–2022",
       },
       {
-        title: 'Master 1 Informatique et Statistique',
-        org: 'Université Lumière Lyon II, France',
-        period: '2020–2021'
+        title: "Master 1 Informatique et Statistique",
+        org: "Université Lumière Lyon II, France",
+        period: "2020–2021",
       },
       {
-        title: 'Licence Informatique',
+        title: "Licence Informatique",
         org: "Université du Littoral Côte d'Opale, France",
-        period: '2018–2020'
+        period: "2018–2020",
       },
       {
-        title: 'Licence Mathématiques et Informatique',
-        org: 'Université de Thiès, Sénégal',
-        period: '2015–2018'
-      }
-    ]
+        title: "Licence Mathématiques et Informatique",
+        org: "Université de Thiès, Sénégal",
+        period: "2015–2018",
+      },
+    ],
   },
   experience: {
-    title: 'Expériences professionnelles',
-    subtitle: 'Contributions data et IA au service de la santé, des télécoms et de l’énergie.',
+    title: "Expériences professionnelles",
+    subtitle:
+      "J’ai commencé chez Enedis en 2021, puis travaillé chez Orange et Innovation e-Santé Sud. J’ai rejoint BPCE-SI en juillet 2026.",
     items: [
       {
-        role: 'Data Scientist – Squad Data Lab & Nouveaux Usages',
-        company: 'BPCE-SI (Groupe BPCE)',
-        period: 'Juil. 2026 – Présent',
-        location: 'Aix-en-Provence, France',
+        role: "Data Scientist – Squad Data Lab & Nouveaux Usages",
+        company: "BPCE-SI (Groupe BPCE)",
+        period: "Juil. 2026 – Présent",
+        location: "Aix-en-Provence, France",
         highlights: [
-          "Équipe Performance & Run : garantie de la stabilité des systèmes data existants, gestion des incidents et mise en œuvre des évolutions, en collaboration directe avec les métiers BPCE-SI.",
-          'Développement et industrialisation de pipelines de données sur Google Cloud Platform (BigQuery, Cloud Composer, Cloud Storage) pour la Cloud Data Platform Groupe.',
-          'Modélisation analytique et transformations ELT sous dbt (couches staging/intermediate/marts, tests de qualité, documentation et lineage des modèles).',
-          'Conception et industrialisation de rapports Power BI adossés à BigQuery (modélisation sémantique, DAX, sécurité RLS) pour le pilotage métier.',
-          "Cas d'usage IA générative : intégration de LLM sur données Groupe (assistants analytiques, automatisation de traitements documentaires) au sein du Data Lab.",
-          "Pratique du développement assisté par agents IA en environnement bancaire régulé (données internes, contraintes de conformité) : documentation de contexte structurée des repos et appropriation accélérée du patrimoine existant."
-        ]
+          "Mon travail concerne les métiers bancaires du Groupe, dans un contexte international. J’échange avec les équipes métier pour comprendre leurs besoins et les traduire en évolutions des outils data et IA.",
+          "Je développe des pipelines sur GCP avec BigQuery, Cloud Composer et Cloud Storage pour la Cloud Data Platform du Groupe, de l’intégration des données à leur mise à disposition pour l’analyse.",
+          "Avec dbt, je modélise les données depuis les premières transformations jusqu’aux tables d’analyse. Je mets en place les tests de qualité, la documentation et le suivi des dépendances entre modèles.",
+          "Au Data Lab, j’intègre des modèles de langage aux données du Groupe pour des assistants d’analyse et des traitements documentaires, en tenant compte de la confidentialité et des contraintes bancaires.",
+          "Je crée aussi des rapports Power BI à partir de BigQuery : modèles de données, calculs DAX et sécurité des accès pour que chaque équipe retrouve les indicateurs qui la concernent.",
+          "Dans l’équipe Performance & Run, je prends en charge les incidents et les évolutions des systèmes data existants. Le travail porte aussi sur leur stabilité au quotidien et le suivi avec les équipes métier.",
+          "J’utilise des agents IA pour le développement et la compréhension des applications existantes. Je documente le contexte des dépôts de code pour encadrer leur utilisation dans un environnement bancaire régulé.",
+        ],
       },
       {
-        role: 'Data Scientist – Santé Publique',
-        company: 'Innovation e-Santé Sud (GRADeS PACA)',
-        period: 'Oct. 2022 – Juil. 2026',
-        location: 'Hyères, France',
+        role: "Data Scientist – Santé Publique",
+        company: "Innovation e-Santé Sud (GRADeS PACA)",
+        period: "Oct. 2022 – Juil. 2026",
+        location: "Hyères, France",
         highlights: [
-          "Cartographie des lits hospitaliers : outil temps réel de visualisation des capacités disponibles sur le volet sanitaire, alimenté par des flux automatisés, déployé pour le pilotage de crise (Covid-19, plans blancs, afflux multi-victimes, tensions hospitalières) de l'ARS PACA.",
-          'CONTESS : dashboard d\'aide à la décision du Ségur numérique sur 6 couloirs, croisant les usages DMP, MSS, INS et Pro Santé Connect via pipelines SAS Viya multisources.',
-          'Développement de tableaux de bord stratégiques pour appuyer le pilotage régional et améliorer la coordination des soins (OKAPI, ETP, Urgences-Samu/Smur, ROR, E-parcours).',
-          'Modélisation TRU (ARS PACA) : outil identifiant à l’échelle communale les facteurs influençant le recours évitable aux urgences, à partir de variables démographiques, sanitaires, d’accès aux soins et socio-économiques, pour orienter le déploiement des soins non programmés.',
-          'Migration de rapports BI de Jaspersoft vers SAS Viya et automatisation de traitements Python/SQL.',
-          'Administration plateforme SAS Viya régionale (droits d’accès, Caslibs, groupes d’utilisateurs, intégration de flux multisources).',
-          'Extraction automatisée de données médicales (comptes rendus, ordonnances, analyses biologiques en PDF ou images) via LLM multimodal (Gemini), avec structuration et alimentation automatique d’un fichier Google Sheets exploitable avec n8n.',
-          'Fiabilisation d’adresses de professionnels de santé par vérification croisée via Google Maps (Apify) et PagesJaunes (SerpAPI), avec détection d’incohérences et mise à jour automatique de la base de données.',
-          'Tri intelligent de tickets Redmine : classification et affectation automatique via analyse LLM du contenu métier, détermination de priorité, contrôle de cohérence et assignation dynamique aux agents du pôle DTSI.'
-        ]
+          "J’ai développé une cartographie des lits hospitaliers disponibles pour l’ARS PACA. Alimentée automatiquement, elle sert au suivi des capacités en période de tension ou de crise.",
+          "Avec CONTESS, j’ai réuni dans un tableau de bord le suivi du Ségur numérique dans six secteurs. Les traitements SAS Viya croisent les usages du DMP, de la messagerie sécurisée, de l’identité nationale de santé et de Pro Santé Connect.",
+          "J’ai créé des tableaux de bord régionaux sur les urgences, le SAMU/SMUR et les parcours de soins, notamment pour OKAPI, l’ETP, le ROR et E-parcours.",
+          "Pour le projet TRU, j’ai étudié les facteurs associés au recours évitable aux urgences à l’échelle des communes : démographie, accès aux soins et situation socio-économique. Ces analyses aident à orienter l’offre de soins non programmés.",
+          "J’ai migré des rapports de Jaspersoft vers SAS Viya et automatisé des traitements en Python et SQL. J’administrais également les accès, les espaces de données et les flux de la plateforme régionale.",
+          "Avec Gemini et n8n, j’ai automatisé l’extraction d’informations depuis des documents médicaux en PDF ou en image vers des tableaux structurés.",
+          "J’ai développé un contrôle des adresses de professionnels de santé en croisant Google Maps et PagesJaunes pour repérer et corriger les incohérences.",
+          "J’ai aussi mis en place le classement et l’affectation de tickets Redmine à partir de leur contenu, avec un modèle de langage.",
+        ],
       },
       {
-        role: 'Data Scientist',
-        company: 'Orange',
-        period: 'Sept. 2021 – Sept. 2022',
-        location: 'Lyon, France',
+        role: "Data Scientist",
+        company: "Orange",
+        period: "Sept. 2021 – Sept. 2022",
+        location: "Lyon, France",
         highlights: [
-          "Traitement des données du parcours fibre optique de bout en bout, de la commande client au raccordement, pour le suivi des délais et l'identification des points de blocage.",
-          'Automatisations RPA (UI Path) et datavisualisation avancée avec Kibana et Power BI pour le pilotage opérationnel des équipes.',
-          'Développement de modèles statistiques sur des flux de données hétérogènes à grande échelle (supervision réseau).'
-        ]
+          "J’ai analysé le parcours de raccordement à la fibre, de la commande à l’installation, pour suivre les délais et repérer les étapes qui bloquent.",
+          "J’ai automatisé des tâches avec UiPath et créé des tableaux de bord dans Kibana et Power BI pour les équipes opérationnelles.",
+          "J’ai travaillé sur des modèles statistiques appliqués aux données de supervision du réseau.",
+        ],
       },
       {
-        role: 'Data Engineer',
-        company: 'Enedis',
-        period: 'Avr. 2021 – Sept. 2021',
-        location: 'Toulon, France',
+        role: "Data Engineer",
+        company: "Enedis",
+        period: "Avr. 2021 – Sept. 2021",
+        location: "Toulon, France",
         highlights: [
-          'Application full-stack de suivi énergétique régional (CodeIgniter/PHP/MySQL) pour le pilotage terrain de la consommation en temps réel.',
-          'Intégration multi-sources via Denodo (VQL), production de rapports analytiques pour la direction régionale.'
-        ]
-      }
-    ]
+          "J’ai développé une application de suivi de la consommation énergétique régionale avec CodeIgniter, PHP et MySQL.",
+          "J’ai intégré plusieurs sources de données avec Denodo et préparé des rapports d’analyse pour la direction régionale.",
+        ],
+      },
+    ],
   },
   expertise: {
-    title: 'Expertise',
-    subtitle: "Un éventail de compétences data, IA et engineering pour livrer des solutions complètes.",
+    title: "Compétences",
+    subtitle:
+      "Mon travail couvre la data science, l’ingénierie sur GCP et dbt, la BI et l’IA appliquée. Chez BPCE-SI, ces sujets s’inscrivent dans un contexte bancaire international, avec des besoins métier et des exigences de fiabilité et de confidentialité.",
     categories: [
       {
-        title: 'Data Science & ML',
-        items: ['Python', 'SQL', 'Statistiques', 'Supervision', 'Clustering', 'NLP']
+        title: "Data Science & ML",
+        items: [
+          "Python",
+          "SQL",
+          "Statistiques",
+          "Supervision",
+          "Clustering",
+          "NLP",
+        ],
       },
       {
-        title: 'Data Engineering',
-        items: ['ETL', 'Pipelines', 'Qualité des données', 'PostgreSQL', 'MongoDB', 'GCP', 'BigQuery', 'Cloud Composer', 'dbt']
+        title: "Data Engineering",
+        items: [
+          "ETL",
+          "Pipelines",
+          "Qualité des données",
+          "PostgreSQL",
+          "MongoDB",
+          "GCP",
+          "BigQuery",
+          "Cloud Composer",
+          "dbt",
+        ],
       },
       {
-        title: 'BI & Visualisation',
-        items: ['Power BI', 'Data storytelling', 'Dashboards décisionnels', 'DAX', 'RLS']
+        title: "BI & Visualisation",
+        items: [
+          "Power BI",
+          "Data storytelling",
+          "Dashboards décisionnels",
+          "DAX",
+          "RLS",
+        ],
       },
       {
-        title: 'AI / Engineering',
-        items: ['Docker', 'n8n', 'CI/CD', 'Automatisation ML Ops', 'LLM', 'IA Générative', 'Agents IA']
-      }
-    ]
+        title: "IA & automatisation",
+        items: [
+          "Docker",
+          "n8n",
+          "CI/CD",
+          "Automatisation ML Ops",
+          "LLM",
+          "IA Générative",
+          "Agents IA",
+        ],
+      },
+    ],
   },
   projects: {
-    title: 'Projets',
-    subtitle: 'Sélection de projets académiques et personnels en IA, data et analytics.',
+    title: "Projets",
+    subtitle:
+      "Des applications personnelles, des automatisations et des travaux d’analyse. Chaque fiche présente le fonctionnement du projet et les outils utilisés.",
     items: [
       {
-        title: "LibOrga - Application de productivité personnelle (matrice d'Eisenhower)",
+        title: "LibOrga — Organisation des tâches",
         description:
-          "Conception et développement d'une application de productivité mobile-first structurée autour de la matrice d'Eisenhower : capture rapide en inbox, tri par glisser-déposer entre quadrants, vue « Aujourd'hui » avec ruban horaire dynamique, timer de focus plein écran, calendrier à grille horaire, suivi de projets et bilan hebdomadaire calculé depuis l'historique réel. Saisie en langage naturel (date, heure, projet et priorité extraits d'une phrase) et scan OCR de listes papier (tesseract.js) pour convertir une liste manuscrite en tâches. Architecture Next.js 16 (App Router) + React 19 + TypeScript, données Supabase (Postgres, Auth, Row Level Security activée sur toutes les tables), design system à hiérarchie de trait à trois niveaux partagé mobile/desktop. PWA installable, thème clair/sombre/système.",
-        tags: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Supabase', 'PostgreSQL', 'RLS', 'tesseract.js', 'PWA', 'Vercel'],
-        repo: 'https://github.com/libasselaye/LibOrga',
-        demo: 'https://liborga.vercel.app'
+          "J’ai développé LibOrga pour organiser les tâches selon leur urgence et leur importance, avec la matrice d’Eisenhower. On peut noter une tâche, la déplacer d’un quadrant à l’autre et retrouver sa journée dans une vue dédiée. Un calendrier, un minuteur de concentration et un bilan hebdomadaire complètent l’application.\n\nLa saisie reconnaît une date ou une priorité dans une phrase. On peut aussi scanner une liste papier pour la convertir en tâches. L’application repose sur Next.js et Supabase, et s’installe sur mobile comme une PWA.",
+        tags: [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS v4",
+          "Supabase",
+          "PostgreSQL",
+          "RLS",
+          "tesseract.js",
+          "PWA",
+          "Vercel",
+        ],
+        repo: "https://github.com/libasselaye/LibOrga",
+        demo: "https://liborga.vercel.app",
       },
       {
-        title: 'LibCalPilot - Suivi alimentaire et macros pour sportifs',
+        title: "LibCalPilot — Suivi alimentaire",
         description:
-          "Conception et développement d'une application mobile PWA de suivi alimentaire pour sportifs : recherche d'aliments (base CIQUAL locale de 2 300 références + OpenFoodFacts), scan de code-barres et reconnaissance photo par IA (Gemini vision) estimant plusieurs aliments et leurs quantités sur une seule image. Calcul personnalisé des besoins caloriques et de la répartition des macronutriments (formule Mifflin-St Jeor), recalculé automatiquement à chaque pesée, dashboard journalier avec anneau de progression animé, recettes et favoris réutilisables, statistiques hebdomadaires et courbe de poids. Architecture React 19 + Vite + TypeScript, TanStack Query, Supabase (Postgres, Auth, RLS, Edge Functions Deno pour l'inférence IA), logique métier testée en TDD et design system verrouillé par un test de contraste WCAG. Installable en PWA, fonctionne hors-ligne.",
-        tags: ['React 19', 'Vite', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Supabase', 'Gemini Vision', 'PWA', 'Vitest', 'Edge Functions'],
-        repo: 'https://github.com/libasselaye/LibCalPilot',
-        demo: 'https://lib-cal-pilot.vercel.app'
+          "LibCalPilot permet de noter ses repas et de suivre ses calories, ses macronutriments et son poids. On peut chercher un aliment dans les bases CIQUAL et Open Food Facts, scanner son code-barres ou utiliser une photo pour obtenir une estimation des aliments et des quantités.\n\nJ’ai développé le suivi quotidien, les recettes réutilisables et les statistiques hebdomadaires avec React et Supabase. Gemini Vision intervient pour l’analyse des photos. Les besoins caloriques sont calculés à partir du profil et actualisés à chaque pesée.",
+        tags: [
+          "React 19",
+          "Vite",
+          "TypeScript",
+          "Tailwind CSS",
+          "TanStack Query",
+          "Supabase",
+          "Gemini Vision",
+          "PWA",
+          "Vitest",
+          "Edge Functions",
+        ],
+        repo: "https://github.com/libasselaye/LibCalPilot",
+        demo: "https://lib-cal-pilot.vercel.app",
       },
       {
-        title: 'LibLeadIN - Prospection B2B automatisée par agents IA',
+        title: "LibLeadIN — Prospection B2B",
         description:
-          "Conception d'une plateforme full-stack de prospection centralisant le cycle commercial: recherche de prospects, enrichissement email/LinkedIn, génération de messages IA personnalisés, envoi et suivi des statuts. Architecture Next.js + API Routes connectée à n8n (4 workflows) avec stockage opérationnel sur Google Sheets, dashboard métier en temps réel (taux d'envoi, activité récente, répartition sectorielle) et déploiement VPS synchronisé avec GitHub pour une livraison robuste. Agents intégrés: B2B AI Prospecting Agent, Email Preview Agent, Email Send Agent, Read Leads Agent.",
-        tags: ['Next.js', 'n8n', 'OpenAI', 'DeepSeek', 'Apify', 'Hunter', 'Gmail OAuth2', 'Google Sheets', 'JWT', 'Tailwind CSS'],
-        repo: 'https://github.com/libasselaye/libleadin',
-        demo: 'https://libleadin.duckdns.org'
+          "LibLeadIN rassemble la recherche de prospects, leurs coordonnées et le suivi des prises de contact. L’application prépare des messages personnalisés à partir des informations recueillies et permet de les prévisualiser avant l’envoi.\n\nJ’ai relié l’interface Next.js à quatre workflows n8n pour la recherche, la préparation des emails, l’envoi et la lecture des contacts. Les données sont enregistrées dans Google Sheets et un tableau de bord affiche les statuts et l’activité récente.",
+        tags: [
+          "Next.js",
+          "n8n",
+          "OpenAI",
+          "DeepSeek",
+          "Apify",
+          "Hunter",
+          "Gmail OAuth2",
+          "Google Sheets",
+          "JWT",
+          "Tailwind CSS",
+        ],
+        repo: "https://github.com/libasselaye/libleadin",
+        demo: "https://libleadin.duckdns.org",
       },
       {
-        title: "LibJobPilot - Automatisation intelligente de recherche d'emploi",
+        title: "LibJobPilot — Recherche d’emploi",
         description:
-          "Conception et développement d'une plateforme full-stack d'automatisation de recherche d'emploi ciblant les postes Data/AI Engineer. Agrégation automatique d'offres depuis LinkedIn, Indeed et Glassdoor via scraping intelligent, scoring IA de chaque offre par rapport au profil candidat (match 0-100), et candidature automatisée sur Indeed/Glassdoor via browser automation headless. Dashboard de suivi avec pipeline Kanban, métriques en temps réel et suggestions de relance. Architecture React + Vite + TypeScript connectée à 5 workflows n8n orchestrant le scraping, le scoring LLM, l'auto-apply Playwright et le suivi des candidatures, avec stockage Supabase et proxy LLM unifié via LiteLLM.",
-        tags: ['React 19', 'Vite 6', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Zustand', 'n8n', 'Supabase', 'LiteLLM', 'Groq', 'Playwright', 'Browserless', 'Docker', 'Traefik'],
-        repo: '#',
-        demo: '#'
+          "J’ai développé LibJobPilot autour de la recherche de postes en data et en IA. Il rassemble des offres de LinkedIn, Indeed et Glassdoor, puis les compare au profil du candidat. Un tableau Kanban permet de suivre les candidatures et les relances.\n\nCinq workflows n8n prennent en charge la collecte des offres, leur évaluation et le suivi. Playwright sert à automatiser des étapes de candidature sur Indeed et Glassdoor. L’interface est en React et les données sont stockées dans Supabase.",
+        tags: [
+          "React 19",
+          "Vite 6",
+          "TypeScript",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "Zustand",
+          "n8n",
+          "Supabase",
+          "LiteLLM",
+          "Groq",
+          "Playwright",
+          "Browserless",
+          "Docker",
+          "Traefik",
+        ],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'LiBrain - Assistant IA multi-agents personnel',
+        title: "LiBrain — Assistant IA personnel",
         description:
-          "Conception et déploiement d'un assistant IA personnel full-stack capable de gérer emails, agenda, contacts et finances en langage naturel. Architecture multi-agents avec orchestrateur central (n8n) routant vers 4 agents spécialisés connectés à Gmail, Google Calendar et Airtable via OAuth2. Déploiement d'un proxy LLM centralisé (LiteLLM) avec routage intelligent par alias de rôle, fallback automatique multi-providers (Groq, Gemini, DeepSeek) et monitoring des coûts en temps réel.",
-        tags: ['React 19', 'Vite 7', 'TypeScript', 'React Router', 'Tailwind CSS v4', 'Supabase Auth', 'n8n', 'LiteLLM', 'Docker Compose', 'Traefik', 'Groq', 'DeepSeek'],
-        repo: 'https://github.com/libasselaye/librain',
-        demo: 'http://72.62.186.157:8084/'
+          "LiBrain est un assistant avec lequel on peut gérer ses emails, son agenda, ses contacts et ses finances en écrivant une demande. J’ai connecté quatre agents spécialisés à Gmail, Google Calendar et Airtable, avec n8n pour répartir les tâches.\n\nL’interface est développée en React. LiteLLM centralise les appels aux modèles, suit leur coût et permet de basculer vers un autre fournisseur lorsqu’un service est indisponible. L’ensemble est déployé avec Docker et Traefik.",
+        tags: [
+          "React 19",
+          "Vite 7",
+          "TypeScript",
+          "React Router",
+          "Tailwind CSS v4",
+          "Supabase Auth",
+          "n8n",
+          "LiteLLM",
+          "Docker Compose",
+          "Traefik",
+          "Groq",
+          "DeepSeek",
+        ],
+        repo: "https://github.com/libasselaye/librain",
+        demo: "http://72.62.186.157:8084/",
       },
       {
-        title: 'Création d’un portfolio web full-stack avec automatisation back-end et chatbot en production',
+        title: "Portfolio — Site web et assistant IA",
         description:
-          'Développement d’un portfolio web moderne et évolutif (React, Vite, Tailwind) intégrant un système de contact temps réel ainsi qu’un chatbot interactif permettant d’échanger avec les visiteurs et de faciliter la prise de contact. Conception d’une architecture back-end événementielle basée sur n8n (webhooks, workflows automatisés) permettant la réception, le traitement et la notification des messages utilisateurs par email (Gmail API, OAuth 2.0). Déploiement sur VPS avec Docker et Nginx, configuration réseau avancée (CORS, reverse proxy, ports, environnements), et intégration CI/CD via GitHub.',
-        tags: ['React', 'Vite', 'Tailwind', 'n8n', 'Docker', 'Nginx', 'CI/CD'],
-        repo: '#',
-        demo: '#'
+          "Ce site présente mon parcours et mes projets en français et en anglais. Je l’ai développé avec React, Vite et Tailwind. Le formulaire de contact et l’assistant IA sont reliés à des workflows n8n.\n\nJ’ai également configuré l’envoi des messages par email, le déploiement sur un VPS avec Docker et Nginx, ainsi que les mises à jour depuis GitHub.",
+        tags: ["React", "Vite", "Tailwind", "n8n", "Docker", "Nginx", "CI/CD"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Automatisation de workflows IA no-code avec n8n et DeepSeek',
+        title: "Extraction de données avec n8n et DeepSeek",
         description:
-          'Conception d’agents intelligents capables d’extraire des informations depuis des PDF et emails, de les structurer et de les exploiter (Google Sheets, notifications). Mise en production de flux robustes avec gestion des erreurs, tests et débogage.',
-        tags: ['n8n', 'DeepSeek', 'Agentic AI', 'PDF', 'Google Sheets'],
-        repo: '#',
-        demo: '#'
+          "J’ai créé des workflows qui lisent des PDF et des emails, en extraient les informations demandées et les enregistrent dans Google Sheets. DeepSeek traite le contenu ; n8n enchaîne les étapes et envoie les notifications. J’ai aussi prévu la gestion des erreurs pour repérer les traitements qui échouent.",
+        tags: ["n8n", "DeepSeek", "Agentic AI", "PDF", "Google Sheets"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Pipeline d’import de données de santé (ViaTrajectoire / TND) vers MariaDB',
+        title: "Import de données de santé vers MariaDB",
         description:
-          'Conception et industrialisation d’un pipeline en Python : automatisation de l’ingestion d’archives CSV, alignement des fichiers avec le modèle de données, nettoyage des données et gestion des doublons et incohérences. Mise en œuvre et exécution sur serveur Linux, avec préparation de l’environnement et livraison d’un script Python prêt à l’utilisation en production.',
-        tags: ['Python', 'MariaDB', 'CSV', 'ETL', 'Linux'],
-        repo: '#',
-        demo: '#'
+          "Ce script Python importe les archives CSV de ViaTrajectoire / TND dans MariaDB. Il adapte les fichiers au modèle de la base, nettoie les valeurs et traite les doublons et les incohérences avant l’import. Je l’ai préparé pour une exécution sur un serveur Linux.",
+        tags: ["Python", "MariaDB", "CSV", "ETL", "Linux"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Pipeline automatisé de génération de vidéos publicitaires par IA',
+        title: "Génération de vidéos publicitaires",
         description:
-          'Combinaison d’appels API à fal.ai pour la création vidéo et à ChatGPT (OpenAI API) pour la génération automatique de titres marketing. Workflow orchestré avec n8n : exécution asynchrone, dépôt des vidéos sur Google Drive et mise à jour des résultats dans Google Sheets, avec une attention particulière portée à la scalabilité et à l’optimisation des coûts.',
-        tags: ['fal.ai', 'ChatGPT', 'OpenAI API', 'n8n', 'Google Drive', 'Google Sheets'],
-        repo: '#',
-        demo: '#'
+          "J’ai relié fal.ai à n8n pour générer des vidéos et l’API OpenAI pour préparer leurs titres. Le workflow attend la fin de chaque génération, dépose la vidéo dans Google Drive et inscrit le résultat dans Google Sheets. Il permet de suivre les traitements sans vérifier chaque appel API manuellement.",
+        tags: [
+          "fal.ai",
+          "ChatGPT",
+          "OpenAI API",
+          "n8n",
+          "Google Drive",
+          "Google Sheets",
+        ],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Automatisation de la production de visuels e-commerce par IA',
+        title: "Création de visuels pour des produits e-commerce",
         description:
-          'Workflow automatisé de génération de visuels marketing à partir de données produits, basé sur des API d’IA générative (Google AI Studio – Gemini Imagen). Orchestration complète avec n8n : ingestion des données via Google Sheets, appels API, gestion asynchrone des traitements, stockage des images sur Google Drive et mise à jour automatique des résultats. Objectif : produire des rendus produits réalistes à grande échelle pour optimiser la qualité visuelle et la performance marketing.',
-        tags: ['Google AI Studio', 'Gemini Imagen', 'n8n', 'Google Sheets', 'Google Drive', 'E-commerce'],
-        repo: '#',
-        demo: '#'
+          "Ce workflow part des informations d’un produit dans Google Sheets pour générer un visuel avec Gemini Imagen. n8n transmet les données, attend le résultat, puis enregistre l’image dans Google Drive et son lien dans le tableau. J’ai développé l’enchaînement des appels et le suivi des générations.",
+        tags: [
+          "Google AI Studio",
+          "Gemini Imagen",
+          "n8n",
+          "Google Sheets",
+          "Google Drive",
+          "E-commerce",
+        ],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Automatisation de pipelines IA pour la génération et l’édition d’images',
+        title: "Génération et retouche d’images avec n8n",
         description:
-          'Workflows automatisés avec n8n intégrant des appels API REST sécurisés (POST) vers Google AI Studio pour exploiter le modèle Nano Banana Pro avec gestion des clés API. Création d’un formulaire web permettant de capturer l’image source et le prompt utilisateur, de convertir les fichiers en Base64 et de gérer le traitement de multiples images dans un même flux. Orchestration complète de la génération, de l’édition et de la restitution de fichiers images exploitables, optimisant la production d’assets IA dans des workflows structurés.',
-        tags: ['n8n', 'Google AI Studio', 'Nano Banana Pro', 'API REST', 'Base64', 'Image IA'],
-        repo: '#',
-        demo: '#'
+          "J’ai créé un formulaire pour envoyer une image et une consigne de retouche à un modèle de Google AI Studio. Le workflow n8n prépare les fichiers, appelle l’API et renvoie les images produites. Il prend aussi en charge plusieurs images dans une même demande.",
+        tags: [
+          "n8n",
+          "Google AI Studio",
+          "Nano Banana Pro",
+          "API REST",
+          "Base64",
+          "Image IA",
+        ],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Application web “Aide-moi” + Agentic AI',
+        title: "Aide-moi — Application d’assistance",
         description:
-          'Application d’assistance intelligente basée sur la description des problèmes. Le frontend (React, Vite, TypeScript) déclenche des requêtes POST vers des webhooks n8n locaux, exposés de manière sécurisée via Cloudflare Tunnel. Les données sont traitées par un workflow n8n orchestrant un Agentic AI (DeepSeek Chat Model), avant restitution synchronisée via le mécanisme “Respond to Webhook”. Le projet couvre l’UX, l’intégration HTTP, l’exposition contrôlée de services locaux et les problématiques réseau (CORS, méthodes HTTP, tunnels).',
-        tags: ['React', 'TypeScript', 'n8n', 'Cloudflare Tunnel', 'DeepSeek'],
-        repo: '#',
-        demo: '#'
+          "Dans Aide-moi, l’utilisateur décrit un problème et reçoit une réponse de DeepSeek. J’ai développé l’interface en React et TypeScript, puis relié le formulaire à un workflow n8n.\n\nLe projet m’a notamment fait travailler sur les échanges entre le navigateur et le serveur : webhooks, réponses HTTP, configuration CORS et accès au service local avec Cloudflare Tunnel.",
+        tags: ["React", "TypeScript", "n8n", "Cloudflare Tunnel", "DeepSeek"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Agentic AI conversationnel sur Telegram',
+        title: "Assistant IA sur Telegram",
         description:
-          'Conception et déploiement d’un Agentic AI sur Telegram, orchestré via n8n, capable de comprendre des requêtes complexes, de rechercher des informations en temps réel (ERP API) et d’exécuter des actions via des outils externes (APIs Google, automatisations). Architecture basée sur webhooks, intégration de LLM (Grok API) et workflows décisionnels, démontrant la différence entre chatbot passif et agent intelligent orienté action.',
-        tags: ['Telegram', 'n8n', 'Grok API', 'Webhooks', 'Automatisation'],
-        repo: '#',
-        demo: '#'
+          "J’ai développé un assistant Telegram qui peut consulter les données d’un ERP et déclencher des actions via des API Google. Les messages passent par n8n ; le modèle Grok interprète la demande et le workflow appelle les outils correspondants avant de répondre dans Telegram.",
+        tags: ["Telegram", "n8n", "Grok API", "Webhooks", "Automatisation"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Advanced Supervised Learning',
+        title: "Arbres de décision et forêts aléatoires",
         description:
-          'Implémentation from scratch d’arbres de décision et de forêts aléatoires, avec validation, métriques et comparaisons.',
-        tags: ['Python', 'ML', 'Decision Trees', 'Random Forests'],
-        repo: '#',
-        demo: '#'
+          "Dans ce projet d’apprentissage supervisé, j’ai implémenté des arbres de décision et des forêts aléatoires en Python. J’ai ensuite comparé leurs résultats avec des métriques de validation pour étudier les différences entre les modèles.",
+        tags: ["Python", "ML", "Decision Trees", "Random Forests"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Détection de Communauté DBLP',
+        title: "Communautés de chercheurs dans DBLP",
         description:
-          'Analyse de graphes et visualisation pour identifier des communautés de chercheurs et leurs interactions.',
-        tags: ['Graphes', 'Visualisation', 'Python'],
-        repo: '#',
-        demo: '#'
+          "J’ai analysé un graphe de relations entre chercheurs à partir de DBLP pour identifier des communautés. Des visualisations en Python permettent d’examiner les groupes obtenus et les liens qui les relient.",
+        tags: ["Graphes", "Visualisation", "Python"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Clustering & Analyse multidimensionnelle',
+        title: "Analyse et regroupement de données automobiles",
         description:
-          'ACP et classification non supervisée sur des données automobiles pour identifier des segments.',
-        tags: ['ACP', 'Clustering', 'Analyse multivariée'],
-        repo: '#',
-        demo: '#'
+          "J’ai utilisé l’analyse en composantes principales et le clustering pour étudier un jeu de données automobiles. Le travail consiste à réduire le nombre de dimensions, puis à identifier des groupes de véhicules aux caractéristiques proches.",
+        tags: ["ACP", "Clustering", "Analyse multivariée"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Projet SAS – World Happiness Report',
+        title: "Analyse du World Happiness Report avec SAS",
         description:
-          'Exploration statistique et reporting sur les données de bonheur mondial avec mise en contexte des résultats.',
-        tags: ['SAS', 'Statistiques', 'BI'],
-        repo: '#',
-        demo: '#'
+          "J’ai exploré les données du World Happiness Report avec SAS. Le projet comprend des analyses statistiques et un rapport qui présente les résultats dans leur contexte.",
+        tags: ["SAS", "Statistiques", "BI"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Simple Data Analysis Project',
+        title: "Analyse exploratoire avec Python",
         description:
-          'Pipeline d’analyse exploratoire et synthèse de résultats pour des jeux de données multi-variables.',
-        tags: ['EDA', 'Python', 'Pandas'],
-        repo: '#',
-        demo: '#'
+          "Ce projet porte sur l’exploration de jeux de données à plusieurs variables avec Python et Pandas. J’y examine les distributions et les relations entre variables, puis je prépare une synthèse des résultats.",
+        tags: ["EDA", "Python", "Pandas"],
+        repo: "#",
+        demo: "#",
       },
       {
-        title: 'Projet Fin d’Études Licence – Jeu de Quiz',
+        title: "Projet de licence — Application de quiz",
         description:
-          'Application interactive de quiz, intégrant logique de score, base de questions et reporting basique.',
-        tags: ['Fullstack', 'UX', 'Data'],
-        repo: '#',
-        demo: '#'
-      }
-    ]
+          "Pour mon projet de fin de licence, j’ai développé une application de quiz avec une base de questions, un calcul des scores et un affichage des résultats. Le projet associe l’interface utilisateur à la gestion des données.",
+        tags: ["Fullstack", "UX", "Data"],
+        repo: "#",
+        demo: "#",
+      },
+    ],
   },
   research: {
-    title: 'Recherche',
-    subtitle: 'Travaux axés sur l’analyse sémantique et la structuration de données complexes.',
+    title: "Recherche",
+    subtitle:
+      "Mes travaux sur la classification de documents et les données spatio-temporelles.",
     items: [
       {
-        title: 'Catégorisation d’articles scientifiques par relations sémantiques',
-        description: 'Méthodes d’analyse sémantique pour structurer des corpus scientifiques et faciliter la recherche thématique.',
-        paper: '#',
-        repo: '#'
+        title:
+          "Catégorisation d’articles scientifiques par relations sémantiques",
+        description:
+          "J’ai étudié comment les relations sémantiques entre articles scientifiques peuvent servir à les regrouper par thème et à organiser un corpus.",
+        paper: "#",
+        repo: "#",
       },
       {
-        title: 'Co-clustering de données spatio-temporelles',
-        description: 'Approche de co-clustering pour comprendre des dynamiques temporelles et spatiales complexes.',
-        paper: '#',
-        repo: '#'
-      }
-    ]
+        title: "Co-clustering de données spatio-temporelles",
+        description:
+          "J’ai étudié le co-clustering pour regrouper des données en tenant compte à la fois de leur dimension spatiale et de leur évolution dans le temps.",
+        paper: "#",
+        repo: "#",
+      },
+    ],
   },
   contact: {
-    title: 'Contact',
-    subtitle: 'Échangeons sur un projet IA, data produit ou collaboration.',
+    title: "Contact",
+    subtitle:
+      "Pour me parler d’un poste, d’un projet ou me poser une question sur mon travail, vous pouvez m’écrire par email ou sur LinkedIn.",
     cards: [
       {
-        label: 'Email',
-        value: 'libasselaye01@gmail.com',
-        href: 'mailto:libasselaye01@gmail.com'
+        label: "Email",
+        value: "libasselaye01@gmail.com",
+        href: "mailto:libasselaye01@gmail.com",
       },
       {
-        label: 'Téléphone',
-        value: '+33 6 51 98 36 14',
-        href: 'tel:+33651983614'
+        label: "Téléphone",
+        value: "+33 6 51 98 36 14",
+        href: "tel:+33651983614",
       },
       {
-        label: 'Localisation',
-        value: 'Région PACA, France'
-      }
+        label: "Localisation",
+        value: "Région PACA, France",
+      },
     ],
     socials: [
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mame-libasse-mboup-3a26871a0/' },
-      { label: 'GitHub', href: 'https://github.com/libasselaye' }
-    ]
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/mame-libasse-mboup-3a26871a0/",
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/libasselaye",
+      },
+    ],
   },
   write: {
-    title: 'Écrivez-moi',
-    subtitle: 'Un message suffit pour démarrer une conversation.',
+    title: "Écrivez-moi",
+    subtitle: "Présentez-moi votre demande en quelques lignes.",
     fields: {
-      name: 'Votre nom',
-      email: 'Votre email',
-      message: 'Votre message'
+      name: "Votre nom",
+      email: "Votre email",
+      message: "Votre message",
     },
-    subject: 'Contact via portfolio',
-    submit: 'Envoyer le message',
-    helper: "Le formulaire ouvre votre client email par défaut. L'intégration n8n peut être activée plus tard."
+    subject: "Contact via portfolio",
+    submit: "Envoyer le message",
+    helper: "Vous pouvez aussi m’écrire directement par email.",
   },
   footer: {
-    text: '© 2026 Mame Libasse Mboup. Tous droits réservés.',
-    marquee: "Let's build Together"
+    text: "© 2026 Mame Libasse Mboup. Tous droits réservés.",
+    marquee: "Me contacter",
   },
   ui: {
-    themeToggle: 'Changer le thème',
+    themeToggle: "Changer le thème",
     themeOptions: {
-      light: 'Clair',
-      dark: 'Sombre'
+      light: "Clair",
+      dark: "Sombre",
     },
-    menuToggle: 'Afficher le menu',
+    menuToggle: "Afficher le menu",
     heroProfile: {
-      kicker: 'Profil',
-      title: 'Ingénierie data appliquée',
+      kicker: "Profil",
+      title: "Ingénierie data appliquée",
       labels: {
-        company: 'Entreprise',
-        location: 'Localisation',
-        email: 'Email',
-        phone: 'Téléphone'
+        company: "Entreprise",
+        location: "Localisation",
+        email: "Email",
+        phone: "Téléphone",
       },
-      tags: ['Data Science', 'Machine Learning', 'Data Engineering', 'AI Automation', 'Agentic AI']
+      tags: [
+        "Data Science",
+        "Machine Learning",
+        "Data Engineering",
+        "AI Automation",
+        "Agentic AI",
+      ],
     },
     sectionKickers: {
-      profile: 'Profil',
-      experience: 'Expériences',
-      timeline: 'Parcours',
-      skills: 'Compétences',
-      work: 'Travaux',
-      papers: 'Publications',
-      details: 'Coordonnées',
-      message: 'Message'
+      profile: "Profil",
+      experience: "Expériences",
+      timeline: "Parcours",
+      skills: "Compétences",
+      work: "Travaux",
+      papers: "Publications",
+      details: "Coordonnées",
+      message: "Message",
     },
-    strengthsTitle: 'Axes forts',
-    writeCardTitle: 'Discutons de votre projet',
+    strengthsTitle: "Domaines de travail",
+    writeCardTitle: "M’écrire",
     buttons: {
-      repo: 'Repo',
-      demo: 'Démo',
-      paper: 'Paper'
-    }
-  }
+      repo: "Repo",
+      demo: "Démo",
+      paper: "Paper",
+    },
+  },
 };

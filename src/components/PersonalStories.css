@@ -1,0 +1,557 @@
+.personal-section {
+  background: var(--paper-soft);
+  border-block: 1px solid var(--line);
+}
+.personal-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 34px;
+}
+.personal-heading .eyebrow {
+  color: var(--muted);
+  font-size: 9px;
+}
+.personal-heading h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.1vw, 56px);
+  font-weight: 400;
+  line-height: 1.05;
+  margin-top: 15px;
+}
+.personal-heading > p {
+  max-width: 315px;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+.personal-chapters {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  gap: 38px;
+  margin-bottom: 32px;
+}
+.personal-chapters button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  font-size: 13px;
+  color: var(--muted);
+  position: relative;
+}
+.personal-chapters button[aria-pressed="true"] {
+  color: var(--ink);
+}
+.personal-chapters button[aria-pressed="true"]::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background: var(--copper);
+}
+.personal-chapters .chapter-number {
+  font-size: 9px;
+  color: var(--copper);
+}
+.personal-chapters .arrow {
+  width: 15px;
+  opacity: 0;
+  transition: opacity 160ms;
+}
+.personal-chapters button[aria-pressed="true"] .arrow {
+  opacity: 1;
+}
+.personal-story {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.7fr);
+  gap: 52px;
+  animation: photo-in 350ms ease;
+}
+.personal-story-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 15px;
+}
+.personal-story-copy > .eyebrow {
+  font-size: 8px;
+  color: var(--muted);
+}
+.personal-story-copy h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(31px, 3.3vw, 45px);
+  line-height: 1.08;
+  margin: 18px 0 20px;
+  max-width: 250px;
+}
+.personal-story-text {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+.personal-note {
+  margin-top: auto;
+  padding-top: 25px;
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.personal-related-project {
+  text-align: left;
+  width: 100%;
+  border: 1px solid var(--line);
+  padding: 18px;
+  margin-top: 26px;
+  background: var(--paper);
+}
+.personal-related-project > .eyebrow {
+  font-size: 8px;
+  color: var(--muted);
+}
+.personal-related-project strong {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-block: 10px 8px;
+}
+.personal-related-project > span:last-child {
+  display: block;
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.personal-related-project:hover {
+  border-color: var(--copper);
+}
+.personal-photos {
+  display: grid;
+  height: 490px;
+  gap: 12px;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.personal-photo {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  background: var(--line);
+}
+.personal-photos-3 .personal-photo-0 {
+  grid-row: 1 / 3;
+}
+.personal-photos-2 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.personal-photo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+.personal-photo:hover > img {
+  transform: scale(1.025);
+}
+.personal-photo::after {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(transparent, #101713aa);
+  pointer-events: none;
+}
+.personal-photo-label {
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+  right: 12px;
+  z-index: 1;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  color: #fff;
+  font-size: 11px;
+}
+.personal-photo-label small {
+  font-size: 8px;
+  opacity: 0.8;
+}
+.personal-photo-expand {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #131d2266;
+  border: 1px solid #ffffff60;
+  border-radius: 50%;
+}
+.personal-photo-expand .arrow {
+  width: 14px;
+  height: 14px;
+}
+.personal-videos {
+  margin-top: 28px;
+  width: 100%;
+}
+.personal-videos > .eyebrow {
+  font-size: 8px;
+  color: var(--muted);
+  margin-bottom: 11px;
+}
+.personal-video-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+  width: 100%;
+  text-align: left;
+}
+.personal-video-link > img {
+  height: 56px;
+  width: 42px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.personal-video-link > span:not(.personal-play) {
+  flex: 1;
+}
+.personal-video-link strong {
+  font-size: 11px;
+  line-height: 1.6;
+  font-weight: 500;
+  display: block;
+}
+.personal-video-link small {
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 4px;
+  display: block;
+}
+.personal-play {
+  border: 1px solid var(--line);
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: background 160ms;
+  flex-shrink: 0;
+}
+.personal-video-link:hover .personal-play {
+  background: var(--ink);
+  color: var(--paper);
+}
+.personal-jump {
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 5px;
+}
+.personal-jump .arrow {
+  width: 14px;
+}
+.personal-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 15px;
+}
+.personal-footer > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 11px;
+}
+.personal-footer > a:last-child {
+  color: var(--muted);
+}
+.personal-footer .arrow {
+  width: 15px;
+}
+.editorial-modal.personal-modal {
+  width: min(960px, calc(100vw - 40px));
+}
+.personal-viewer {
+  background: #131714;
+  display: flex;
+  justify-content: center;
+  min-height: 200px;
+}
+.personal-viewer > img,
+.personal-viewer > video {
+  display: block;
+  width: 100%;
+  height: min(66dvh, 720px);
+  object-fit: contain;
+}
+.personal-viewer-caption {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 23px 30px 26px;
+}
+.personal-viewer-caption .eyebrow {
+  color: var(--muted);
+  font-size: 8px;
+}
+.personal-viewer-caption h4 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  margin: 8px 0;
+  line-height: 1.15;
+}
+.personal-viewer-caption p:not(.eyebrow) {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 610px;
+}
+.personal-viewer-caption a {
+  text-decoration: underline;
+}
+.personal-viewer-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.personal-viewer-controls > span {
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 47px;
+  text-align: center;
+}
+.personal-viewer-controls .icon-button {
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.personal-viewer-controls .icon-button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+.personal-viewer-controls .previous-arrow {
+  transform: rotate(180deg);
+}
+@media (max-width: 1100px) {
+  .personal-story {
+    gap: 30px;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.65fr);
+  }
+  .personal-photos {
+    height: 470px;
+  }
+  .personal-story-copy h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 900px) {
+  .personal-heading {
+    gap: 28px;
+  }
+  .personal-heading h2 {
+    max-width: 280px;
+  }
+  .personal-heading > p {
+    max-width: 260px;
+    font-size: 12px;
+  }
+  .personal-story {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .personal-story-copy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    padding-top: 0;
+  }
+  .personal-story-copy > .eyebrow,
+  .personal-story-copy > h3,
+  .personal-story-text {
+    grid-column: 1;
+  }
+  .personal-story-copy h3 {
+    max-width: none;
+    margin-block: 14px;
+  }
+  .personal-videos {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    margin-top: 0;
+    align-self: center;
+  }
+  .personal-note {
+    grid-column: 1;
+    margin-top: 0;
+    padding-top: 18px;
+  }
+  .personal-story-training .personal-story-text {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  .personal-related-project {
+    grid-column: 1 / 3;
+    max-width: 420px;
+    margin-top: 20px;
+  }
+  .personal-story-training .personal-note {
+    grid-column: 1 / 3;
+  }
+  .personal-photos {
+    height: 440px;
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .personal-photos-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .personal-heading {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .personal-heading h2 {
+    font-size: 38px;
+    max-width: none;
+  }
+  .personal-heading > p {
+    max-width: none;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  .personal-chapters {
+    gap: 23px;
+    margin-bottom: 25px;
+  }
+  .personal-chapters button {
+    font-size: 12px;
+    gap: 8px;
+    min-height: 48px;
+  }
+  .personal-chapters .arrow {
+    display: none;
+  }
+  .personal-story-copy {
+    display: flex;
+  }
+  .personal-story-copy h3 {
+    font-size: 34px;
+    margin: 14px 0 16px;
+  }
+  .personal-story-text {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .personal-videos {
+    margin-top: 23px;
+  }
+  .personal-video-link strong {
+    font-size: 12px;
+  }
+  .personal-video-link > img {
+    width: 36px;
+    height: 48px;
+  }
+  .personal-play {
+    width: 33px;
+    height: 33px;
+  }
+  .personal-note {
+    padding-top: 17px;
+    font-size: 10px;
+  }
+  .personal-photos {
+    height: auto;
+    gap: 9px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .personal-photos-3 .personal-photo-0 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    height: 380px;
+  }
+  .personal-photos-3 .personal-photo:not(.personal-photo-0) {
+    height: 200px;
+  }
+  .personal-photos-2 {
+    grid-template-rows: 1fr;
+    height: 310px;
+  }
+  .personal-photo-label {
+    font-size: 10px;
+    bottom: 13px;
+    left: 12px;
+    gap: 7px;
+  }
+  .personal-photo-label small {
+    display: none;
+  }
+  .personal-photo-expand {
+    top: 9px;
+    right: 9px;
+    width: 27px;
+    height: 27px;
+  }
+  .personal-jump {
+    font-size: 11px;
+  }
+  .editorial-modal.personal-modal {
+    width: calc(100vw - 24px);
+    max-height: calc(100dvh - 30px);
+  }
+  .personal-viewer > img,
+  .personal-viewer > video {
+    height: 58dvh;
+  }
+  .personal-viewer-caption {
+    padding: 19px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .personal-viewer-caption h4 {
+    font-size: 27px;
+  }
+  .personal-viewer-controls {
+    justify-content: flex-end;
+  }
+  .personal-viewer-controls .icon-button {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .personal-story {
+    animation: none;
+  }
+  .personal-photo:hover > img {
+    transform: none;
+  }
+}

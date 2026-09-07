@@ -1,132 +1,37 @@
 <!doctype html>
-<html lang="fr" class="dark">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer." />
-    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="description"
+      content="Mame Libasse Mboup, data scientist chez BPCE-SI à Aix-en-Provence. Parcours, projets et compétences en analyse de données, développement web et IA."
+    />
+    <meta name="theme-color" content="#f5f3ed" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" />
     <link rel="canonical" href="https://libasse.tech" />
-    <meta property="og:title" content="Libasse | Data & IA" />
+    <meta
+      property="og:title"
+      content="Mame Libasse Mboup — Data Scientist & ML Engineer"
+    />
     <meta
       property="og:description"
-      content="Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer."
+      content="Data scientist chez BPCE-SI à Aix-en-Provence. Retrouvez mon parcours et mes projets en data, développement web et IA."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://libasse.tech" />
     <meta property="og:site_name" content="Mame Libasse Mboup" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Libasse | Data & I" />
+    <meta name="twitter:title" content="Mame Libasse Mboup — Data & IA" />
     <meta
       name="twitter:description"
-      content="Portfolio de Mame Libasse Mboup, Data Scientist et Machine Learning Engineer."
+      content="Data scientist chez BPCE-SI à Aix-en-Provence. Retrouvez mon parcours et mes projets en data, développement web et IA."
     />
-    <title>Mame Libasse Mboup | Data Scientist</title>
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <title>Mame Libasse Mboup | Data Scientist & ML Engineer</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="module">
-      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-      const chatCopy = {
-        fr: {
-          title: 'LibasseAI',
-          subtitle: '',
-          inputPlaceholder: 'Ecrivez votre message...',
-          closeButtonTooltip: 'Fermer',
-          initialMessages: [
-            'Hello !',
-            "Je suis LibasseAI, l'assistant virtuel de Libasse. Posez-moi toutes vos questions, je vous repondrai comme si vous etiez en face de lui."
-          ]
-        },
-        en: {
-          title: 'LibasseAI',
-          subtitle: '',
-          inputPlaceholder: 'Type your message...',
-          closeButtonTooltip: 'Close',
-          initialMessages: [
-            'Hello!',
-            "I'm LibasseAI, Libasse's virtual assistant. Ask me anything and I'll answer as if you were speaking with him."
-          ]
-        }
-      };
-
-      const getChatLanguage = () => {
-        const stored = window.localStorage.getItem('language');
-        if (stored === 'en' || stored === 'fr') return stored;
-        const htmlLang = document.documentElement.lang || 'fr';
-        return htmlLang.startsWith('en') ? 'en' : 'fr';
-      };
-
-      let chatApp;
-      const chatWebhookUrl = import.meta.env.VITE_CHAT_WEBHOOK_URL;
-
-      const bindCloseButton = () => {
-        const root = document.querySelector('#n8n-chat');
-        if (!root) return;
-        const closeButton = root.querySelector('.chat-close-button');
-        const toggleButton = root.querySelector('.chat-window-toggle');
-        if (!closeButton || !toggleButton) return;
-        if (closeButton.dataset.bound === 'true') return;
-        closeButton.dataset.bound = 'true';
-        closeButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          toggleButton.click();
-        });
-      };
-
-      const initChat = (lang) => {
-        const selected = chatCopy[lang] || chatCopy.fr;
-
-        if (!chatWebhookUrl) {
-          console.warn('VITE_CHAT_WEBHOOK_URL is missing. Chatbot init skipped.');
-          return;
-        }
-
-        if (chatApp) {
-          chatApp.unmount();
-          chatApp = null;
-        }
-
-        const target = document.querySelector('#n8n-chat');
-        if (target) target.remove();
-
-        chatApp = createChat({
-          webhookUrl: chatWebhookUrl,
-          showWindowCloseButton: true,
-          defaultLanguage: lang,
-          i18n: {
-            fr: {
-              title: chatCopy.fr.title,
-              subtitle: chatCopy.fr.subtitle,
-              inputPlaceholder: chatCopy.fr.inputPlaceholder,
-              closeButtonTooltip: chatCopy.fr.closeButtonTooltip
-            },
-            en: {
-              title: chatCopy.en.title,
-              subtitle: chatCopy.en.subtitle,
-              inputPlaceholder: chatCopy.en.inputPlaceholder,
-              closeButtonTooltip: chatCopy.en.closeButtonTooltip
-            }
-          },
-          initialMessages: selected.initialMessages
-        });
-
-        requestAnimationFrame(() => {
-          requestAnimationFrame(bindCloseButton);
-        });
-      };
-
-      initChat(getChatLanguage());
-
-      window.addEventListener('portfolio-language-change', (event) => {
-        const next = event?.detail;
-        if (next === 'fr' || next === 'en') {
-          initChat(next);
-        }
-      });
-    </script>
   </body>
 </html>
