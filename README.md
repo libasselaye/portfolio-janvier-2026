@@ -149,17 +149,29 @@ Je préfère des commits atomiques (une intention claire par commit : design, co
 
 ---
 
-## Déploiement VPS (Nginx)
+## Déploiement VPS
 
-Depuis le serveur :
+Le domaine est servi par Traefik, qui route vers un conteneur `nginx:alpine`
+montant `dist/` en lecture seule. Le conteneur lit le montage en direct : un
+nouveau build suffit, aucun redémarrage n'est nécessaire.
+
+```txt
+libasse.tech → Traefik (80/443, TLS Let's Encrypt)
+  ├── /      → conteneur portfolio      → /var/www/portfolio-janvier-2026/dist
+  └── /old   → conteneur portfolio-old  → /var/www/portfolio-old   (archive figée)
+```
+
+Le stack Docker est décrit dans `/docker/n8n/docker-compose.yml` sur le serveur.
+Le vhost `sites-available/portfolio-janvier-2026.conf` (port 8081) est un vestige
+et ne sert pas le domaine.
+
+Mise en production depuis le serveur :
 
 ```bash
 cd /var/www/portfolio-janvier-2026
 git pull origin main
 npm ci
 npm run build
-sudo nginx -t
-sudo systemctl reload nginx
 ```
 
 Checklist post-déploiement :
@@ -168,6 +180,25 @@ Checklist post-déploiement :
 - test formulaire contact
 - test chatbot
 - vérification des liens CV/Repo/Démo
+
+### Archive `/old`
+
+`/var/www/portfolio-old` contient une copie figée d'un build précédent, servie par
+un conteneur distinct. Elle est indépendante de `dist/` : les rebuilds ne la
+touchent pas. Son `index.html` a ses chemins racine préfixés par `/old/` et porte
+un `noindex` pour rester hors des moteurs de recherche.
+
+Pour figer la version en ligne comme nouvelle archive :
+
+```bash
+rm -rf /var/www/portfolio-old && mkdir -p /var/www/portfolio-old
+cp -a /var/www/portfolio-janvier-2026/dist/. /var/www/portfolio-old/
+sed -i 's|href="/favicon|href="/old/favicon|g; s|="/assets/|="/old/assets/|g' /var/www/portfolio-old/index.html
+sed -i 's|<meta charset="UTF-8" />|<meta charset="UTF-8" />\n    <meta name="robots" content="noindex, nofollow" />|' /var/www/portfolio-old/index.html
+```
+
+Pour retirer l'archive : supprimer le service `portfolio-old` du
+`docker-compose.yml`, puis `docker compose up -d --remove-orphans`.
 
 ---
 
