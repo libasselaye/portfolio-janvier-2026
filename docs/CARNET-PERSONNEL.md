@@ -13,7 +13,7 @@ Les cinq photos s’ouvrent en grand. Le lecteur permet de passer au média pré
 - `src/content/personal.ts` : textes FR/EN, légendes et correspondance des médias.
 - `public/photos/optimized/personal` : vignettes, photos pour l’affichage en grand et vidéos MP4.
 
-Les originaux du dossier `public/photos` sont conservés. Les copies JPEG sont correctement orientées, redimensionnées et réencodées sans les métadonnées personnelles des fichiers sources. Les vidéos sont en H.264/AAC, 720 × 1280, avec les métadonnées de lecture en début de fichier. Les deux copies vidéo totalisent environ 7,1 Mo, contre 85,4 Mo pour les originaux. Les durées complètes de 6,8 et 21,1 secondes sont conservées.
+Les originaux sont conservés dans `assets-sources/photos`, hors du dossier `public` : ils restent versionnés mais ne sont plus servis par le site. Les copies JPEG sont correctement orientées, redimensionnées et réencodées sans les métadonnées personnelles des fichiers sources. Les vidéos sont en H.264/AAC, 720 × 1280, avec les métadonnées de lecture en début de fichier. Les deux copies vidéo totalisent environ 7,1 Mo, contre 85,4 Mo pour les originaux. Les durées complètes de 6,8 et 21,1 secondes sont conservées.
 
 ## Sources locales
 

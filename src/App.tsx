@@ -107,6 +107,20 @@ export default function App() {
   }, [messages, chatStatus, chatOpen]);
   useEffect(() => () => clearTimeout(copyTimer.current), []);
   useEffect(() => {
+    const block = (event: Event) => {
+      const target = event.target;
+      if (target instanceof Element && target.closest("img, video")) {
+        event.preventDefault();
+      }
+    };
+    document.addEventListener("contextmenu", block);
+    document.addEventListener("dragstart", block);
+    return () => {
+      document.removeEventListener("contextmenu", block);
+      document.removeEventListener("dragstart", block);
+    };
+  }, []);
+  useEffect(() => {
     if (!menuOpen) return;
     const close = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMenuOpen(false);

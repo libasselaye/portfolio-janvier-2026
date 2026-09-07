@@ -14,7 +14,7 @@ Le métier « Data Scientist & Ingénieur IA » est renforcé dès l’accueil. 
 
 Quatre projets sont mis en avant (LibOrga, LiBrain, LibCalPilot et LibLeadIN). Le catalogue complet reste accessible par filtres et par expansion. Chaque fiche décrit le fonctionnement du projet et le travail réalisé, avec ses technologies et uniquement les liens renseignés. Les visuels sont des interprétations réalisées en HTML/CSS/SVG, et non des captures des applications ni des mesures de leurs performances.
 
-La galerie présente trois facettes du parcours. Les quatre photos utilisées disposent de copies adaptées au web dans `public/photos/optimized`. Les originaux restent disponibles. Le portrait d’accueil provient du fichier fourni `ChatGPT Image 30 avr. 2026, 11_25_57.png` ; il pourra être remplacé par un portrait photographique choisi ensemble.
+La galerie présente trois facettes du parcours. Les quatre photos utilisées disposent de copies adaptées au web dans `public/photos/optimized`. Les originaux restent disponibles dans `assets-sources/photos`, hors du dossier servi. Le portrait d’accueil provient du fichier fourni `ChatGPT Image 30 avr. 2026, 11_25_57.png` ; il pourra être remplacé par un portrait photographique choisi ensemble.
 
 ## Révision des textes — 6 septembre 2026
 

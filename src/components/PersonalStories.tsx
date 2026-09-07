@@ -195,6 +195,8 @@ export default function PersonalStories({
                   src={`${mediaRoot}${selected.file}`}
                   poster={`${mediaRoot}${selected.preview}`}
                   controls
+                  controlsList="nodownload noplaybackrate"
+                  disablePictureInPicture
                   playsInline
                   autoPlay
                   preload="metadata"

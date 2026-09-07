@@ -57,11 +57,18 @@ src/
   hooks/             # Hooks utilitaires (sections actives, etc.)
   App.tsx            # Composition globale des sections
   index.css          # Thème global + styles custom
-public/
+public/                # tout ce qui est publié tel quel sur le web
   CV_Mame_Libasse_Mboup.pdf
   CV_Mame_Libasse_Mboup_EN.pdf
   favicon.ico
+  photos/optimized/    # copies web des photos et vidéos
+  logos/
+assets-sources/        # originaux versionnés, jamais servis par le site
+  photos/
 ```
+
+> Les originaux pleine résolution restent hors de `public/` : tout fichier placé
+> dans `public/` devient téléchargeable publiquement par URL directe.
 
 ---
 
@@ -220,6 +227,17 @@ Avant chaque push, je vérifie :
 - Aucune clé/API token ne doit être exposée dans le code front
 - Toute intégration externe passe par variable d’environnement
 - Les infos d’infrastructure (adresses, secrets, credentials) restent hors documentation publique
+
+### Protection des médias
+
+Aucune protection ne rend un média non téléchargeable : ce que le navigateur
+affiche a déjà été transmis au visiteur. Le site limite donc l'exposition et la
+reprise opportuniste :
+
+- les originaux pleine résolution vivent dans `assets-sources/`, hors du web
+- clic droit et glisser-déposer neutralisés sur `img` et `video` (`src/App.tsx`)
+- appui long iOS et sélection désactivés (`img, video` dans `src/index.css`)
+- bouton de téléchargement natif retiré du lecteur vidéo (`controlsList`)
 
 ---
 

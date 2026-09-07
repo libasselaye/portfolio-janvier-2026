@@ -88,6 +88,12 @@ img {
   display: block;
   max-width: 100%;
 }
+img,
+video {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
 ::selection {
   background: var(--copper);
   color: var(--paper);
