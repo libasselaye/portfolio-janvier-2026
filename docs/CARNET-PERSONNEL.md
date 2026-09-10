@@ -6,6 +6,8 @@ Le chapitre PSG présente une grande photo des tribunes, deux vues complémentai
 
 Les cinq photos s’ouvrent en grand. Le lecteur permet de passer au média précédent ou suivant, utilise le dialogue natif du site et restitue le focus à la fermeture. Les vidéos ne sont montées ni téléchargées à l’affichage de la page ; elles démarrent après une action dans le carnet. La fermeture ou le changement de média retire le lecteur.
 
+Depuis le 10 septembre, le lecteur utilise `parc-vestiaire-silent.mp4`, une copie sans piste audio de la vidéo des vestiaires. La piste vidéo est conservée sans réencodage, avec la même orientation et la durée de 6,8 secondes. Le lecteur est également muet par défaut. L’original reste conservé.
+
 ## Fichiers
 
 - `src/components/PersonalStories.tsx` : chapitres, sélection des médias et lecteur.

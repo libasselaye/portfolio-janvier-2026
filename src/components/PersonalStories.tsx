@@ -199,6 +199,7 @@ export default function PersonalStories({
                   disablePictureInPicture
                   playsInline
                   autoPlay
+                  muted
                   preload="metadata"
                   aria-label={selected.label[language]}
                   aria-describedby="personal-media-description"

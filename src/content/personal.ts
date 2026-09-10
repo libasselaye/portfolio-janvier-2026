@@ -56,7 +56,7 @@ export const personalMedia: PersonalMedia[] = [
     id: "video-vestiaire",
     chapter: "psg",
     type: "video",
-    file: "parc-video-1.mp4",
+    file: "parc-vestiaire-silent.mp4",
     preview: "parc-vestiaire-poster.jpg",
     duration: "0:07",
     label: {
