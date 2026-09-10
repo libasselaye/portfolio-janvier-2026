@@ -32,7 +32,7 @@ Les dates, formations, coordonnées, technologies et liens existants sont conser
 - Thèmes clair et sombre persistants ; la nouvelle direction s’ouvre en clair par défaut.
 - Menu mobile, navigation par sections et progression de lecture.
 - Filtres de projets, catalogue complet, fiches en dialogue natif, fermeture et restitution du focus.
-- Expériences, formation et travaux de recherche dépliables.
+- Expériences et travaux de recherche dépliables. Formation toujours visible, master mis en avant et lien d’accès direct depuis l’introduction du parcours.
 - Galerie de photos contrôlée par le visiteur, sans défilement automatique.
 - Carnet personnel PSG/musculation : cinq nouvelles photos, une vidéo au clic et accès à LibCalPilot. Détails dans `docs/CARNET-PERSONNEL.md`.
 - Contact par email, copie d’adresse, réseaux et formulaire avec validation, état d’envoi, réussite, erreur et solution de repli.
@@ -57,6 +57,12 @@ Compilation TypeScript et build Vite. Vérifications dans le navigateur des vers
 
 Le formulaire et le chat ont été testés contre un serveur HTTP local simulant n8n : validation des champs, structure des requêtes, réponses réussies et erreurs HTTP. Aucune soumission n’a été envoyée aux services de production pendant ces essais. Leur disponibilité réelle reste donc à vérifier avant publication.
 
+## Présentation des prestations et de l’enseignement
+
+« À propos » présente les applications et agents IA, les sites et applications web, et l’ingénierie data en entreprise. Le parcours professionnel apporte le contexte de ces compétences sans présenter les employeurs comme des clients. Un bloc distinct décrit l’enseignement en mathématiques, statistiques et programmation (notamment Python et SQL), pour les professionnels, les organismes de formation, les élèves et les étudiants. Le nom de la plateforme IT reste privé à la demande de Libasse ; aucun nom ni lien n’est ajouté. Deux liens vers le contact permettent de parler d’un projet ou d’une formation. Les contenus existent en français et en anglais.
+
 ## Pour la prochaine itération
+
+Révision du 10 septembre : descriptions des compétences enrichies à partir des missions existantes (cadrage métier, modélisation, qualité, exploitation et intégration IA). La galerie « À propos » s’ouvre sur « 01 — Au quotidien », puis « 02 — Au bureau » et « 03 — Remise de diplôme », dans les deux langues. La vidéo des vestiaires utilise une copie sans piste audio.
 
 Choisir ensemble le portrait définitif, ajouter de vraies captures des quatre applications et enrichir les études de cas avec contexte, décisions et résultats vérifiables. Ces éléments permettront de rendre la présentation plus personnelle et d’étayer les réalisations, sans inventer de chiffres.

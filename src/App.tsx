@@ -23,7 +23,7 @@ import useActiveSection from "./hooks/useActiveSection";
 const assets = `${import.meta.env.BASE_URL}photos/optimized/`;
 const sectionIds = ["experience", "expertise", "projects", "about"];
 const categories: ProjectCategory[] = ["all", "product", "ai", "data"];
-const gallery = ["atelier.jpg", "diplome.jpg", "quotidien.jpg"];
+const gallery = ["quotidien.jpg", "atelier.jpg", "diplome.jpg"];
 const externalLink = (href: string) => /^https?:\/\//.test(href);
 const storedPreference = (key: string) => {
   try {
@@ -489,7 +489,12 @@ export default function App() {
               <br />
               <em>{t.careerItalic}</em>
             </h2>
-            <p>{content.experience.subtitle}</p>
+            <div className="career-overview">
+              <p>{content.experience.subtitle}</p>
+              <a className="text-link" href="#curriculum">
+                {t.educationLink} <Arrow diagonal />
+              </a>
+            </div>
           </div>
           <div className="career-list">
             {content.experience.items.map((item, i) => (
@@ -521,27 +526,34 @@ export default function App() {
               </details>
             ))}
           </div>
-          <details id="curriculum" className="education">
-            <summary>
+          <section
+            id="curriculum"
+            className="education"
+            aria-labelledby="education-title"
+          >
+            <div className="education-heading">
               <div>
                 <span className="eyebrow">{t.educationHint}</span>
-                <h3>
+                <h3 id="education-title">
                   {t.education}
-                  <em> ↗</em>
+                  <em>.</em>
                 </h3>
               </div>
-              <span className="disclosure-symbol" />
-            </summary>
-            <div className="education-content">
-              {content.curriculum.items.map((item) => (
-                <div key={item.title}>
+              <p>{content.curriculum.subtitle}</p>
+            </div>
+            <ol className="education-content">
+              {content.curriculum.items.map((item, i) => (
+                <li
+                  key={item.title}
+                  className={i === 0 ? "education-featured" : undefined}
+                >
                   <span className="eyebrow">{item.period}</span>
                   <h4>{item.title}</h4>
                   <p>{item.org}</p>
-                </div>
+                </li>
               ))}
-            </div>
-          </details>
+            </ol>
+          </section>
         </section>
 
         <section id="expertise" className="expertise-section section-space">
@@ -805,6 +817,48 @@ export default function App() {
                 <Arrow diagonal />
               </a>
             </div>
+          </div>
+          <div className="page-width about-offer">
+            <div className="offer-heading">
+              <div>
+                <p className="eyebrow">{t.servicesKicker}</p>
+                <h3>{t.servicesTitle}</h3>
+              </div>
+              <p>{t.servicesIntro}</p>
+            </div>
+            <div className="service-grid">
+              {t.services.map((service, i) => (
+                <article className="service-item" key={service.title}>
+                  <span className="eyebrow">0{i + 1}</span>
+                  <h4>{service.title}</h4>
+                  <p>{service.text}</p>
+                </article>
+              ))}
+            </div>
+            <a className="button button-dark" href="#contact">
+              {t.servicesCta} <Arrow diagonal />
+            </a>
+            <section
+              className="teaching-block"
+              aria-labelledby="teaching-title"
+            >
+              <div className="teaching-intro">
+                <p className="eyebrow">{t.teachingKicker}</p>
+                <h3 id="teaching-title">{t.teachingTitle}</h3>
+                <p>{t.teachingIntro}</p>
+                <a className="text-link" href="#contact">
+                  {t.teachingCta} <Arrow diagonal />
+                </a>
+              </div>
+              <div className="teaching-audiences">
+                {t.teachingAudiences.map((audience) => (
+                  <article key={audience.title}>
+                    <h4>{audience.title}</h4>
+                    <p>{audience.text}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
           </div>
         </section>
 

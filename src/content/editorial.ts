@@ -83,21 +83,55 @@ export const editorial = {
     aboutTitle: "À propos",
     aboutItalic: "de moi.",
     aboutLead:
-      "J’ai commencé mes études en mathématiques et informatique à Thiès, avant de les poursuivre en France. J’ai obtenu mon master en machine learning à Lyon II en 2022.",
+      "Je conçois des applications web et des agents IA, j’interviens sur des plateformes data en entreprise et je forme aux mathématiques, aux statistiques et à la programmation.",
     aboutText:
-      "Depuis 2021, je travaille dans la data. J’ai développé des outils de suivi pour l’énergie, les télécoms et la santé publique, avant de rejoindre le secteur bancaire. Mes projets personnels me permettent aussi de travailler sur les interfaces web et les agents IA.",
+      "Diplômé d’un master en machine learning à Lyon II, je travaille dans la data depuis 2021. Mon parcours chez Enedis, Orange, Innovation e-Santé Sud et aujourd’hui BPCE-SI m’a amené à travailler avec des équipes métier et techniques, sur des systèmes utilisés au quotidien. Cette expérience nourrit aussi ma façon de concevoir des applications et d’accompagner un projet.",
     aboutPersonal:
       "Je m’intéresse aussi aux statistiques appliquées au sport. En dehors du travail, je suis supporter du Paris Saint-Germain et je pratique la musculation.",
-    galleryLabels: ["Au bureau", "Remise de diplôme", "Au quotidien"],
+    servicesKicker: "PROJETS & ACCOMPAGNEMENT",
+    servicesTitle: "Ce que je peux vous apporter.",
+    servicesIntro:
+      "Créer une application, intégrer l’IA à vos outils ou renforcer votre équipe data : voici les sujets sur lesquels nous pouvons travailler ensemble.",
+    services: [
+      {
+        title: "Applications & agents IA",
+        text: "Un assistant qui exploite vos documents, un agent connecté à vos outils ou une application qui intègre l’IA. Je vous accompagne pour préciser le besoin, concevoir la solution et développer les intégrations nécessaires.",
+      },
+      {
+        title: "Sites internet & applications web",
+        text: "Un site pour présenter votre activité, une plateforme ou un outil interne. Je conçois les interfaces et développe les fonctionnalités, avec une attention portée à la clarté des parcours et à l’usage sur mobile.",
+      },
+      {
+        title: "Ingénierie data en entreprise",
+        text: "Je peux rejoindre une équipe data pour développer ses flux, structurer ses modèles et faire évoluer ses outils d’analyse. Mon expérience couvre GCP, BigQuery, dbt et Power BI, ainsi que les contraintes de qualité, d’accès et de maintenance en production.",
+      },
+    ],
+    servicesCta: "Parlons de votre projet",
+    teachingKicker: "ENSEIGNEMENT & FORMATION",
+    teachingTitle: "Former et transmettre.",
+    teachingIntro:
+      "La transmission fait aussi partie de mon activité. J’enseigne les mathématiques, les statistiques et la programmation, notamment Python et SQL.",
+    teachingAudiences: [
+      {
+        title: "Professionnels & organismes de formation",
+        text: "Je propose des formations sur une plateforme IT et au sein d’organismes de formation. Je peux intervenir pour accompagner l’apprentissage des outils et des méthodes en data et en programmation.",
+      },
+      {
+        title: "Élèves & étudiants",
+        text: "J’accompagne les élèves et les étudiants en mathématiques, en statistiques et en programmation : comprendre les notions, les mettre en pratique et progresser sur les sujets qui leur posent difficulté.",
+      },
+    ],
+    teachingCta: "Échanger sur une formation",
+    galleryLabels: ["Au quotidien", "Au bureau", "Remise de diplôme"],
     galleryAlt: [
+      "Mame Libasse Mboup travaillant sur sa tablette en extérieur",
       "Mame Libasse Mboup à son bureau, travaillant sur ses ordinateurs",
       "Mame Libasse Mboup lors de sa remise de diplôme",
-      "Mame Libasse Mboup travaillant sur sa tablette en extérieur",
     ],
     galleryCaptions: [
-      "01 — Au bureau.",
-      "02 — Remise de diplôme.",
-      "03 — Au quotidien.",
+      "01 — Au quotidien.",
+      "02 — Au bureau.",
+      "03 — Remise de diplôme.",
     ],
     cv: "Consulter mon CV",
     downloadCv: "Télécharger mon CV",
@@ -107,16 +141,17 @@ export const editorial = {
     current: "Aujourd’hui",
     education: "Formation",
     educationHint: "Diplômes & universités",
+    educationLink: "Voir ma formation",
     expertiseKicker: "OUTILS & MÉTHODES",
     expertiseTitle: "Mes",
     expertiseItalic: "compétences.",
     expertiseText:
-      "Mon travail couvre la data science, l’ingénierie sur GCP et dbt, la BI et l’IA appliquée. Chez BPCE-SI, ces sujets s’inscrivent dans un contexte bancaire international, avec des besoins métier et des exigences de fiabilité et de confidentialité.",
+      "J’interviens sur l’ensemble de la chaîne data : cadrage avec les métiers, préparation des données, analyse et mise à disposition des résultats. Chez BPCE-SI, ce travail associe ingénierie sur GCP, BI et IA appliquée, dans un environnement bancaire international où la fiabilité des traitements et la confidentialité des données sont essentielles.",
     expertiseDescriptions: [
-      "J’analyse les données et je construis des modèles statistiques ou de machine learning pour étudier un problème précis.",
-      "Je construis des pipelines sur GCP avec BigQuery, Cloud Composer et Cloud Storage. Avec dbt, je modélise les données, teste leur qualité et documente les transformations jusqu’aux tables utilisées pour l’analyse.",
-      "Je crée des tableaux de bord pour suivre une activité : disponibilité des lits hospitaliers, raccordements fibre ou indicateurs bancaires.",
-      "Je travaille sur des assistants d’analyse, l’extraction d’informations dans les documents et des agents connectés à des outils. Cela comprend l’intégration des modèles de langage, leur orchestration avec n8n et le développement assisté par IA.",
+      "Mes analyses portent sur des questions métier concrètes, comme les facteurs de recours aux urgences ou la supervision des réseaux. Je mobilise les statistiques et le machine learning pour étudier les relations entre variables, construire des modèles et interpréter les résultats, en tenant compte des limites des données.",
+      "Sur GCP, je développe les flux qui alimentent la plateforme data et les modèles qui rendent les données exploitables. BigQuery, Cloud Composer et dbt couvrent l’intégration, l’orchestration et les transformations. Les tests de qualité, la documentation et le suivi des dépendances font partie du travail, au même titre que la maintenance des traitements en production.",
+      "Je conçois des dispositifs de reporting avec les équipes métier, de la définition des indicateurs à leur restitution dans Power BI. Le travail comprend les modèles de données, les mesures DAX et la sécurité des accès, notamment à partir de BigQuery. Mes réalisations couvrent le pilotage bancaire, les capacités hospitalières et les opérations télécoms.",
+      "J’intègre des modèles de langage aux données et aux outils existants : assistants d’analyse, extraction documentaire et agents capables d’exécuter des actions. Je développe les connexions, orchestre les traitements avec n8n et structure les données produites. Dans le secteur bancaire, ces usages doivent aussi respecter la confidentialité et les contraintes de l’environnement de travail.",
     ],
     research: "Travaux de recherche",
     researchNote: "Pendant mes études",
@@ -186,21 +221,55 @@ export const editorial = {
     aboutTitle: "A little",
     aboutItalic: "about me.",
     aboutLead:
-      "I began studying mathematics and computer science in Thiès, then continued my studies in France. I completed my master’s in machine learning at Lyon II in 2022.",
+      "I build web applications and AI agents, work on enterprise data platforms, and teach mathematics, statistics and programming.",
     aboutText:
-      "I’ve worked in data since 2021. Before joining the banking sector, I built reporting tools for energy, telecoms and public healthcare. My personal projects also give me a chance to work on web interfaces and AI agents.",
+      "With a master’s in machine learning from Lyon II, I have worked in data since 2021. My roles at Enedis, Orange, Innovation e-Santé Sud and now BPCE-SI have involved working with business and technical teams on systems used every day. This experience also informs how I design applications and approach a project.",
     aboutPersonal:
       "I’m also interested in sports statistics. Outside work, I’m a Paris Saint-Germain supporter and I practise weight training.",
-    galleryLabels: ["At my desk", "Graduation", "Day to day"],
+    servicesKicker: "PROJECTS & SUPPORT",
+    servicesTitle: "How I can help.",
+    servicesIntro:
+      "Building an application, integrating AI into your tools or strengthening your data team: these are the areas we can work on together.",
+    services: [
+      {
+        title: "AI applications & agents",
+        text: "An assistant that works with your documents, an agent connected to your tools or an application with AI features. I can help define the requirements, design the solution and build the integrations it needs.",
+      },
+      {
+        title: "Websites & web applications",
+        text: "A website for your business, a platform or an internal tool. I design interfaces and develop features, with attention to clear user journeys and usability on mobile.",
+      },
+      {
+        title: "Enterprise data engineering",
+        text: "I can join a data team to develop its pipelines, structure its models and improve its analytical tools. My experience covers GCP, BigQuery, dbt and Power BI, including data quality, access controls and production maintenance.",
+      },
+    ],
+    servicesCta: "Let’s discuss your project",
+    teachingKicker: "TEACHING & TRAINING",
+    teachingTitle: "Teaching and sharing knowledge.",
+    teachingIntro:
+      "Teaching is also part of my work. I teach mathematics, statistics and programming, including Python and SQL.",
+    teachingAudiences: [
+      {
+        title: "Professionals & training organisations",
+        text: "I offer courses on an IT training platform and through training organisations. I can support learners in developing their knowledge of data and programming tools and methods.",
+      },
+      {
+        title: "School & university students",
+        text: "I support students in mathematics, statistics and programming: understanding concepts, putting them into practice and working through topics they find difficult.",
+      },
+    ],
+    teachingCta: "Discuss a training need",
+    galleryLabels: ["Day to day", "At my desk", "Graduation"],
     galleryAlt: [
+      "Mame Libasse Mboup working on a tablet outdoors",
       "Mame Libasse Mboup at his desk, working on his computers",
       "Mame Libasse Mboup at his graduation ceremony",
-      "Mame Libasse Mboup working on a tablet outdoors",
     ],
     galleryCaptions: [
-      "01 — At my desk.",
-      "02 — Graduation.",
-      "03 — Day to day.",
+      "01 — Day to day.",
+      "02 — At my desk.",
+      "03 — Graduation.",
     ],
     cv: "Read my résumé",
     downloadCv: "Download my CV",
@@ -210,16 +279,17 @@ export const editorial = {
     current: "Currently",
     education: "Education",
     educationHint: "Degrees & universities",
+    educationLink: "View my education",
     expertiseKicker: "TOOLS & METHODS",
     expertiseTitle: "My",
     expertiseItalic: "skills.",
     expertiseText:
-      "My work covers data science, engineering with GCP and dbt, BI and applied AI. At BPCE-SI, this involves an international banking context, business requirements, and expectations around reliability and confidentiality.",
+      "I work across the data lifecycle: defining requirements with business teams, preparing data, analysing it and making the results available. At BPCE-SI, this combines GCP engineering, BI and applied AI in an international banking environment, where reliable processing and data confidentiality are essential.",
     expertiseDescriptions: [
-      "I analyse data and build statistical or machine learning models to investigate a specific problem.",
-      "I build GCP pipelines with BigQuery, Cloud Composer and Cloud Storage. With dbt, I model data, test its quality and document transformations through to the tables used for analysis.",
-      "I create dashboards to track hospital bed availability, fibre connections and banking indicators.",
-      "I work on analytical assistants, document extraction and agents connected to external tools. This includes integrating language models, orchestrating them with n8n and using AI-assisted development.",
+      "My analyses address specific business questions, such as factors behind emergency department use or network monitoring. I use statistics and machine learning to examine relationships between variables, build models and interpret their results, taking the limitations of the data into account.",
+      "On GCP, I develop the flows that feed the data platform and the models that make its data usable. BigQuery, Cloud Composer and dbt support integration, orchestration and transformation. Quality tests, documentation and dependency tracking are part of this work, alongside maintaining production data processes.",
+      "I design reporting systems with business teams, from defining indicators to presenting them in Power BI. This includes data models, DAX measures and access controls, particularly with BigQuery as a source. My work covers banking reporting, hospital capacity and telecom operations.",
+      "I connect language models to existing data and tools: analytical assistants, document extraction and agents that can carry out actions. I build the integrations, orchestrate processing with n8n and structure the resulting data. In banking, these applications also need to respect confidentiality and the constraints of the working environment.",
     ],
     research: "Research projects",
     researchNote: "From my studies",
