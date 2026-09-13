@@ -55,7 +55,7 @@ export const editorial = {
     available: "Ouvert aux collaborations",
     heroLines: ["Mame", "Libasse", "Mboup."],
     intro:
-      "Chez BPCE-SI, à Aix-en-Provence, je travaille sur la plateforme data du Groupe avec GCP, BigQuery et dbt, et je conçois des rapports Power BI.\n\nJe participe aussi à des projets d’IA appliquée aux métiers bancaires dans un contexte international. En parallèle, je développe mes propres applications web et assistants IA.",
+      "Chez BPCE-SI, à Aix-en-Provence, je travaille sur des sujets data et IA pour les métiers bancaires du Groupe, dans un contexte international. J’interviens de la compréhension du besoin à la mise en production : pipelines et modèles de données, outils de pilotage et usages de l’IA, avec GCP, BigQuery, dbt et Power BI.\n\nEn parallèle, je conçois mes propres applications web et assistants IA.",
     seeProjects: "Voir mes projets",
     meet: "À propos de moi",
     scroll: "Mon parcours",
@@ -70,7 +70,8 @@ export const editorial = {
     details: "Voir le projet",
     allProjects: "Voir les 19 projets",
     fewerProjects: "Afficher la sélection",
-    illustration: "LibOrga : captures réelles · Autres projets : illustrations",
+    illustration:
+      "LibOrga, LiBrain, LibCalPilot et LibLeadIN : interfaces réelles · Données de démonstration",
     source: "Code source",
     demo: "Ouvrir le site",
     close: "Fermer",
@@ -192,7 +193,7 @@ export const editorial = {
     available: "Open to collaborations",
     heroLines: ["Mame", "Libasse", "Mboup."],
     intro:
-      "At BPCE-SI in Aix-en-Provence, I work on the Group’s data platform with GCP, BigQuery and dbt, and I build Power BI reports.\n\nI also contribute to AI projects for banking teams in an international context. Alongside this work, I develop my own web applications and AI assistants.",
+      "At BPCE-SI in Aix-en-Provence, I work on data and AI projects for the Group’s banking teams in an international context. I contribute from understanding the business need through to production: data pipelines and models, reporting tools and AI use cases, using GCP, BigQuery, dbt and Power BI.\n\nAlongside this role, I design and build my own web applications and AI assistants.",
     seeProjects: "View my projects",
     meet: "About me",
     scroll: "My experience",
@@ -207,7 +208,8 @@ export const editorial = {
     details: "View project",
     allProjects: "View all 19 projects",
     fewerProjects: "Show selected projects",
-    illustration: "LibOrga: real screenshots · Other projects: illustrations",
+    illustration:
+      "LibOrga, LiBrain, LibCalPilot and LibLeadIN: real interfaces · Demo data",
     source: "Source code",
     demo: "Open website",
     close: "Close",

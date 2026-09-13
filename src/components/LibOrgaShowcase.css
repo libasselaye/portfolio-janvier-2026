@@ -17,7 +17,7 @@
 .liborga-gallery-controls button span{opacity:.65;margin-right:5px}
 .liborga-gallery-controls button[aria-pressed=true]{background:#244237;color:#fff}
 .liborga-full-screen{display:flex;justify-content:center;background:#dbe2d7;border:1px solid #24423720;padding:22px;border-radius:4px}
-.liborga-full-screen img{height:490px;max-width:100%;width:auto;object-fit:contain;box-shadow:0 6px 24px #24423716}
+.liborga-full-screen img{width:100%;height:auto;aspect-ratio:18/13;object-fit:contain;box-shadow:0 6px 24px #24423716}
 .liborga-gallery figcaption{display:flex;align-items:start;justify-content:space-between;gap:24px;font-size:12px;line-height:1.7;margin-top:16px}
 .liborga-gallery figcaption span{max-width:360px}
 .liborga-gallery figcaption a{white-space:nowrap;text-decoration:underline;text-underline-offset:4px}

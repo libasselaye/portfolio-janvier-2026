@@ -5,7 +5,7 @@ const root = `${import.meta.env.BASE_URL}projects/liborga/`;
 const screens = [
   { file: "today-libasse", fr: "La journée", en: "Today", textFr: "Trois priorités, leurs créneaux et un accès au mode focus pour passer à l’action.", textEn: "Three priorities, their time slots and a focus mode to get started." },
   { file: "matrix", fr: "Les priorités", en: "Priorities", textFr: "La matrice d’Eisenhower aide à distinguer ce qui est urgent de ce qui est important.", textEn: "The Eisenhower matrix helps distinguish urgent work from important work." },
-  { file: "projects", fr: "Les projets", en: "Projects", textFr: "Chaque projet regroupe ses tâches et affiche leur progression en un coup d’œil.", textEn: "Each project brings its tasks together and shows progress at a glance." },
+  { file: "bilan", fr: "Le bilan", en: "Review", textFr: "Le bilan hebdomadaire met en regard les tâches terminées, le temps de focus et le rythme de travail.", textEn: "The weekly review brings completed tasks, focus time and working rhythm together." },
 ];
 
 export function LibOrgaCover({ en }: { en: boolean }) {
@@ -29,7 +29,7 @@ export default function LibOrgaShowcase({ en }: { en: boolean }) {
   return <section className="liborga-gallery" aria-label={en ? "LibOrga screenshots" : "Captures de LibOrga"}>
     <div className="liborga-gallery-header">
       <p className="eyebrow">{en ? "INSIDE THE APPLICATION" : "DANS L’APPLICATION"}</p>
-      <h3>{en ? "From a task to a plan." : "D’une tâche à un programme."}</h3>
+      <h3>{en ? "From priority to progress." : "Des priorités aux progrès."}</h3>
       <p>{en ? "Real interface, shown with fictional projects and tasks." : "L’interface réelle, présentée avec des projets et des tâches fictifs."}</p>
     </div>
     <div className="liborga-gallery-controls" aria-label={en ? "Choose a screen" : "Choisir un écran"}>

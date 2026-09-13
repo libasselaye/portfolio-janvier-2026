@@ -9,6 +9,9 @@ import {
   ChatIcon,
 } from "./components/EditorialUI";
 import LibOrgaShowcase, { LibOrgaCover } from "./components/LibOrgaShowcase";
+import ProductShowcase, {
+  ProductScreenshotCover,
+} from "./components/ProductShowcase";
 import AboutGallery from "./components/AboutGallery";
 import ScrollProgress from "./components/ScrollProgress";
 import PersonalStories from "./components/PersonalStories";
@@ -26,6 +29,36 @@ const assets = `${import.meta.env.BASE_URL}photos/optimized/`;
 const sectionIds = ["experience", "expertise", "projects", "about"];
 const categories: ProjectCategory[] = ["all", "product", "ai", "data"];
 const externalLink = (href: string) => /^https?:\/\//.test(href);
+
+function FeaturedProjectCover({ index, en }: { index: number; en: boolean }) {
+  if (index === 0) return <LibOrgaCover en={en} />;
+  if (index === 1)
+    return <ProductScreenshotCover product="calpilot" en={en} />;
+  if (index === 2)
+    return <ProductScreenshotCover product="leadin" en={en} />;
+  if (index === 4)
+    return <ProductScreenshotCover product="librain" en={en} />;
+
+  const design = featured[index];
+  return design ? <ProductVisual kind={design.kind} en={en} /> : null;
+}
+
+function FeaturedProjectShowcase({
+  index,
+  en,
+}: {
+  index: number;
+  en: boolean;
+}) {
+  if (index === 0) return <LibOrgaShowcase en={en} />;
+  if (index === 1) return <ProductShowcase product="calpilot" en={en} />;
+  if (index === 2) return <ProductShowcase product="leadin" en={en} />;
+  if (index === 4) return <ProductShowcase product="librain" en={en} />;
+
+  const design = featured[index];
+  return design ? <ProductVisual kind={design.kind} en={en} /> : null;
+}
+
 const storedPreference = (key: string) => {
   try {
     return localStorage.getItem(key);
@@ -329,10 +362,7 @@ export default function App() {
           <div className="hero-grid">
             <div className="hero-copy">
               <h1>
-                {t.heroLines[0]}
-                <br />
-                {t.heroLines[1]}
-                <br />
+                {t.heroLines[0]} {t.heroLines[1]}{" "}
                 <em>{t.heroLines[2]}</em>
               </h1>
               <div className="hero-intro">
@@ -483,9 +513,8 @@ export default function App() {
         >
           <SectionLabel number="01">{t.careerKicker}</SectionLabel>
           <div className="section-heading">
-            <h2>
-              {t.careerTitle}
-              <br />
+            <h2 className="editorial-inline-title">
+              {t.careerTitle}{" "}
               <em>{t.careerItalic}</em>
             </h2>
             <div className="career-overview">
@@ -559,9 +588,8 @@ export default function App() {
           <div className="page-width expertise-grid">
             <div className="expertise-intro">
               <SectionLabel number="02">{t.expertiseKicker}</SectionLabel>
-              <h2>
-                {t.expertiseTitle}
-                <br />
+              <h2 className="editorial-inline-title">
+                {t.expertiseTitle}{" "}
                 <em>{t.expertiseItalic}</em>
               </h2>
               <p>{t.expertiseText}</p>
@@ -617,9 +645,8 @@ export default function App() {
         >
           <SectionLabel number="03">{t.workKicker}</SectionLabel>
           <div className="section-heading">
-            <h2>
-              {t.workTitle}
-              <br />
+            <h2 className="editorial-inline-title">
+              {t.workTitle}{" "}
               <em>{t.workItalic}</em>
             </h2>
             <p>{t.workDescription}</p>
@@ -670,7 +697,7 @@ export default function App() {
                   >
                     {design ? (
                       <div className="project-art">
-                        {index === 0 ? <LibOrgaCover en={en} /> : <ProductVisual kind={design.kind} en={en} />}
+                        <FeaturedProjectCover index={index} en={en} />
                         <span className="project-hover-arrow">
                           <Arrow diagonal />
                         </span>
@@ -951,9 +978,7 @@ export default function App() {
           closeLabel={t.close}
           onClose={() => setSelectedProject(null)}
         >
-          {selectedProject === 0 ? <LibOrgaShowcase en={en} /> : featured[selectedProject] && (
-            <ProductVisual kind={featured[selectedProject].kind} en={en} />
-          )}
+          <FeaturedProjectShowcase index={selectedProject} en={en} />
           <div className="modal-content">
             <p className="eyebrow">{t.projectAbout}</p>
             <h2>{featured[selectedProject]?.name ?? project.title}</h2>

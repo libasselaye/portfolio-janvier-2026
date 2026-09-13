@@ -1,0 +1,37 @@
+.screenshot-cover{display:grid;grid-template-columns:42% 58%;padding:28px 24px;overflow:hidden;isolation:isolate}
+.screenshot-cover-calpilot{background:#e7efe4;color:#183d2c}
+.screenshot-cover-leadin{background:#0b0d17;color:#f4f5fa}
+.screenshot-cover-librain{background:#0c111d;color:#f4f5fa}
+.screenshot-cover-copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start}
+.screenshot-cover-copy .eyebrow{font-size:8px;letter-spacing:.12em}
+.screenshot-cover-copy strong{font-family:var(--serif,Georgia,serif);font-size:31px;font-weight:400;line-height:1.12;max-width:180px;margin-top:32px}
+.screenshot-cover-copy small{font-size:8px;line-height:1.5;margin-top:auto}
+.screenshot-cover-media{position:relative;height:100%}
+.cover-shot{position:absolute;object-fit:cover;object-position:top;box-shadow:0 16px 32px #0003}
+.screenshot-cover-calpilot .cover-shot{width:48%;height:300px;border:4px solid #fff;border-radius:18px}
+.screenshot-cover-calpilot .cover-shot-1{left:3%;top:4px;transform:rotate(-5deg)}
+.screenshot-cover-calpilot .cover-shot-2{right:-4%;top:37px;transform:rotate(5deg)}
+.screenshot-cover-leadin .screenshot-cover-media,.screenshot-cover-librain .screenshot-cover-media{transform:perspective(800px) rotateY(-5deg)}
+.screenshot-cover-leadin .cover-shot,.screenshot-cover-librain .cover-shot{width:92%;height:auto;aspect-ratio:16/9;border:3px solid #22283d;border-radius:8px;right:-8%;top:18px}
+.screenshot-cover-leadin .cover-shot-2,.screenshot-cover-librain .cover-shot-2{top:108px;right:-17%;opacity:.48}
+.screenshot-gallery{padding:38px 34px 28px}
+.screenshot-gallery-calpilot{background:#e7efe4;color:#183d2c}
+.screenshot-gallery-leadin{background:#10131e;color:#f5f6fb}
+.screenshot-gallery-librain{background:#101522;color:#f5f6fb}
+.screenshot-gallery-heading h3{font-family:var(--serif,Georgia,serif);font-size:32px;font-weight:400;line-height:1.2;margin:12px 0}
+.screenshot-gallery-heading>p:last-child{max-width:540px;font-size:12px;line-height:1.7;opacity:.72}
+.screenshot-gallery-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 20px}
+.screenshot-gallery-tabs button{border:1px solid currentColor;border-radius:3px;padding:10px 12px;font-size:11px;color:inherit;opacity:.62}
+.screenshot-gallery-tabs button span{font-size:9px;margin-right:7px}
+.screenshot-gallery-tabs button[aria-pressed=true]{background:currentColor;opacity:1}
+.screenshot-gallery-calpilot .screenshot-gallery-tabs button[aria-pressed=true]{color:#fff;background:#183d2c}
+.screenshot-gallery-leadin .screenshot-gallery-tabs button[aria-pressed=true],.screenshot-gallery-librain .screenshot-gallery-tabs button[aria-pressed=true]{color:#10131e;background:#f5f6fb}
+.screenshot-gallery figure>a{display:flex;justify-content:center;border:1px solid currentColor;border-radius:4px;overflow:hidden}
+.screenshot-gallery-calpilot figure>a{background:#dce7d9;border-color:#183d2c30;padding:24px}
+.screenshot-gallery-leadin figure>a,.screenshot-gallery-librain figure>a{background:#080a12;border-color:#ffffff20;padding:14px}
+.screenshot-gallery figure.is-mobile img{height:580px;max-width:100%;width:auto;object-fit:contain;box-shadow:0 12px 34px #183d2c24}
+.screenshot-gallery figure.is-desktop img{display:block;width:100%;height:auto;object-fit:contain}
+.screenshot-gallery figcaption{display:flex;align-items:start;justify-content:space-between;gap:24px;font-size:12px;line-height:1.7;margin-top:16px}
+.screenshot-gallery figcaption span{max-width:450px}
+.screenshot-gallery figcaption a{white-space:nowrap;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:600px){.screenshot-cover{padding:23px 19px}.screenshot-cover-copy strong{font-size:26px;margin-top:26px}.screenshot-gallery{padding:30px 20px 24px}.screenshot-gallery-heading h3{font-size:27px}.screenshot-gallery-tabs{gap:5px}.screenshot-gallery-tabs button{font-size:10px;padding:9px 8px}.screenshot-gallery-calpilot figure>a{padding:12px}.screenshot-gallery figure.is-mobile img{height:auto;max-height:540px}.screenshot-gallery figcaption{flex-direction:column;gap:9px}}
