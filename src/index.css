@@ -446,13 +446,15 @@ h2 {
 }
 .portrait > img {
   width: 100%;
-  height: 440px;
+  height: auto;
+  aspect-ratio: 1042 / 1300;
   object-fit: cover;
-  object-position: 50% 38%;
+  object-position: 50% 0%;
+  transform-origin: 50% 0%;
   transition: transform 1s ease;
 }
 .portrait:hover > img {
-  transform: scale(1.035);
+  transform: none;
 }
 .portrait > figcaption {
   position: absolute;
@@ -2076,9 +2078,6 @@ details[open] > summary .disclosure-symbol:after {
   .hero-grid {
     padding-block: 58px 62px;
   }
-  .portrait > img {
-    height: 510px;
-  }
   .portrait-composition {
     max-width: 460px;
   }
@@ -2111,9 +2110,6 @@ details[open] > summary .disclosure-symbol:after {
   }
   .hero h1 {
     font-size: 8vw;
-  }
-  .portrait > img {
-    height: 395px;
   }
   .hero-cta {
     gap: 17px;
@@ -2244,9 +2240,6 @@ details[open] > summary .disclosure-symbol:after {
   }
   .portrait-composition {
     padding-right: 9px;
-  }
-  .portrait > img {
-    height: 375px;
   }
   .portrait-side {
     right: -21px;
@@ -2585,10 +2578,6 @@ details[open] > summary .disclosure-symbol:after {
     max-width: unset;
     justify-self: start;
     padding: 10px 10px 0 0;
-  }
-  .portrait > img {
-    height: 420px;
-    object-position: 50% 35%;
   }
   .portrait-side {
     right: -22px;
@@ -3105,9 +3094,6 @@ details[open] > summary .disclosure-symbol:after {
   .hero-cta .text-link {
     font-size: 8px;
   }
-  .portrait > img {
-    height: 365px;
-  }
   .project-filters {
     gap: 15px;
   }
@@ -3274,3 +3260,7 @@ details[open] > summary .disclosure-symbol:after {
     width: 124px;
   }
 }
+
+.about-work-video { object-fit: contain; background: #20231f; }
+.about-media-controls { flex-wrap: wrap; justify-content: flex-start; column-gap: 20px; row-gap: 0; }
+.about-media-controls .about-video-label { margin-right: 0; white-space: nowrap; }

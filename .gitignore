@@ -5,3 +5,6 @@ node_modules
 dist
 .env
 .claude/
+
+# Original media retained locally; only web exports are published.
+media-originals/

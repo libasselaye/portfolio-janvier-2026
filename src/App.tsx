@@ -8,6 +8,8 @@ import {
   NetworkIcon,
   ChatIcon,
 } from "./components/EditorialUI";
+import LibOrgaShowcase, { LibOrgaCover } from "./components/LibOrgaShowcase";
+import AboutGallery from "./components/AboutGallery";
 import ScrollProgress from "./components/ScrollProgress";
 import PersonalStories from "./components/PersonalStories";
 import { contentFr } from "./content/fr";
@@ -23,7 +25,6 @@ import useActiveSection from "./hooks/useActiveSection";
 const assets = `${import.meta.env.BASE_URL}photos/optimized/`;
 const sectionIds = ["experience", "expertise", "projects", "about"];
 const categories: ProjectCategory[] = ["all", "product", "ai", "data"];
-const gallery = ["quotidien.jpg", "atelier.jpg", "diplome.jpg"];
 const externalLink = (href: string) => /^https?:\/\//.test(href);
 const storedPreference = (key: string) => {
   try {
@@ -50,7 +51,6 @@ export default function App() {
   const [filter, setFilter] = useState<ProjectCategory>("all");
   const [showAll, setShowAll] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
-  const [photo, setPhoto] = useState(0);
   const [formOpen, setFormOpen] = useState(false);
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
@@ -409,7 +409,6 @@ export default function App() {
               <span>↓</span>
               {t.scroll}
             </a>
-            <p>{t.portrait}</p>
             <span className="edition">PORTFOLIO — 2026</span>
           </div>
         </section>
@@ -671,7 +670,7 @@ export default function App() {
                   >
                     {design ? (
                       <div className="project-art">
-                        <ProductVisual kind={design.kind} en={en} />
+                        {index === 0 ? <LibOrgaCover en={en} /> : <ProductVisual kind={design.kind} en={en} />}
                         <span className="project-hover-arrow">
                           <Arrow diagonal />
                         </span>
@@ -738,39 +737,7 @@ export default function App() {
 
         <section id="about" className="about-section section-space">
           <div className="page-width about-grid">
-            <div className="about-photo-column">
-              <div className="about-image">
-                <img
-                  key={photo}
-                  src={`${assets}${gallery[photo]}`}
-                  alt={t.galleryAlt[photo]}
-                  width="900"
-                  height="1200"
-                  loading="lazy"
-                  decoding="async"
-                  className={`gallery-photo gallery-photo-${photo}`}
-                />
-                <span className="photo-corner">MAME LIBASSE MBOUP</span>
-              </div>
-              <div
-                className="gallery-controls"
-                aria-label={en ? "Photo selection" : "Sélection de photos"}
-              >
-                {t.galleryLabels.map((label, i) => (
-                  <button
-                    key={label}
-                    aria-pressed={photo === i}
-                    onClick={() => setPhoto(i)}
-                  >
-                    <span>0{i + 1}</span>
-                    {label}
-                  </button>
-                ))}
-              </div>
-              <p className="photo-caption" aria-live="polite">
-                {t.galleryCaptions[photo]}
-              </p>
-            </div>
+            <AboutGallery en={en} />
             <div className="about-copy">
               <SectionLabel number="04">{t.aboutKicker}</SectionLabel>
               <h2>
@@ -791,7 +758,7 @@ export default function App() {
                 <div>
                   <strong>2021</strong>
                   <span>
-                    {en ? "Started working in data" : "Début dans la data"}
+                    {en ? "First professional role" : "Première expérience professionnelle"}
                   </span>
                 </div>
                 <div>
@@ -984,7 +951,7 @@ export default function App() {
           closeLabel={t.close}
           onClose={() => setSelectedProject(null)}
         >
-          {featured[selectedProject] && (
+          {selectedProject === 0 ? <LibOrgaShowcase en={en} /> : featured[selectedProject] && (
             <ProductVisual kind={featured[selectedProject].kind} en={en} />
           )}
           <div className="modal-content">
