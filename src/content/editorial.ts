@@ -1,12 +1,13 @@
 export type ProjectCategory = "all" | "product" | "ai" | "data";
 // Stable source indices keep the complete FR/EN project catalogue intact.
 export const projectOrder = [
-  0, 4, 1, 2, 3, 7, 6, 8, 9, 10, 11, 12, 5, 13, 14, 15, 16, 17, 18,
+  19, 0, 20, 22, 21, 1, 23, 4, 2, 3, 24, 25, 7, 6, 8, 9, 10, 11, 12, 5,
+  13, 14, 15, 16, 17, 18,
 ];
 export const projectCategory = (index: number): ProjectCategory =>
-  [0, 1, 5, 18].includes(index)
+  [0, 1, 5, 18, 19, 20, 22, 24, 25].includes(index)
     ? "product"
-    : [7, 13, 14, 15, 16, 17].includes(index)
+    : [7, 13, 14, 15, 16, 17, 23].includes(index)
       ? "data"
       : "ai";
 export const featured: Record<
@@ -27,11 +28,11 @@ export const featured: Record<
     tags: ["Product design", "Next.js", "Supabase"],
   },
   "1": {
-    name: "LibCalPilot",
+    name: "Libfuel",
     kind: "nutrition",
     fr: "Suivre son alimentation et ses apports nutritionnels.",
     en: "Track meals and nutritional intake.",
-    tags: ["PWA", "Gemini Vision", "React"],
+    tags: ["PWA", "IA vision", "React"],
   },
   "2": {
     name: "LibLeadIN",
@@ -68,7 +69,7 @@ export const editorial = {
       "Des applications personnelles, des automatisations et des travaux d’analyse. Chaque fiche présente le fonctionnement du projet et les outils utilisés.",
     filters: ["Tous les projets", "Applications web", "Agents IA", "Data & ML"],
     details: "Voir le projet",
-    allProjects: "Voir les 19 projets",
+    allProjects: "Voir les 26 projets",
     fewerProjects: "Afficher la sélection",
     illustration:
       "LibOrga, LiBrain, LibCalPilot et LibLeadIN : interfaces réelles · Données de démonstration",
@@ -206,7 +207,7 @@ export const editorial = {
       "Personal applications, automation workflows and data analysis projects. Each overview explains what the project does and which tools I used.",
     filters: ["All projects", "Web applications", "AI agents", "Data & ML"],
     details: "View project",
-    allProjects: "View all 19 projects",
+    allProjects: "View all 26 projects",
     fewerProjects: "Show selected projects",
     illustration:
       "LibOrga, LiBrain, LibCalPilot and LibLeadIN: real interfaces · Demo data",
