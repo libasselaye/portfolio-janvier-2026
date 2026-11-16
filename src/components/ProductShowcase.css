@@ -13,6 +13,10 @@
 .screenshot-cover.is-desktop .cover-shot{width:92%;height:auto;aspect-ratio:16/9;border:3px solid #22283d;border-radius:8px;right:-8%;top:18px}
 .screenshot-cover.is-desktop.is-light .cover-shot{border-color:#fff}
 .screenshot-cover.is-desktop .cover-shot-2{top:108px;right:-17%;opacity:.48}
+.screenshot-cover.is-desktop.is-light .screenshot-cover-media{transform:none}
+.screenshot-cover.is-desktop.is-light .cover-shot{width:80%;aspect-ratio:16/10;object-fit:cover;object-position:top left;border:4px solid #fff;border-radius:10px;box-shadow:0 14px 30px #00000022;opacity:1}
+.screenshot-cover.is-desktop.is-light .cover-shot-1{left:-2%;right:auto;top:10px;transform:rotate(-4deg)}
+.screenshot-cover.is-desktop.is-light .cover-shot-2{right:-16%;top:118px;transform:rotate(3deg)}
 
 .screenshot-gallery{padding:38px 34px 28px}
 .screenshot-gallery-heading h3{font-family:var(--serif,Georgia,serif);font-size:32px;font-weight:400;line-height:1.2;margin:12px 0}
@@ -37,12 +41,12 @@
 .screenshot-gallery-libfuel{--figure-bg:#eeddd0}
 .screenshot-cover-aminteu,.screenshot-gallery-aminteu{--product-text:#0b454b;background:#e3efef;color:var(--product-text)}
 .screenshot-gallery-aminteu{--figure-bg:#d3e5e5}
-.screenshot-cover-knowledge,.screenshot-gallery-knowledge{--product-text:#3b2d27;background:#f1ebe5;color:var(--product-text)}
-.screenshot-gallery-knowledge{--figure-bg:#e6ddd4}
-.screenshot-cover-libticket,.screenshot-gallery-libticket{--product-text:#0c2d5e;background:#e6eefb;color:var(--product-text)}
-.screenshot-gallery-libticket{--figure-bg:#d6e2f5}
-.screenshot-cover-openstudio,.screenshot-gallery-openstudio{--product-text:#3d2500;background:#eee8dd;color:var(--product-text)}
-.screenshot-gallery-openstudio{--figure-bg:#e2d9c9}
+.screenshot-cover-knowledge,.screenshot-gallery-knowledge{--product-text:#3b2d27;background:#dccfc2;color:var(--product-text)}
+.screenshot-gallery-knowledge{--figure-bg:#cfc0b1}
+.screenshot-cover-libticket,.screenshot-gallery-libticket{--product-text:#0c2d5e;background:#d5e1f7;color:var(--product-text)}
+.screenshot-gallery-libticket{--figure-bg:#c5d4f0}
+.screenshot-cover-openstudio,.screenshot-gallery-openstudio{--product-text:#3d2500;background:#e0d6c4;color:var(--product-text)}
+.screenshot-gallery-openstudio{--figure-bg:#d3c7b2}
 .screenshot-cover-leadin{background:#0b0d17;color:#f4f5fa}
 .screenshot-cover-librain{background:#0c111d;color:#f4f5fa}
 .screenshot-gallery-leadin{background:#10131e;color:#f5f6fb}
