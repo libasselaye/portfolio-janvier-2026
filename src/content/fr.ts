@@ -515,9 +515,9 @@ export const contentFr: Content = {
         demo: "#",
       },
       {
-        title: "Aminteu — Suivi des médicaments",
+        title: "LibMedoc (Aminteu) — Suivi des médicaments",
         description:
-          "Aminteu permet à une famille de suivre ensemble les prises de médicaments et les séances d’oxygène d’un proche. Chacun se connecte avec son code personnel et coche une prise ; tous les écrans ouverts se mettent à jour en direct. Des rappels et des alertes arrivent par notification quand une prise est en retard.\n\nLes règles sont garanties par PostgreSQL : une prise ne s’enregistre qu’une fois, deux séances d’oxygène ne peuvent pas se chevaucher et rien n’est supprimé, seulement annulé avec un motif. Le serveur est en Node.js avec Fastify et l’interface est une PWA sans framework. Un workflow n8n recopie le journal dans un Google Sheet, et les mises en ligne se font sans coupure.",
+          "LibMedoc, qui s’appelle Aminteu pour ses utilisateurs, permet à une famille de suivre ensemble les prises de médicaments et les séances d’oxygène d’un proche. Chacun se connecte avec son code personnel et coche une prise ; tous les écrans ouverts se mettent à jour en direct. Des rappels et des alertes arrivent par notification quand une prise est en retard.\n\nLes règles sont garanties par PostgreSQL : une prise ne s’enregistre qu’une fois, deux séances d’oxygène ne peuvent pas se chevaucher et rien n’est supprimé, seulement annulé avec un motif. Le serveur est en Node.js avec Fastify et l’interface est une PWA sans framework. Un workflow n8n recopie le journal dans un Google Sheet, et les mises en ligne se font sans coupure.",
         tags: [
           "Node.js 22",
           "Fastify",

@@ -14,7 +14,7 @@ export const featured: Record<
   number,
   {
     name: string;
-    kind: "organizer" | "brain" | "nutrition" | "leads";
+    kind?: "organizer" | "brain" | "nutrition" | "leads";
     fr: string;
     en: string;
     tags: string[];
@@ -32,7 +32,7 @@ export const featured: Record<
     kind: "nutrition",
     fr: "Suivre son alimentation et ses apports nutritionnels.",
     en: "Track meals and nutritional intake.",
-    tags: ["PWA", "IA vision", "React"],
+    tags: ["PWA", "React", "Supabase"],
   },
   "2": {
     name: "LibLeadIN",
@@ -47,6 +47,30 @@ export const featured: Record<
     fr: "Gérer ses emails et son agenda avec un assistant IA.",
     en: "Manage email and calendar with an AI assistant.",
     tags: ["Agents IA", "n8n", "LiteLLM"],
+  },
+  "19": {
+    name: "Knowledge",
+    fr: "Suivre les cours particuliers et trouver un professeur.",
+    en: "Follow private lessons and find a teacher.",
+    tags: ["NestJS", "Next.js", "PostgreSQL"],
+  },
+  "20": {
+    name: "LibTicket",
+    fr: "Suivre les demandes de ses clients sur un tableau.",
+    en: "Track client requests on a board.",
+    tags: ["Next.js", "PostgreSQL", "Docker"],
+  },
+  "21": {
+    name: "OpenStudio",
+    fr: "Générer des images et des vidéos en maîtrisant les coûts.",
+    en: "Generate images and videos while keeping costs under control.",
+    tags: ["IA générative", "Next.js", "SQLite"],
+  },
+  "22": {
+    name: "LibMedoc (Aminteu)",
+    fr: "Suivre en famille les médicaments et l’oxygène d’un proche.",
+    en: "Track a relative’s medication and oxygen as a family.",
+    tags: ["PWA", "Fastify", "PostgreSQL"],
   },
 };
 export const editorial = {
@@ -72,7 +96,7 @@ export const editorial = {
     allProjects: "Voir les 26 projets",
     fewerProjects: "Afficher la sélection",
     illustration:
-      "LibOrga, LiBrain, LibCalPilot et LibLeadIN : interfaces réelles · Données de démonstration",
+      "Interfaces réelles · Données de démonstration",
     source: "Code source",
     demo: "Ouvrir le site",
     close: "Fermer",
@@ -210,7 +234,7 @@ export const editorial = {
     allProjects: "View all 26 projects",
     fewerProjects: "Show selected projects",
     illustration:
-      "LibOrga, LiBrain, LibCalPilot and LibLeadIN: real interfaces · Demo data",
+      "Real interfaces · Demo data",
     source: "Source code",
     demo: "Open website",
     close: "Close",

@@ -516,9 +516,9 @@ export const contentEn: Content = {
         demo: "#",
       },
       {
-        title: "Aminteu — Medication tracking",
+        title: "LibMedoc (Aminteu) — Medication tracking",
         description:
-          "Aminteu lets a family track a relative’s medication and oxygen sessions together. Each person signs in with a personal code and ticks off a dose; every open screen updates live. Reminders and alerts arrive as notifications when a dose is late.\n\nThe rules are enforced by PostgreSQL: a dose can only be recorded once, two oxygen sessions cannot overlap, and nothing is deleted, only cancelled with a reason. The server uses Node.js with Fastify and the interface is a PWA built without a framework. An n8n workflow copies the log to a Google Sheet, and releases go live without downtime.",
+          "LibMedoc, known to its users as Aminteu, lets a family track a relative’s medication and oxygen sessions together. Each person signs in with a personal code and ticks off a dose; every open screen updates live. Reminders and alerts arrive as notifications when a dose is late.\n\nThe rules are enforced by PostgreSQL: a dose can only be recorded once, two oxygen sessions cannot overlap, and nothing is deleted, only cancelled with a reason. The server uses Node.js with Fastify and the interface is a PWA built without a framework. An n8n workflow copies the log to a Google Sheet, and releases go live without downtime.",
         tags: [
           "Node.js 22",
           "Fastify",
