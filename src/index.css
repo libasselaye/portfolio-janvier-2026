@@ -747,36 +747,58 @@ h2 {
   font-size: 20px;
   line-height: 1;
 }
-.project-card-compact {
-  padding: 26px;
-  border: 1px solid var(--line);
-  border-radius: 3px;
+.project-list-block {
+  margin-top: 56px;
 }
-.compact-project-top {
-  display: flex;
+.project-list-block > .eyebrow {
+  margin-bottom: 14px;
+}
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+.project-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1.4fr) minmax(0, 1fr) 150px 20px;
+  gap: 20px;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  padding: 17px 4px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
 }
-.compact-project-top .eyebrow {
-  font-size: 8px;
-}
-.project-card-compact .project-info h3 {
-  font-size: 22px;
-  letter-spacing: -0.5px;
-}
-.compact-project-description {
-  font-size: 12px;
-  line-height: 1.8;
+.project-row-index {
+  font-size: 10px;
   color: var(--muted);
-  margin-top: 12px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  letter-spacing: 0.08em;
 }
-.project-card-compact:hover {
-  border-color: var(--copper);
+.project-row-title,
+.project-row-tags,
+.project-row-category {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.project-row-title {
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  transition: color 0.2s;
+}
+.project-row-tags,
+.project-row-category {
+  font-size: 11px;
+  color: var(--muted);
+}
+.project-row > svg {
+  transition: color 0.2s;
+}
+.project-row:hover .project-row-title,
+.project-row:hover > svg,
+.project-row:focus-visible .project-row-title,
+.project-row:focus-visible > svg {
+  color: var(--copper);
 }
 /* Purpose-made product illustrations; no fabricated screenshots or metrics. */
 .organizer-visual {
@@ -2785,11 +2807,28 @@ details[open] > summary .disclosure-symbol:after {
     align-self: center;
     font-size: 11px;
   }
-  .project-card-compact {
-    padding: 22px;
+  .project-row {
+    grid-template-columns: 28px minmax(0, 1fr) 18px;
+    gap: 12px;
   }
-  .project-card-compact .project-info h3 {
-    font-size: 22px;
+  .project-row-title {
+    white-space: normal;
+    line-height: 1.35;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .project-row-tags {
+    grid-column: 2;
+    grid-row: 2;
+    white-space: normal;
+    margin-top: 3px;
+  }
+  .project-row-category {
+    display: none;
+  }
+  .project-row > svg {
+    grid-column: 3;
+    grid-row: 1 / span 2;
   }
   .about-grid {
     grid-template-columns: 1fr;

@@ -125,6 +125,8 @@ export default function App() {
   );
   const displayed =
     showAll || filter !== "all" ? matching : matching.slice(0, 4);
+  const displayedFeatured = displayed.filter((index) => featured[index]);
+  const displayedOther = displayed.filter((index) => !featured[index]);
   const project =
     selectedProject === null ? null : content.projects.items[selectedProject];
   useEffect(() => {
@@ -686,72 +688,77 @@ export default function App() {
               {String(matching.length).padStart(2, "0")}
             </span>
           </div>
-          <div className="project-grid">
-            {displayed.map((index) => {
-              const item = content.projects.items[index];
+          {displayedFeatured.length > 0 && <div className="project-grid">
+            {displayedFeatured.map((index) => {
               const design = featured[index];
               return (
                 <article
                   key={index}
-                  className={`project-card ${design ? "" : "project-card-compact"}`}
+                  className="project-card"
                 >
                   <button
                     className="project-open"
                     onClick={() => setSelectedProject(index)}
-                    aria-label={`${t.details} : ${design?.name ?? item.title}`}
+                    aria-label={`${t.details} : ${design.name}`}
                   >
-                    {design ? (
-                      <div className="project-art">
-                        <FeaturedProjectCover index={index} en={en} />
-                        <span className="project-hover-arrow">
-                          <Arrow diagonal />
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="compact-project-top">
-                        <span className="eyebrow">
-                          {String(index + 1).padStart(2, "0")} /{" "}
-                          {
-                            t.filters[
-                              categories.indexOf(projectCategory(index))
-                            ]
-                          }
-                        </span>
+                    <div className="project-art">
+                      <FeaturedProjectCover index={index} en={en} />
+                      <span className="project-hover-arrow">
                         <Arrow diagonal />
-                      </div>
-                    )}
+                      </span>
+                    </div>
                     <div className="project-info">
                       <div>
                         <p className="project-discipline">
-                          {design
-                            ? design.tags
-                                .map((tag) =>
-                                  en && tag === "Agents IA" ? "AI agents" : tag,
-                                )
-                                .join(" / ")
-                            : item.tags.slice(0, 3).join(" / ")}
+                          {design.tags
+                            .map((tag) =>
+                              en && tag === "Agents IA" ? "AI agents" : tag,
+                            )
+                            .join(" / ")}
                         </p>
-                        <h3>{design?.name ?? item.title.split(" - ")[0]}</h3>
-                        {design && (
-                          <p className="project-subtitle">{design[language]}</p>
-                        )}
+                        <h3>{design.name}</h3>
+                        <p className="project-subtitle">{design[language]}</p>
                       </div>
-                      {design && (
-                        <span className="project-link-arrow">
-                          <Arrow diagonal />
-                        </span>
-                      )}
+                      <span className="project-link-arrow">
+                        <Arrow diagonal />
+                      </span>
                     </div>
-                    {!design && (
-                      <p className="compact-project-description">
-                        {item.description}
-                      </p>
-                    )}
                   </button>
                 </article>
               );
             })}
-          </div>
+          </div>}
+          {displayedOther.length > 0 && (
+            <div className="project-list-block">
+              <p className="eyebrow">{t.otherProjects}</p>
+              <ul className="project-list">
+                {displayedOther.map((index, position) => {
+                  const item = content.projects.items[index];
+                  return (
+                    <li key={index}>
+                      <button
+                        className="project-row"
+                        onClick={() => setSelectedProject(index)}
+                        aria-label={`${t.details} : ${item.title}`}
+                      >
+                        <span className="project-row-index">
+                          {String(position + 1).padStart(2, "0")}
+                        </span>
+                        <span className="project-row-title">{item.title}</span>
+                        <span className="project-row-tags">
+                          {item.tags.slice(0, 3).join(" / ")}
+                        </span>
+                        <span className="project-row-category">
+                          {t.filters[categories.indexOf(projectCategory(index))]}
+                        </span>
+                        <Arrow diagonal />
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
           <div className="projects-bottom">
             <span>{t.illustration}</span>
             {filter === "all" && (

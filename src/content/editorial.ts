@@ -94,6 +94,7 @@ export const editorial = {
     filters: ["Tous les projets", "Applications web", "Agents IA", "Data & ML"],
     details: "Voir le projet",
     allProjects: "Voir les 26 projets",
+    otherProjects: "Autres projets",
     fewerProjects: "Afficher la sélection",
     illustration:
       "Interfaces réelles · Données de démonstration",
@@ -232,6 +233,7 @@ export const editorial = {
     filters: ["All projects", "Web applications", "AI agents", "Data & ML"],
     details: "View project",
     allProjects: "View all 26 projects",
+    otherProjects: "Other projects",
     fewerProjects: "Show selected projects",
     illustration:
       "Real interfaces · Demo data",
