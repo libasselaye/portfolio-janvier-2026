@@ -97,7 +97,7 @@ export default function PersonalStories({
               >
                 <span className="eyebrow">{t.nutritionProject.label}</span>
                 <strong>
-                  LibCalPilot <Arrow diagonal />
+                  Libfuel <Arrow diagonal />
                 </strong>
                 <span>{t.nutritionProject.description}</span>
               </button>

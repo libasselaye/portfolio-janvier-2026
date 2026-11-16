@@ -195,7 +195,7 @@ export function ProductVisual({
           <div>
             <span>{en ? "Daily food log" : "Journal alimentaire"}</span>
             <strong>
-              LibCalPilot<span>↗</span>
+              Libfuel<span>↗</span>
             </strong>
             <small>
               {en

@@ -11,6 +11,7 @@ import {
 import LibOrgaShowcase, { LibOrgaCover } from "./components/LibOrgaShowcase";
 import ProductShowcase, {
   ProductScreenshotCover,
+  type Product,
 } from "./components/ProductShowcase";
 import AboutGallery from "./components/AboutGallery";
 import ScrollProgress from "./components/ScrollProgress";
@@ -29,18 +30,23 @@ const assets = `${import.meta.env.BASE_URL}photos/optimized/`;
 const sectionIds = ["experience", "expertise", "projects", "about"];
 const categories: ProjectCategory[] = ["all", "product", "ai", "data"];
 const externalLink = (href: string) => /^https?:\/\//.test(href);
+const productShots: Record<number, Product> = {
+  1: "libfuel",
+  2: "leadin",
+  4: "librain",
+  19: "knowledge",
+  20: "libticket",
+  21: "openstudio",
+  22: "aminteu",
+};
 
 function FeaturedProjectCover({ index, en }: { index: number; en: boolean }) {
   if (index === 0) return <LibOrgaCover en={en} />;
-  if (index === 1)
-    return <ProductScreenshotCover product="calpilot" en={en} />;
-  if (index === 2)
-    return <ProductScreenshotCover product="leadin" en={en} />;
-  if (index === 4)
-    return <ProductScreenshotCover product="librain" en={en} />;
+  const product = productShots[index];
+  if (product) return <ProductScreenshotCover product={product} en={en} />;
 
   const design = featured[index];
-  return design ? <ProductVisual kind={design.kind} en={en} /> : null;
+  return design?.kind ? <ProductVisual kind={design.kind} en={en} /> : null;
 }
 
 function FeaturedProjectShowcase({
@@ -51,12 +57,11 @@ function FeaturedProjectShowcase({
   en: boolean;
 }) {
   if (index === 0) return <LibOrgaShowcase en={en} />;
-  if (index === 1) return <ProductShowcase product="calpilot" en={en} />;
-  if (index === 2) return <ProductShowcase product="leadin" en={en} />;
-  if (index === 4) return <ProductShowcase product="librain" en={en} />;
+  const product = productShots[index];
+  if (product) return <ProductShowcase product={product} en={en} />;
 
   const design = featured[index];
-  return design ? <ProductVisual kind={design.kind} en={en} /> : null;
+  return design?.kind ? <ProductVisual kind={design.kind} en={en} /> : null;
 }
 
 const storedPreference = (key: string) => {

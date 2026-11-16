@@ -1,19 +1,20 @@
 export type ProjectCategory = "all" | "product" | "ai" | "data";
 // Stable source indices keep the complete FR/EN project catalogue intact.
 export const projectOrder = [
-  0, 4, 1, 2, 3, 7, 6, 8, 9, 10, 11, 12, 5, 13, 14, 15, 16, 17, 18,
+  19, 0, 20, 22, 21, 1, 23, 4, 2, 3, 24, 25, 7, 6, 8, 9, 10, 11, 12, 5,
+  13, 14, 15, 16, 17, 18,
 ];
 export const projectCategory = (index: number): ProjectCategory =>
-  [0, 1, 5, 18].includes(index)
+  [0, 1, 5, 18, 19, 20, 22, 24, 25].includes(index)
     ? "product"
-    : [7, 13, 14, 15, 16, 17].includes(index)
+    : [7, 13, 14, 15, 16, 17, 23].includes(index)
       ? "data"
       : "ai";
 export const featured: Record<
   number,
   {
     name: string;
-    kind: "organizer" | "brain" | "nutrition" | "leads";
+    kind?: "organizer" | "brain" | "nutrition" | "leads";
     fr: string;
     en: string;
     tags: string[];
@@ -27,11 +28,11 @@ export const featured: Record<
     tags: ["Product design", "Next.js", "Supabase"],
   },
   "1": {
-    name: "LibCalPilot",
+    name: "Libfuel",
     kind: "nutrition",
     fr: "Suivre son alimentation et ses apports nutritionnels.",
     en: "Track meals and nutritional intake.",
-    tags: ["PWA", "Gemini Vision", "React"],
+    tags: ["PWA", "React", "Supabase"],
   },
   "2": {
     name: "LibLeadIN",
@@ -46,6 +47,30 @@ export const featured: Record<
     fr: "Gérer ses emails et son agenda avec un assistant IA.",
     en: "Manage email and calendar with an AI assistant.",
     tags: ["Agents IA", "n8n", "LiteLLM"],
+  },
+  "19": {
+    name: "Knowledge",
+    fr: "Suivre les cours particuliers et trouver un professeur.",
+    en: "Follow private lessons and find a teacher.",
+    tags: ["NestJS", "Next.js", "PostgreSQL"],
+  },
+  "20": {
+    name: "LibTicket",
+    fr: "Suivre les demandes de ses clients sur un tableau.",
+    en: "Track client requests on a board.",
+    tags: ["Next.js", "PostgreSQL", "Docker"],
+  },
+  "21": {
+    name: "OpenStudio",
+    fr: "Générer des images et des vidéos en maîtrisant les coûts.",
+    en: "Generate images and videos while keeping costs under control.",
+    tags: ["IA générative", "Next.js", "SQLite"],
+  },
+  "22": {
+    name: "LibMedoc (Aminteu)",
+    fr: "Suivre en famille les médicaments et l’oxygène d’un proche.",
+    en: "Track a relative’s medication and oxygen as a family.",
+    tags: ["PWA", "Fastify", "PostgreSQL"],
   },
 };
 export const editorial = {
@@ -68,10 +93,10 @@ export const editorial = {
       "Des applications personnelles, des automatisations et des travaux d’analyse. Chaque fiche présente le fonctionnement du projet et les outils utilisés.",
     filters: ["Tous les projets", "Applications web", "Agents IA", "Data & ML"],
     details: "Voir le projet",
-    allProjects: "Voir les 19 projets",
+    allProjects: "Voir les 26 projets",
     fewerProjects: "Afficher la sélection",
     illustration:
-      "LibOrga, LiBrain, LibCalPilot et LibLeadIN : interfaces réelles · Données de démonstration",
+      "Interfaces réelles · Données de démonstration",
     source: "Code source",
     demo: "Ouvrir le site",
     close: "Fermer",
@@ -206,10 +231,10 @@ export const editorial = {
       "Personal applications, automation workflows and data analysis projects. Each overview explains what the project does and which tools I used.",
     filters: ["All projects", "Web applications", "AI agents", "Data & ML"],
     details: "View project",
-    allProjects: "View all 19 projects",
+    allProjects: "View all 26 projects",
     fewerProjects: "Show selected projects",
     illustration:
-      "LibOrga, LiBrain, LibCalPilot and LibLeadIN: real interfaces · Demo data",
+      "Real interfaces · Demo data",
     source: "Source code",
     demo: "Open website",
     close: "Close",
